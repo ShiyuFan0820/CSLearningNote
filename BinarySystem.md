@@ -1,8 +1,8 @@
-# decimalism
+# Decimalism
 
-# binary system
+# Binary System
 
-# conservion between decimalism and binary system
+# Conservion Between Decimalism and Binary System
 
-# conclusion
+# Conclusion
 
