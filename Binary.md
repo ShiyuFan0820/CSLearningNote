@@ -19,29 +19,57 @@ Binary counting is exactly the same,the only difference is there are only 0 and 
 # Rules
 
 We already know how to count and add in these two systems,but what's the rules between them?
-```
+```math
 1+0=1(2)->1(10)
+```
+```math
 1+1=10(2)->2(10)
+```
+```math
 1+1+1=10+1=11(2)->3(10)
+```
+```math
 1+1+1+1=11+1=100(2)->4(10)
+```
+```math
 1+1+1+1+1=100+1=101(2)->5(10)
+```
+```math
 1+1+1+1+1+1=101+1=110(2)->6(10)
+```
+```math
 1+1+1+1+1+1+1=110+1=111(2)->7(10)
+```
+```math
 ......
 ```
 
-Decimal has one's position,ten's position,hundred's position,and thousand's position ect,which represent 10^0,10^1,10^2,10^3 ect.Same with the binary,it has one's position,two's position,four's position,and eight's position ect,which represent 2^0,2^1,2^2,2^3 ect,every position in binary is a bit.
+Decimal has one's position,ten's position,hundred's position,and thousand's position,etc.These positions represent $10^0$, $10^1$, $10^2$, $10^3$,etc.Same with the binary,it has one's position,two's position,four's position,and eight's position,etc.These positions represent $2^0$, $2^1$, $2^2$, $2^3$,etc.Every position in binary is a bit.
 So the rules of converting binary to decimal is like:
+```math
+1(2)=1\times 2^0=1(10)
 ```
-1(2)=1*2^0=1(10)
-10(2)=0*2^0+1*2^1=2(10)
-11(2)=1*2^0+1*2^1=3(10)
-100(2)=0*2^0+0*2^1+1*2^2=4(10)
-101(2)=1*2^0+0*2^1+1*2^2=5(10)
+```math
+10(2)=0\times 2^0+1\times 2^1=2(10)
+```
+```math
+11(2)=1\times 2^0+1\times 2^1=3(10)
+```
+```math
+100(2)=0\times 2^0+0\times 2^1+1\times 2^2=4(10)
+```
+```math
+101(2)=1\times 2^0+0\times 2^1+1\times 2^2=5(10)
+```
+```math
 ......
 ```
 
 # Maximum Int In 32 Bit
 
-In binary the maximum number of every position is 1,so the maximum int in 32 bit is the number that there is 1 in 32 positions，converting to decimal is 1*2^31+1*2^30+1*2^29+...+1*2^2+1*2^1+1*2^0=2^31-1.
+In binary the maximum number of every position is 1,so the maximum int in 32 bit is the number that there is 1 in 32 positions，converting to decimal is:
+```math
+1\times 2^31+1\times 2^30+1\times 2^29+...+1\times 2^2+1\times 2^1+1\times 2^0=2^31-1.
+```
+
 
