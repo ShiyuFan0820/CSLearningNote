@@ -62,7 +62,8 @@ Follow the steps below:
 
 - Split the number up in two parts,convert the two parts separately.The part on the left of the decimal point use succesive divisions by 2 and collect the reminders from bottom to top,
 - the part on the right of the decimal point use succesive multiplications by 2,and strip off the result to the left of the decimal,continue until result on right of the decimal point is either zero or repeatition,collect the whole number results from top to bottom,
-- Collect the result of the two parts.
+- Collect the result of the two parts,
+- Normalize results.
 
 For example:
 
@@ -105,6 +106,22 @@ The results number is:
 
 ```math
 23.375(10)=10111.011(2)
+```
+
+4. Normalize
+
+Float the point to the beginning:
+
+```math
+10111.011(2) = 0.10111011 \times 2^5
+```
+
+Both mantissa and exponent are positive,so their sign bits are both 0.The exponent is "5",it shoule be converted to binary,5(10) = 101(2).
+
+So the result is:
+
+```math
+23.375(10) = 0.10111011 \times 2^{101}(2)
 ```
 
 ## Floating point Binary Number to Decimal
