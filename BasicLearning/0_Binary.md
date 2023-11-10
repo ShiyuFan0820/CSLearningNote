@@ -69,7 +69,7 @@ So the rules of converting binary to decimal is like:
 
 In binary the maximum number of every position is 1,so the maximum int in 32 bit is the number that there is 1 in 32 positions，converting to decimal is:
 ```math
-1\times 2^31+1\times 2^30+1\times 2^29+...+1\times 2^2+1\times 2^1+1\times 2^0=2^31-1.
+1\times 2^{31} + 1\times 2^{30}+1\times 2^{29}+...+1\times 2^2+1\times 2^1+1\times 2^0=2^{32}-1.
 ```
 
 
