@@ -72,4 +72,11 @@ In binary the maximum number of every position is 1,so the maximum int in 32 bit
 1\times 2^{31} + 1\times 2^{30}+1\times 2^{29}+...+1\times 2^2+1\times 2^1+1\times 2^0=2^{32}-1.
 ```
 
+# Brief Explanation
+
+1. The maximum number in 1 bit is 1.(Becuase there are only two numbers in binary-0 and 1,so 1 is the maximum number if it can only contain one bit.)
+2. The maximum number in 2 bits is 3.(Becuase 2 bits means there are two positions we can use to present numbers,the maximum number in every bit\position is 1,so the maximum number is 11,convert it to decimal is 2 to the power of 2 substracts 1 is equal to 3.)
+3. The maximum number in 3 bits is 7.(Because 3 bits means there are three positions we can use to present numbers,we already know that 1 is the maximum number in every bit,so the maximum number consists of three ones,it is 111,convert it to decimal is 2 to the power of 3 substracts 1 is equal to 7.)
+4. So on and so forth the maximum number in 32 bits is the number consists of 32 ones,so convert it to decimal is 2 to the power of 32 substract 1 is equal to 4,294,967,295.
+
 
