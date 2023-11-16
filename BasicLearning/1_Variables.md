@@ -20,7 +20,7 @@ A double is double-precision floating-point number.
 
 String is a type of variable which can represent text, and it must be enclosed in double quotes at both ends. For example: "This is a string"
 
-# Question: How to represent floating point numbers in binary？(Updateing～）
+# Question: How to represent floating point numbers in binary？
 
 ## Floating Point Decimal Number to Binary
 
@@ -208,6 +208,8 @@ The result is:
 ```
 
 ## 16 Bits Folating Point Binary Number to Decimal
+
+[16 Bits Folating Point Binary Number to Decimal](https://youtu.be/L8OYx1I8qNg?si=rbSjYdpNowrKRuNt)
 
 _Follow the step below:_
 
