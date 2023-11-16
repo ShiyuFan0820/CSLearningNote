@@ -42,7 +42,7 @@ For example:
 
 A floating point number has two parts - **mantissa** and **exponent**. The part of float number like "7.17", "3.14", or "4.145", is called mantissa. The part of the notation like the "7", "5", or "-9" next to "10" is called exponent. The number of digits of mantissa and exponent will be given in condition.
 
-If the mantissa of the floating point number wants to float the point to the right or left the number of the exponent will subtract or add the number, according to the movement the point made.
+If the mantissa of the floating point number wants to float the point to the right or left, the number of the exponent will subtract or add the number, according to the movement the point made.
 
 For example:
 
@@ -82,13 +82,13 @@ Split up 23.375 to 23 and 0.375.
 2 \times 0.375 = 0.75
 ```
 
-Strip off the left of decimal is 0.75:
+Strip off the left of decimal point is 0.75:
 
 ```math
 2 \times 0.75 = 1.5
 ```
 
-Strip off the left of decimal is 0.5:
+Strip off the left of decimal point is 0.5:
 
 ```math
 2 \times 0.5 = 1.0
@@ -110,7 +110,7 @@ The results number is:
 
 4. Normalize
 
-Float the point to the beginning:
+Float the point to the beginning of a actual number of the binary number:
 
 ```math
 10111.011(2) = 0.10111011 \times 2^5
