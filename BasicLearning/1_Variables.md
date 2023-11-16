@@ -60,47 +60,49 @@ In binary, the principle is the same.
 
 _Follow the steps below:_
 
-- Split the number up in two parts, convert the two parts separately. The part on the left of the decimal point use succesive divisions by 2 and collect the reminders from bottom to top,
-- The part on the right of the decimal point use succesive multiplications by 2, and strip off the result on the left of the decimal, continue until result on the right of the decimal point is either zero or repeatition, collect the whole number results from top to bottom,
-- Collect the result of the two parts,
-- Normalize the results requests us to move the floating point to the left of a actual number. In binary representation, we use the left most bit of mantissa and exponent to represent negative or positive, "0" represent positive, and "1" represent negative.
+- Covert the integer part: Split the number up in two parts, convert the two parts separately. The part on the left of the decimal point use succesive divisions by 2 and collect the reminders from bottom to top,
+- Convert the decimal part: The part on the right of the decimal point use succesive multiplications by 2, and strip off the result on the left of the decimal, continue until result on the right of the decimal point is either zero or repeatition, collect the whole number results from top to bottom,
+- Combine the integer and decimal part,
+- Add sign bit: In binary representation, we use the left most bit of mantissa and exponent as a sign bit to represent negative or positive, "0" represent positive, and "1" represent negative.
 
 _Example 1(Positive number):_
 
 ```math
 23.375(10)=(???)(2)
 ```
-1. Split up
+1. Convert the integer part
 
 Split up 23.375 to 23 and 0.375.
 ```math
 23(10)=10111(2)
 ```
-2. Succesive multiplications
+2. Convert the decimal part
 
 ```math
 2 \times 0.375 = 0.75
 ```
+So the first bit is "0".
 
 Strip off the left of decimal point is 0.75:
 
 ```math
 2 \times 0.75 = 1.5
 ```
+So the second bit is "1".
 
 Strip off the left of decimal point is 0.5:
 
 ```math
 2 \times 0.5 = 1.0
 ```
-The right of the decimal point is "0", multiplications end.
+So the third bit is "1", and the right of the decimal point is "0", multiplications end.
 
 The result is:
 
 ```math
 0.375(10)=0.011(2)
 ```
-3. Collect results
+3. Combine the two parts
 
 The results number is:
 
@@ -108,20 +110,14 @@ The results number is:
 23.375(10)=10111.011(2)
 ```
 
-4. Normalize
+4. Add sign bit
 
-Float the point to the beginning of a actual number of the binary number:
-
-```math
-10111.011(2) = 0.10111011 \times 2^5
-```
-
-Both mantissa and exponent are positive, so their sign bits are both 0. The exponent is "5", it shoule be converted to binary, 5(10) = 101(2).
+Both mantissa and exponent are positive, so their sign bits are both 0.
 
 So the result is:
 
 ```math
-23.375(10) = 0.10111011 \times 2^{101}(2)
+23.375(10) = 10111.011(2)
 ```
 
 _Example 2(Negative number):_
@@ -130,13 +126,53 @@ _Example 2(Negative number):_
 -3.125(10) = ???(2)
 ```
 
-1. Split up
+1. Convert the integer part
+
+As the number is negative, we can calculate the positive form of it fisrt, the integer part of "3.125" is "3", so the binary representation is:
+```math
+3(10) = 11(2)
+```
    
-2. Succesive mutiplications
+2. Convert the decimal part
+
+```math
+2 \times 0.125 = 0.25
+```
+
+So the first bit is "0".
+
+```math
+2 \times 0.25 = 0.5
+```
+
+So the second bit is "0".
+
+```math
+2 \times 0.5 = 1.0
+```
+
+So the third bit "1", and the right of the decimal point is "0", mutiplications end.
+
+So the result is:
+```math
+0.125(10) = .001(2)
+```
 
 3. Collect results
+
+Combine the integer and decimal part to get the final binary representation is:
+```math
+3.125(10) = 11.001(2)
+```
    
-4. Normalize
+4. Add sign bit
+
+Since the original number is negative, add a sign bit "1" for negative, so the result is:
+```math
+-3.125(10) = 111.001(2)
+```
+
+
 
 ## Floating point Binary Number to Decimal
 
