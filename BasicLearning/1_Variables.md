@@ -174,21 +174,37 @@ Since the original number is negative, add a sign bit "1" for negative, so the r
 
 ## Floating point Binary Number to Decimal
 
+_Follow the step blow:_ 
 
+- Identify the sign bit(leftmost bit),
+- Convert integer part: Convert the integer part of the binary number(excluding the sign bit) to decimal using the binary-to-decimal convertion method.
+- Convert fractional part: Convert the fractional part of the binary number to decimal by multiplying each bit by 2<sup>-n</sup>, where "n" is the position of the bit.
+- Combine integer and fractional parts: Add the decimal values obtained from the integer and fractional parts, if the sign bit is "1", the final result is negative.
 
+_Example:_
 
+_Convert the negative binary number 1100.101 to decimal._
 
+1. Identify the sign bit
 
+The sign bit is "1", indicating the number is negative.
 
+2. Convert the integer part
+```math
+100(2) = 4(10)
+```
 
+3. Convert the fractional part
+```math
+0.101(2) = 1 \times 2^{-1} + 0 \times 2^{-2} + 1 \times 2^{-3} = 0.625(10)
+```
 
+4. Combine integer and fractional parts
 
-
-
-
-
-
-
+The result is:
+```math
+1100.101(2) = -4.625(10)
+```
 
 ## Another Form of Folating Point Binary Number to Decimal
 
