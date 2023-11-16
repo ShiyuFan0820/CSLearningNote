@@ -64,8 +64,9 @@ _Follow the steps below:_
 - Convert the decimal part: The part on the right of the decimal point use succesive multiplications by 2, and strip off the result on the left of the decimal, continue until result on the right of the decimal point is either zero or repeatition, collect the whole number results from top to bottom,
 - Combine the integer and decimal part,
 - Add sign bit: In binary representation, we use the left most bit of mantissa and exponent as a sign bit to represent negative or positive, "0" represent positive, and "1" represent negative.
+- If you want to use a negative decimal number to convert to a binary number then to do the arithmetic, you need to convert the true form to the two's complement because in binary, both mantissa and exponent are stored in two's complement, to get the two's complement, replacing "0"s with "1"s and vice versa except the sign bit to get the one's complement first, then add "1" to get the result of the one's complement, to get the two's complement.
 
-_Example 1(Positive number):_
+**Example 1(Positive number):**
 
 ```math
 23.375(10)=(???)(2)
@@ -120,7 +121,7 @@ So the result is:
 23.375(10) = 10111.011(2)
 ```
 
-_Example 2(Negative number):_
+**Example 2(Negative number):**
 
 ```math
 -3.125(10) = ???(2)
@@ -181,7 +182,7 @@ _Follow the step blow:_
 - Convert fractional part: Convert the fractional part of the binary number to decimal by multiplying each bit by 2<sup>-n</sup>, where "n" is the position of the bit.
 - Combine integer and fractional parts: Add the decimal values obtained from the integer and fractional parts, if the sign bit is "1", the final result is negative.
 
-_Example:_
+**Example:**
 
 _Convert the negative binary number 1100.101 to decimal._
 
@@ -206,27 +207,30 @@ The result is:
 1100.101(2) = -4.625(10)
 ```
 
-## Another Form of Folating Point Binary Number to Decimal
+## 16 Bits Folating Point Binary Number to Decimal
 
-For example:
+_Follow the step below:_
+
+- Positive and negative judgment: The leftmost bit of mantissa or exponent is called the sign bit, if it is a positive number, the sign bit will be 0, if it is a negative number, the sign bit will be 1(We already mentioned above).  
+- Convert exponent: Using the binary to decimal method to convert the exponent, the number converted is the 2 to the power of the convert number(be careful with the positive and negative),
+- Convert mantissa: An imaginary point is right after the sign bit, If the mantissa is positive, move the imaginary point according to the exponent to get the pure binary number(When the exponent is positive, move the imaginary point to the right and vice versa).   Convert the pure binary number to decimal, when the sign bit is positive, using the binary-to-decimal method. When the sign bit is negative, the integer part of the binary number to decimal by multiplying each bit by 2<sup>n</sup>, the fractional part of the binary number to decimal by multiplying each bit by 2<sup>-n</sup>, where "n" is the position of the bit, but the sign bit should multiple the negative place value.
+
+**Example 1(Positive number):**
 
 ![](https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/dea074ee-e6c5-479c-98a8-730273aae808)
 
 1. Positive and negative judgment
 
-In binary, both mantissa and exponent are stored in two's complement, the leftmost bit of mantissa or exponent is called the sign bit, if it is a positive number, the sign bit will be 0, if it is a negative number, the sign bit will be 1(We already mentioned above).  
-The ture form, one's complement code, and two's complement code are same when the mantissa is positive, when the mantissa is negative, to get one's complement, replace "0"s with "1"s and vice versa except the sign bit, to get two's complement, add "1" to the result of the one's complement.
-
 In this binary number, ten bits on the left have been allocated to the mantissa, and six bits on the right have been allocated to the exponent.  
-In the mantissa part, the leftmost of it is the sign bit of the mantissa which is zero, means this number is a positive number, and we do not need to convert it to ture form. In the exponent part, the condition is the same, means the exponent is also positive.
+In the mantissa part, the leftmost of it is the sign bit of the mantissa which is "0", indicating this number is a positive number, and we do not need to convert it to ture form. In the exponent part, the condition is the same, indicating the exponent is also positive.
 
-2. Coverting exponent
+2. Covert exponent
 ![](https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/babd6996-a180-4f84-8115-2f096c662969)
 
 In binary, 11（2） = 3（10）, so the exponent is 3. Like 10 is the base number in decimal, 2 is base number in binary, so the exponent part is 2 to the power of 3.  
 So in this 16 bits number, there is something times 2 to the power of 3.
-
-3. Coverting mantissa
+ 
+3. Covert mantissa
 ![](https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/dd1aae74-6189-4479-bd9a-b377f2568ce8)
 
 An imaginary point is right after the sign bit. As the exponent is 3, we can move the imaginary point back three places and we get the pure binary number.
@@ -243,10 +247,35 @@ So the float number converts to decimal is:
 0110100000000011(2)=6.5(10)
 ```
 
+**Example 2(Negative number):**
 
+![](https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/868a02ca-0d4d-4a09-a8bc-941317b846a4)
 
+1. Positive and negative judgment
 
+In this binary number, ten bits on the left have been allocated to the mantissa, and six bits on the right have been allocated to the exponent.  
+In the mantissa part, the sign bit of the mantissa is "1", indicating this number is a negative number.
 
+2. Convert exponent
+
+In binary, 11（2） = 3（10）, so the exponent is 3. So in this 16 bits number, there is something times 2 to the power of 3.
+
+3. Convert mantissa
+
+![](https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/c27eccb2-5df0-4235-8e23-58bcb4d4f0ff)
+
+An imaginary point is right after the sign bit. As the exponent is 3, we can move the imaginary point back three places and we get the pure binary number, which is "1110.1".
+
+Convert to decimal is:
+```math
+1110.1(2) = 1 \times -2^8 + 1 \times 2^2 + 1\times 2^1 + 0 \times 2^0 + 1 \times 2^{-1} = -1.5
+```
+
+So the result is:
+
+```math
+1110100000000011(2) = -1.5(10)
+```
 
 
 
