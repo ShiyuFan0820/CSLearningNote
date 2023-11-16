@@ -209,7 +209,7 @@ The result is:
 
 ## 16 Bits Folating Point Binary Number to Decimal
 
-[16 Bits Folating Point Binary Number to Decimal](https://youtu.be/L8OYx1I8qNg?si=rbSjYdpNowrKRuNt)
+[Reference Video of 16 Bits Folating Point Binary Number to Decimal](https://youtu.be/L8OYx1I8qNg?si=rbSjYdpNowrKRuNt)
 
 _Follow the step below:_
 
