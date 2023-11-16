@@ -61,9 +61,9 @@ In binary, the principle is the same.
 Follow the steps below:
 
 - Split the number up in two parts, convert the two parts separately. The part on the left of the decimal point use succesive divisions by 2 and collect the reminders from bottom to top,
-- The part on the right of the decimal point use succesive multiplications by 2, and strip off the result on the left of the decimal, continue until result on right of the decimal point is either zero or repeatition, collect the whole number results from top to bottom,
+- The part on the right of the decimal point use succesive multiplications by 2, and strip off the result on the left of the decimal, continue until result on the right of the decimal point is either zero or repeatition, collect the whole number results from top to bottom,
 - Collect the result of the two parts,
-- Normalize results.
+- Normalize the results requests us to move the floating point to the left of a actual number. In binary representation, we use the left most bit of mantissa and exponent to represent negative or positive, "0" represent positive, and "1" represent negative.
 
 For example:
 
@@ -123,6 +123,8 @@ So the result is:
 ```math
 23.375(10) = 0.10111011 \times 2^{101}(2)
 ```
+
+
 
 ## Floating point Binary Number to Decimal
 
