@@ -172,9 +172,25 @@ Since the original number is negative, add a sign bit "1" for negative, so the r
 -3.125(10) = 111.001(2)
 ```
 
-
-
 ## Floating point Binary Number to Decimal
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Another Form of Folating Point Binary Number to Decimal
 
 For example:
 
@@ -182,7 +198,7 @@ For example:
 
 1. Positive and negative judgment
 
-In binary,both mantissa and exponent are stored in two's complement, the leftmost bit of mantissa or exponent is called the sign bit, if it is a positive number, the sign bit will be 0, if it is a negative number, the sign bit will be 1.  
+In binary, both mantissa and exponent are stored in two's complement, the leftmost bit of mantissa or exponent is called the sign bit, if it is a positive number, the sign bit will be 0, if it is a negative number, the sign bit will be 1(We already mentioned above).  
 The ture form, one's complement code, and two's complement code are same when the mantissa is positive, when the mantissa is negative, to get one's complement, replace "0"s with "1"s and vice versa except the sign bit, to get two's complement, add "1" to the result of the one's complement.
 
 In this binary number, ten bits on the left have been allocated to the mantissa, and six bits on the right have been allocated to the exponent.  
