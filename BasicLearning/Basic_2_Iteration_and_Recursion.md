@@ -12,8 +12,10 @@ Recuesion is a function that calls itself from within.
 
 ## Fibonacci Sequence
 
-Fibonacci sequence is a kind of number sequence where the next value always equals the sum of it's two previous values.
-
+Fibonacci sequence is a kind of number sequence where the next value always equals the sum of it's two previous values. For example:
+|No.0|No.1|No.2   |No.3 |No.4  |No.5  |No.6  |No.7  |No.8|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+|0    |1  |1(0+1)|2(1+1)|3(1+2)|5(2+3)|8(3+5)|13(5+8)|21(8+13)|
 ## Fibonacci In Iteration
 
 ```py
@@ -21,12 +23,12 @@ def fibonacci(index):
     if index <= 1:
         print(index)
     else:
-        num1 = 0
-        num2 = 1
+        num0 = 0
+        num1 = 1
         for i in range(index):
-            result = num1 + num2
-            num1 = num2
-            num2 = result
+            result = num0 + num1
+            num0 = num1
+            num1 = result
         return num1
 ```
 
