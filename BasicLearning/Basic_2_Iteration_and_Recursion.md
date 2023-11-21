@@ -29,7 +29,7 @@ def fibonacci(index):
             result = num0 + num1
             num0 = num1
             num1 = result
-        return num1
+        return num0
 ```
 
 # Iteration vs Recursion
