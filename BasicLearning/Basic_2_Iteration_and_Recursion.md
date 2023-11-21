@@ -10,4 +10,14 @@ Recuesion is a function that calls itself from within.
 
 # Fibonacci Sequence In Iteration And Recursion
 
+## Fibonacci Sequence
+
+Fibonacci sequence is a kind of number sequence where the next value always equals the sum of it's two previous values.
+
+## Fibonacci In Iteration
+
+```py
+
+```
+
 # Iteration vs Recursion
