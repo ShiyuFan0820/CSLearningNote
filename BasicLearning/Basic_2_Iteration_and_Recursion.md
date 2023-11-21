@@ -27,7 +27,7 @@ def fibonacci(index):
             print(num0)
             num0 = num1
             num1 = result
-        return print(num0)
+        return print
 ```
 
 ## Fibonacci In Recursion
