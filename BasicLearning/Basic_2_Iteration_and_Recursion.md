@@ -20,16 +20,14 @@ Fibonacci sequence is a kind of number sequence where the next value always equa
 
 ```py
 def fibonacci(index):
-    if index <= 1:
-        print(index)
-    else:
         num0 = 0
         num1 = 1
         for i in range(index):
             result = num0 + num1
+            print(num0)
             num0 = num1
             num1 = result
-        return num0
+        return print(num0)
 ```
 
 ## Fibonacci In Recursion
