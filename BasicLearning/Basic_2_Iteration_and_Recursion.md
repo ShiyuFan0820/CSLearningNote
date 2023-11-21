@@ -17,7 +17,17 @@ Fibonacci sequence is a kind of number sequence where the next value always equa
 ## Fibonacci In Iteration
 
 ```py
-
+def fibonacci(index):
+    if index <= 1:
+        print(index)
+    else:
+        num1 = 0
+        num2 = 1
+        for i in range(index):
+            result = num1 + num2
+            num1 = num2
+            num2 = result
+        return num1
 ```
 
 # Iteration vs Recursion
