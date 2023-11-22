@@ -20,13 +20,18 @@ Fibonacci sequence is a kind of number sequence where the next value always equa
 
 ```py
 def fibonacci(index):
-        num0 = 0
-        num1 = 1
-        for i in range(index):
-            result = num0 + num1
-            print(num0)
-            num0 = num1
-            num1 = result
+    num1 = 0
+    num2 = 1  #Because the next value is equal to the sum of the two previous values, so we define two viariables to store the two values.
+    if index == 1:
+        print(num1)
+    elif index == 2:
+        print(num2)
+    else:
+        for i in range(index-2): #Loop evaluation from the third number, loop once, loop twice from the fourth number.
+            result = num1 + num2
+            num1 = num2
+            num2 = result
+        return result
 ```
 
 ## Fibonacci In Recursion
