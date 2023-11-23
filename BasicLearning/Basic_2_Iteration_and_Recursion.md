@@ -120,13 +120,13 @@ To test which one is more efficient, we can use the `time` module to record the 
 import time
 def fibonacci(index):
     num1 = 0
-    num2 = 1  #Because the next value is equal to the sum of the two previous values, so we define two viariables to store the two values.
+    num2 = 1  
     if index == 1:
         return 0
     elif index == 2:
         return 1
     else:
-        for i in range(index-2): #Loop evaluation from the third number, loop once, loop twice from the fourth number.
+        for i in range(index-2):
             result = num1 + num2
             num1 = num2
             num2 = result
@@ -160,7 +160,7 @@ def fibonacci(index):
     elif index == 2:
         return 1
     else:
-        result = fibonacci(index - 1) + fibonacci(index - 2) #Function calls itself in within.
+        result = fibonacci(index - 1) + fibonacci(index - 2) 
         return result
 
 record = time.time()
