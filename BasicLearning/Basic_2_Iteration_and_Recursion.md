@@ -165,7 +165,7 @@ print("The speed of iteration is: " + str(time.time() - record) )
 The speed of iteration is: 6.70896315574646
 ```
 
-Apparently, $6.615490674972534 <  6.70896315574646$, the speed of iteation is quicker than recursion. 
+Apparently, $6.615490674972534 < 6.70896315574646$, the speed of iteation is quicker than recursion. 
 
 
 
