@@ -133,21 +133,13 @@ def fibonacci(index):
         return result
 
 record = time.time()
-print(fibonacci(1))
-print(fibonacci(2))
-print(fibonacci(3))
-print(fibonacci(4))
-print(fibonacci(5))
+print(fibonacci(40))
 print("The speed of iteration is: " + str(time.time() - record) )
 ```
 **The output is:**
 ```py
-0
-1
-1
-2
-3
-The speed of iteration is: 1.4066696166992188e-05
+63245986
+The speed of iteration is: 6.615490674972534
 ```
 
 **The speed of recursion:**
@@ -164,24 +156,16 @@ def fibonacci(index):
         return result
 
 record = time.time()
-print(fibonacci(1))
-print(fibonacci(2))
-print(fibonacci(3))
-print(fibonacci(4))
-print(fibonacci(5))
+print(fibonacci(40))
 print("The speed of iteration is: " + str(time.time() - record) )
 ```
 **The output is:**
 ```py
-0
-1
-1
-2
-3
-The speed of iteration is: 1.6927719116210938e-05
+63245986
+The speed of iteration is: 6.70896315574646
 ```
 
-Apparently, $1.4066696166992188e-05 <  1.6927719116210938e-05$, the speed of iteation is quicker than recursion. 
+Apparently, $6.615490674972534 <  6.70896315574646$, the speed of iteation is quicker than recursion. 
 
 
 
