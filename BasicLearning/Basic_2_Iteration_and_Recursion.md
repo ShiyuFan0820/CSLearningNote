@@ -139,7 +139,7 @@ print("The speed of iteration is: " + str(time.time() - record) )
 **The output is:**
 ```py
 63245986
-The speed of iteration is: 6.615490674972534
+The speed of iteration is: 1.2159347534179688e-05
 ```
 
 **The speed of recursion:**
@@ -157,15 +157,15 @@ def fibonacci(index):
 
 record = time.time()
 print(fibonacci(40))
-print("The speed of iteration is: " + str(time.time() - record) )
+print("The speed of recursion is: " + str(time.time() - record) )
 ```
 **The output is:**
 ```py
 63245986
-The speed of iteration is: 6.70896315574646
+The speed of recursion is: 6.610930919647217
 ```
 
-Apparently, $6.615490674972534 < 6.70896315574646$, the speed of iteation is quicker than recursion. 
+Apparently, $1.2159347534179688e-05 < 6.610930919647217$, the speed of iteation is quicker than recursion. 
 
 
 
