@@ -2,7 +2,7 @@
 
 ## Iteration
 
-If there are numbers in a given range, the programme will loop throught the numbers one by one automatically until the order to end is given. This process is called iteration.
+If there are numbers in a given range, the programme will loop throught the numbers one by one automatically and will stop until the reaches the last number. This process is called iteration.
 
 ## Recursion
 
