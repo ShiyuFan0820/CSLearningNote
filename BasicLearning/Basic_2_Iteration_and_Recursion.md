@@ -2,7 +2,7 @@
 
 ## Iteration
 
-If there are numbers in a given range, the programme will loop throught the numbers one by one automatically and will stop until the reaches the last number. This process is called iteration.
+If there are numbers in a given range, the programme will loop throught the numbers one by one automatically and will stop looping until reaches the last number. This process is called iteration.
 
 ## Recursion
 
@@ -28,7 +28,7 @@ def fibonacci(index):
     elif index == 2:
         return 1
     else:
-        for i in range(index-2): #Loop evaluation from the third number, loop once, loop twice from the fourth number.
+        for i in range(index-2): #Loop evaluation loops once from the third number, loops twice from the fourth number.
             result = num1 + num2
             num1 = num2
             num2 = result
