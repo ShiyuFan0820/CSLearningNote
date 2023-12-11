@@ -167,7 +167,7 @@ The speed of recursion is: 6.610930919647217
 
 Apparently, $1.2159347534179688e-05 < 6.610930919647217$, the speed of iteation is quicker than recursion. 
 
-**In conclusion, comparing to recursion, iteration is faster, and although the recursion code can be easy to understand, it will cause stack over flow in some situations.**
+**In conclusion, comparing to recursion, iteration is faster, and although the recursion code can be easy to understand, it will cause stack overflow in some situations.**
 
 
 
