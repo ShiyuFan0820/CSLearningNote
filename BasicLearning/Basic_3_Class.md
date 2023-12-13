@@ -9,8 +9,6 @@ For example, a school needs to collect all the personal information of all fresh
 
 This process just exactly like how `class` works in python. Creating the information spreadhseet template is like calling the function `class` to define a class, the attributes like student name, student ID, gender, nationality, telephone number ect. is called `member variables`, this is also the constructor of class. Giving every student a spreasheet is called creating objects, also called instance in python, and filling out the information is called assigning attributes to the objects, we can define some functions to access and process the collected data, these functionalities is call `member methods`.
 
-By using `class` in python, we can organise and structure data in a single unit, reduce duplication.
-
 ### How to Use Class in Python?
 
 1. Creating class by calling the keyword `class`:
@@ -38,8 +36,30 @@ class freshmen_tem:
         self.m_gender = gender
         self.m_nationality = nationality
         self.m_tele = telephone
-
+    """
+    The format of the member method is pretty much the same with the member variables. But keep it in mind that when we want to call the member variables, we should use the keyword "self." following with the name of the variables.
+    """
+    def say_hi(self, message):
+        print(f"I'm {self.m_name}, I come from {self.m_nationality}, my telephone number is {self.m_tele}, {message}")
 ```
 
+3. Create objects:
+```py
+#Use the class
+student1 = freshmen_tem("fanfan", "1701", "female", "China", "123456")
+student2 = freshmen_tem("xixi", "1702", "Male", "China", "123789")
+
+#When call the function in the class, we need to use the name of the object followed by a dot and the name of the function: object.function_name(parameter)
+student1.say_hi("I'm so excited to meet everyone!")
+student2.say_hi("Hope you guys have a nice day!")
+```
+
+Let's run the code:
+```py
+I'm fanfan, I come from China, my telephone number is 123456, I'm so excited to meet everyone!
+I'm xixi, I come from China, my telephone number is 123789, Hope you guys have a nice day!
+```
 
 ## Object-Oriented Programming
+
+Python is an "object-oriented" programming language, this means that almost all the code is implemented using classed, programmers use classed to keep related things together. By using class in python, we can organise and structure data in a single unit, reduce duplication.
