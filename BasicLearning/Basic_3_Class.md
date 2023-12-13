@@ -2,7 +2,7 @@
 
 ## What is Class in Python?
 
-### Real-Life Examples
+### Real-Life Example
 There are list, dictionary in python we use to organise data, class provides a means of bundling data and funtionality together. In python class is a code template to create objects. 
 
 For example, a school needs to collect all the personal information of all freshmen, the first thing to do is to create an information spreadsheet template. The student's attributes like student name, student ID, gender, nationality, telephone number ect., maybe included in the template, when the new semester begins, the school will prepare the spreadsheets to give out to the freshmen, when students receive the information spreadsheet, they will fill out with their own information. After finishing collecting information of all freshmen, school can use these information to manage all the students.
@@ -13,6 +13,33 @@ By using `class` in python, we can organise and structure data in a single unit,
 
 ### How to Use Class in Python?
 
+1. Creating class by calling the keyword `class`:
+```py
+class freshmen_tem: #The name of the class
+  pass
+```
+By the code above, we create an empty class.
+
+2. Definition of member variables and member methods:
+```py
+class freshmen_tem:
+    #Member variables aslo called constructor:
+    '''
+    The format of the constructor is like this:
+    def __init__(self, variable1, variable2, variable3, ...)
+    self.m_name1 = variable1
+    self.m_name2 = variable2
+    self.m_name3 = variable3 ("m" means "member")
+    Attention: The word "self" is always provided in the first argument.
+    '''
+    def __init__(self, name, ID, gender, nationality, telephone):
+        self.m_name = name
+        self.m_ID = ID
+        self.m_gender = gender
+        self.m_nationality = nationality
+        self.m_tele = telephone
+
+```
 
 
 ## Object-Oriented Programming
