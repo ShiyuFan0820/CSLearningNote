@@ -13,14 +13,14 @@ This process just exactly like how `class` works in python. Creating the informa
 
 1. Creating class by calling the keyword `class`:
 ```py
-class freshmen_tem: #The name of the class
+class FreshmenTem: #The name of classes are best using the format of CamelCase, refer to this website: https://google.github.io/styleguide/pyguide.html
   pass
 ```
 By the code above, we create an empty class.
 
 2. Definition of member variables and member methods:
 ```py
-class freshmen_tem:
+class FreshmenTem:
     #Member variables aslo called constructor:
     '''
     The format of the constructor is like this:
