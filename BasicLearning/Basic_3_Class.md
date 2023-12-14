@@ -24,10 +24,10 @@ class FreshmenTem:
     #Member variables aslo called constructor:
     '''
     The format of the constructor is like this:
-    def __init__(self, variable1, variable2, variable3, ...)
-    self.m_name1 = variable1
-    self.m_name2 = variable2
-    self.m_name3 = variable3 ("m" means "member")
+    def __init__(self, variable_1, variable_2, variable_3, ...)
+    self.m_name_1 = variable_1
+    self.m_name_2 = variable_2
+    self.m_name_3 = variable_3 ("m" means "member")
     Attention: The word "self" is always provided in the first argument.
     '''
     def __init__(self, name, ID, gender, nationality, telephone):
@@ -46,8 +46,8 @@ class FreshmenTem:
 3. Create objects:
 ```py
 #Use the class
-student1 = freshmen_tem("fanfan", "1701", "female", "China", "123456")
-student2 = freshmen_tem("xixi", "1702", "Male", "China", "123789")
+student_1 = FreshmenTem("fanfan", "1701", "female", "China", "123456")
+student_2 = FreshmenTem("xixi", "1702", "Male", "China", "123789")
 
 #When call the function in the class, we need to use the name of the object followed by a dot and the name of the function: object.function_name(parameter)
 student1.say_hi("I'm so excited to meet everyone!")
