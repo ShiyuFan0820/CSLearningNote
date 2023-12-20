@@ -33,7 +33,7 @@ the machine or to check the stock of resources. Your code should end execution w
 **The code is:**
 ```py
 # Define a coffee menu to store the recipe
-coffe_menu = {
+coffee_menu = {
     "espresso": {"water": 50, "coffee": 18, "milk": 0, "cost": 1.5, "product": "☕️"},
     "latte": {"water": 200, "coffee": 24, "milk": 150, "cost": 2.5, "product": "🥤️"},
     "cappuccino": {"water": 250, "coffee": 24, "milk": 100, "cost": 3, "product": "🍹️"},
@@ -46,20 +46,20 @@ resources = {
     "money": 0,
 }
 # Define a function to update the resources
-def current_resources(resources, coffe_menu, order):
+def current_resources(resources, coffee_menu, order):
     resources = {
-        "water": resources["water"] - coffe_menu[order]["water"],
-        "coffee": resources["coffee"] - coffe_menu[order]["coffee"],
-        "milk": resources["milk"] - coffe_menu[order]["milk"],
+        "water": resources["water"] - coffee_menu[order]["water"],
+        "coffee": resources["coffee"] - coffee_menu[order]["coffee"],
+        "milk": resources["milk"] - coffee_menu[order]["milk"],
         "money": resources["money"] + order_cost,
     }
     return resources
 def if_resources_sufficient(resources, order):
     insufficient_resources = []
     order_ingrediant = {
-        "water": coffe_menu[order]["water"],
-        "coffee": coffe_menu[order]["coffee"],
-        "milk": coffe_menu[order]["milk"],
+        "water": coffee_menu[order]["water"],
+        "coffee": coffee_menu[order]["coffee"],
+        "milk": coffee_menu[order]["milk"],
     }
     if resources["water"] > order_ingrediant["water"] and resources["coffee"] > order_ingrediant["coffee"]:
         return "yes"
@@ -80,11 +80,12 @@ def process_coins(order_cost):
 
     # If the user have inserted too much money, the machine should offer change
     if insert_coins >= order_cost:
-        print(f"The coins you inserted are ${insert_coins} in total, here is ${round(insert_coins - order_cost, 2)} in change.\nHere is your {order} {coffe_menu[order]["product"]}. Enjoy!")
+        print(f"The coins you inserted are ${insert_coins} in total, here is ${round(insert_coins - order_cost, 2)} in change.\nHere is your {order} {coffee_menu[order]["product"]}. Enjoy!")
         return insert_coins
     else:
         print(f"The coins you inserted are ${insert_coins}, that's not enough money. Money refunded.")
         return None
+
 
 
 # The prompt should show again to serve the next customer
@@ -102,13 +103,13 @@ while should_continue:
     else:
         # Check whether the resources are sufficient
         check_resources = if_resources_sufficient(resources, order)
-        order_cost = coffe_menu[order]["cost"]
+        order_cost = coffee_menu[order]["cost"]
         # If the resources are sufficient, the program should prompt the user to insert coins
         if check_resources == "yes":
             # Only if the user have inserted the enough money the cost of drink gets added to the machine
            process_coins(order_cost)
             # When one coffee is done, the ingredients to make the drink should be deducted from the coffee machine resources
-           resources = current_resources(resources, coffe_menu, order)
+           resources = current_resources(resources, coffee_menu, order)
         else:
             print(f"Sorry there is not enough {check_resources}.")
 ```
