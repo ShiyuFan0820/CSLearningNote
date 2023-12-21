@@ -143,4 +143,6 @@ What would you like? (espresso/latte/cappuccino): off
 The machine has turned off.
 ```
 
+# Using Class to Complete the Exercise (updating)
+
 
