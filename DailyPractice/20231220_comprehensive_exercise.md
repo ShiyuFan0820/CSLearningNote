@@ -145,4 +145,11 @@ The machine has turned off.
 
 # Using Class to Complete the Exercise (updating)
 
+Collapse the chanllenge into small blocks:
+1. Define a menu class to store the coffee menu, including type, ingrediant, and cost of the coffee.
+2. Define a order class to take the user's order, and check whether the resources are sufficient, return `True` if there are enough ingredients, return `False` if not.
+3. Define a payment class to process the payment if the coffee can be made, let the user insert their coins, check whether they have inserted enough money, offer a change if they have inserted too much money, and cancel the order if the money is not enough. Add the successful payment to the profit.
+4. Define a coffee maker class to make the coffee if the payment is successfully paid, and deduct the relevant ingredients from the resources.
+5. Remember the scerect key words `off` and `report` that mentioned above.
+
 
