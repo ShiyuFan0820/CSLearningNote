@@ -159,10 +159,10 @@ class Menu:
     def __init__(self):
         self.m_menu = {} # Define a empty menu to store the added coffee.
 
-    def add_coffee(self, name, ingredients, cost, product):
+    def add_coffee(self, name, ingredients, cost, product): # When call this method and insert the parameter, the menu will update the drink automatically.
         self.m_menu[name] = {"ingredients": ingredients, "cost": cost, "product": product}
 
-    def list_item(self):
+    def list_item(self): # List the coffee in the menu in a format.
         list_coffee = ""
         for coffee in self.m_menu:
             list_coffee += "/" + coffee
