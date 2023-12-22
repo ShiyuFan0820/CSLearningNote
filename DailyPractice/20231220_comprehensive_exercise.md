@@ -146,7 +146,7 @@ The machine has turned off.
 # Using Class to Complete the Exercise (updating)
 
 Collapse the chanllenge into small blocks:
-1. Define a menu class to store the coffee menu, including type, ingrediant, and cost of the coffee, let the user insert their order, check whether their order is in the menu, return the drink if it is avaliable.
+1. Define a menu class to store the coffee menu, including type, ingrediant, and cost of the coffee, let the user insert their order, check whether their order is in the menu, return the drink if it is available.
 2. Define resources class to check whether the resources are sufficient, return `True` if there are enough ingredients, return `False` if not.
 3. Define a payment class to process the payment if the coffee can be made, let the user insert their coins, check whether they have inserted enough money, offer a change if they have inserted too much money, and cancel the order if the money is not enough. Add the successful payment to the profit.
 4. Define a coffee maker class to make the coffee if the payment is successfully paid, and deduct the relevant ingredients from the resources.
@@ -167,6 +167,13 @@ class Menu:
         for coffee in self.m_menu:
             list_coffee += "/" + coffee
         return list_coffee
+
+    def check_order(self, order): # Check whether user's order is in the menu.
+        for coffee in self.m_menu:
+            if order == coffee:
+                return "available"
+            else:
+                return "not available"
     
 
 # Define a Resources class:
