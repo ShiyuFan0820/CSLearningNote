@@ -156,15 +156,17 @@ Collapse the chanllenge into small blocks:
 ```py
 # Define a Menu class:
 class Menu:
-    def __init__(self, name, water, coffee, milk, cost, product):
-        self.m_name = name
-        self.m_cost = cost
-        self.m_product = product
-        self.m_ingredients = {
-            "water": water,
-            "coffee": coffee,
-            "milk": milk
-        }
+    def __init__(self):
+        self.m_menu = {} # Define a empty menu to store the added coffee.
+
+    def add_coffee(self, name, ingredients, cost, product):
+        self.m_menu[name] = {"ingredients": ingredients, "cost": cost, "product": product}
+
+    def list_item(self):
+        list_coffee = ""
+        for coffee in self.m_menu:
+            list_coffee += "/" + coffee
+        return list_coffee
     
 
 # Define a Resources class:
