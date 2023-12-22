@@ -165,7 +165,7 @@ class Menu:
     def list_item(self): # List the coffee in the menu in a format.
         list_coffee = ""
         for coffee in self.m_menu:
-            list_coffee += "/" + coffee
+            list_coffee += coffee + "/"
         return list_coffee
 
     def check_order(self, order): # Check whether user's order is in the menu.
