@@ -184,5 +184,13 @@ class Resources:
             "milk": 200,
             "coffee": 100,
         }
+
+    def is_enough(self, order):
+        for ingredient in self.m_resources:
+            if order["ingredients"][ingredient] > self.m_resources[ingredient]:
+                print(f"Sorry, the {ingredient} is not enough.")
+                return False
+            else:
+                return True
 ```
 
