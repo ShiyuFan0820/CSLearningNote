@@ -146,10 +146,34 @@ The machine has turned off.
 # Using Class to Complete the Exercise (updating)
 
 Collapse the chanllenge into small blocks:
-1. Define a menu class to store the coffee menu, including type, ingrediant, and cost of the coffee.
-2. Define a order class to take the user's order, and check whether the resources are sufficient, return `True` if there are enough ingredients, return `False` if not.
+1. Define a menu class to store the coffee menu, including type, ingrediant, and cost of the coffee, let the user insert their order, check whether their order is in the menu, return the drink if it is avaliable.
+2. Define resources class to check whether the resources are sufficient, return `True` if there are enough ingredients, return `False` if not.
 3. Define a payment class to process the payment if the coffee can be made, let the user insert their coins, check whether they have inserted enough money, offer a change if they have inserted too much money, and cancel the order if the money is not enough. Add the successful payment to the profit.
 4. Define a coffee maker class to make the coffee if the payment is successfully paid, and deduct the relevant ingredients from the resources.
 5. Remember the scerect key words `off` and `report` that mentioned above.
 
+**The code is:**
+```py
+# Define a Menu class:
+class Menu:
+    def __init__(self, name, water, coffee, milk, cost, product):
+        self.m_name = name
+        self.m_cost = cost
+        self.m_product = product
+        self.m_ingredients = {
+            "water": water,
+            "coffee": coffee,
+            "milk": milk
+        }
+    
+
+# Define a Resources class:
+class Resources:
+    def __init__(self):
+        self.m_resources = {
+            "water": 300,
+            "milk": 200,
+            "coffee": 100,
+        }
+```
 
