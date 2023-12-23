@@ -194,7 +194,7 @@ class Resources:
                 return True
 ```
 
-_**Issues:**_
+_**Issues Recorded:**_
 
 _**There are so many issues when I was writing the code, this is a difficult challenge for me, I recorded some of the issues below:**_
 
