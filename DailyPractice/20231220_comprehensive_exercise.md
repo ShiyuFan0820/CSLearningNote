@@ -157,24 +157,23 @@ Collapse the chanllenge into small blocks:
 # Define a Menu class:
 class Menu:
     def __init__(self):
-        self.m_menu = {} # Define a empty menu to store the added coffee.
+        self.m_menu = {}
 
-    def add_coffee(self, name, ingredients, cost, product): # When call this method and insert the parameter, the menu will update the drink automatically.
+    def add_coffee(self, name, ingredients, cost, product):
         self.m_menu[name] = {"ingredients": ingredients, "cost": cost, "product": product}
 
-    def list_item(self): # List the coffee in the menu in a format.
-        list_coffee = ""
+    def list_item(self):
+        options = ""
         for coffee in self.m_menu:
-            list_coffee += coffee + "/"
-        return list_coffee
+            options += coffee + "/"
+        return options
 
-    def check_item(self, order): # Check whether user's order is in the menu.
+    def check_item(self, order):
         for coffee in self.m_menu:
             if order == coffee:
                 return self.m_menu[coffee]
-            else:
-                return "not available"
-    
+        print(f"Sorry, the {order} is not available.")
+
 
 # Define a Resources class:
 class Resources:
@@ -184,14 +183,120 @@ class Resources:
             "milk": 200,
             "coffee": 100,
         }
+        self.m_unit = {
+            "water": "ml",
+            "milk": "ml",
+            "coffee": "g",
+        }
+
+    def report(self):
+        for ingredient in self.m_resources:
+            print(f"{ingredient}: {self.m_resources[ingredient]}{self.m_unit[ingredient]}")
 
     def is_enough(self, order):
+        can_make = True
         for ingredient in self.m_resources:
             if order["ingredients"][ingredient] > self.m_resources[ingredient]:
                 print(f"Sorry, the {ingredient} is not enough.")
-                return False
-            else:
-                return True
+                can_make = False
+        return can_make
+
+    def coffee_maker(self, order):
+        print(f"This is your {order_name} {order["product"]}, please enjoy!")
+        for ingredient in self.m_resources:
+            self.m_resources[ingredient] -= order["ingredients"][ingredient]
+
+
+class Payment:
+    def __init__(self):
+        self.m_profit = 0
+        self.m_money_inserted = 0
+        self.m_coin_values = {
+            "quarters": 0.25,
+            "dimes": 0.01,
+            "nickles": 0.05,
+            "pennies": 0.01,
+        }
+
+    def process_coins(self, order):
+        print(f"The price is ${order["cost"]}, please insert coins:")
+        for coin in self.m_coin_values:
+            self.m_money_inserted += float(input(f"How many {coin}?")) * self.m_coin_values[coin]
+        if self.m_money_inserted < order["cost"]:
+            print(f"The money you inserted is {self.m_money_inserted}, that's not enough money. Money refunded.")
+            return False
+        else:
+            print(f"Here is ${round(self.m_money_inserted - order["cost"], 2)} in change.")
+            self.m_profit += order["cost"]
+            return True
+
+    def report(self):
+        print(f"Money: ${self.m_profit}")
+
+
+coffee_menu = Menu()
+coffee_menu.add_coffee("espresso", {"water": 50, "coffee": 18, "milk": 0}, 1.5, "☕️")
+coffee_menu.add_coffee("latte", {"water": 200, "coffee": 24, "milk": 150}, 2.5, "🥤️")
+coffee_menu.add_coffee("cappuccino", {"water": 250, "coffee": 24, "milk": 100}, 3, "🍹️")
+list_coffee = coffee_menu.list_item()
+
+check_resources = Resources()
+
+payment = Payment()
+
+
+is_on = True
+while is_on:
+    order_name = input("What would you like?" + " " + list_coffee + ": ").lower()
+    if order_name == "report":
+        check_resources.report()
+        payment.report()
+    elif order_name == "off":
+        is_on = False
+        print("The machine is logged out.")
+    else:
+        check_order = coffee_menu.check_item(order_name)
+        if check_order != None:
+            is_sufficient = check_resources.is_enough(check_order)
+            if is_sufficient:
+                process_payment = payment.process_coins(check_order)
+                if process_payment:
+                    check_resources.coffee_maker(check_order)
+```
+
+**Run the code:**
+```py
+What would you like? espresso/latte/cappuccino/: report
+water: 300ml
+milk: 200ml
+coffee: 100g
+Money: $0
+What would you like? espresso/latte/cappuccino/: latte
+The price is $2.5, please insert coins:
+How many quarters?9
+How many dimes?9
+How many nickles?9
+How many pennies?9
+Here is $0.38 in change.
+This is your latte 🥤️, please enjoy!
+What would you like? espresso/latte/cappuccino/: cappuccino
+Sorry, the water is not enough.
+Sorry, the milk is not enough.
+What would you like? espresso/latte/cappuccino/: espresso
+The price is $1.5, please insert coins:
+How many quarters?12
+How many dimes?12
+How many nickles?12
+How many pennies?12
+Here is $5.22 in change.
+This is your espresso ☕️, please enjoy!
+What would you like? espresso/latte/cappuccino/: report
+water: 50ml
+milk: 50ml
+coffee: 58g
+Money: $4.0
+What would you like? espresso/latte/cappuccino/: off
+The machine is logged out.
 ```
 
 _**Issues Recorded:**_
@@ -209,5 +314,7 @@ _**1. For loop will end immediately then `return` is excuted:**_
 ```
 _**When I frist wrote the `check_item` methods, I set two `return` output under a if statement within a for loop, this caused I can only get the right output when I insert the first item in the `self.m_menu`.**_     
 _**For example, the items in the `self.m_menu` are `espresso/latte/cappuccino/`, if I input `latte`, the method will loop the `espresso` first, so the `order == coffee` is not matched, the `not available` will be returned, once the `return` is completed, the for loop will end, I will not get the output I want.**_
+
+
 
 
