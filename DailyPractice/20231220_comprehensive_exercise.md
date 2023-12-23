@@ -168,10 +168,10 @@ class Menu:
             list_coffee += coffee + "/"
         return list_coffee
 
-    def check_order(self, order): # Check whether user's order is in the menu.
+    def check_item(self, order): # Check whether user's order is in the menu.
         for coffee in self.m_menu:
             if order == coffee:
-                return "available"
+                return self.m_menu[coffee]
             else:
                 return "not available"
     
@@ -193,4 +193,21 @@ class Resources:
             else:
                 return True
 ```
+
+_**Issues:**_
+
+_**There are so many issues when I was writing the code, this is a difficult challenge for me, I recorded some of the issues below:**_
+
+_**1. For loop will end immediately then `return` is excuted:**_
+```py
+ def check_item(self, order):
+        for coffee in self.m_menu:
+            if order == coffee:
+                return self.m_menu[coffee]
+            else:
+                return "not available"
+```
+_**When I frist wrote the `check_item` methods, I set two `return` output under a if statement within a for loop, this caused I can only get the right output when I insert the first item in the `self.m_menu`.**_     
+_**For example, the items in the `self.m_menu` are `espresso/latte/cappuccino/`, if I input `latte`, the method will loop the `espresso` first, so the `order == coffee` is not matched, the `not available` will be returned, once the `return` is completed, the for loop will end, I will not get the output I want.**_
+
 
