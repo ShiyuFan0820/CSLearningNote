@@ -143,7 +143,7 @@ What would you like? (espresso/latte/cappuccino): off
 The machine has turned off.
 ```
 
-# Using Class to Complete the Exercise (updating)
+# Using Class to Complete the Exercise (Updated in 23/12/2023)
 
 Collapse the chanllenge into small blocks:
 1. Define a menu class to store the coffee menu, including type, ingrediant, and cost of the coffee, let the user insert their order, check whether their order is in the menu, return the drink if it is available.
