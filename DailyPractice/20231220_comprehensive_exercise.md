@@ -303,7 +303,7 @@ _**Issues Recorded:**_
 
 _**There are so many issues when I was writing the code, this is a difficult challenge for me, I recorded some of the issues below:**_
 
-_**1. For loop will end immediately then `return` is excuted:**_
+_**1. For loop will end immediately after `return` is excuted:**_
 ```py
  def check_item(self, order):
         for coffee in self.m_menu:
@@ -315,6 +315,6 @@ _**1. For loop will end immediately then `return` is excuted:**_
 _**When I frist wrote the `check_item` methods, I set two `return` output under a if statement within a for loop, this caused I can only get the right output when I insert the first item in the `self.m_menu`.**_     
 _**For example, the items in the `self.m_menu` are `espresso/latte/cappuccino/`, if I input `latte`, the method will loop the `espresso` first, so the `order == coffee` is not matched, the `not available` will be returned, once the `return` is completed, the for loop will end, I will not get the output I want.**_
 
-
-
+_**2. Try to put the constructors you want to call into one class:**_  
+_**When I collapsed the exercise into small blocks for the first time, I wanted to build the resouces class and the coffee maker class separately, however, I found it was hard to deduct the resources I already used to make coffee if I put them into two classes, so I adjusted my plan in the end, and in this way, the code performed better.**_
 
