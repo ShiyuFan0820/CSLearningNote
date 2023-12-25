@@ -48,6 +48,7 @@ class Human():
         self.m_pets = animals
         for animal in animals:
             print(f"{self.m_name}, is adopting a {animal.m_type}, named {animal.m_name}.")
+        print("\n")
         
         
     def walk(self, new_position):
@@ -55,16 +56,19 @@ class Human():
         self.m_position = new_position
         for animal in self.m_pets:
             animal.walk(new_position)
+        print("\n")
             
     def swim(self, new_position):
         for animal in animals:
             print(f"{self.m_name} took {animal.m_name} to swim.")
             animal.swim(new_position)
+        print("\n")    
             
     def poo_poo(self, new_position):
         for animal in animals:
             print(f"{self.m_name} took {animal.m_name} to poop.")
             animal.poo_poo(new_position)
+        print("\n")
             
 
 pig = Pig("Xixi", [2, 1], "🐷")
@@ -85,16 +89,22 @@ Ariel born at position [7, 7].
 Fanfan, is adopting a 🐷, named Xixi.
 Fanfan, is adopting a 🦎, named Koko.
 Fanfan, is adopting a 🐟, named Ariel.
+
+
 Fanfan moved from [1, 1] to [6, 1]
 Xixi moved from [2, 1] to [6, 1].
 Koko is a komodo dragon 🦎, don't try to walk it, it will eat you alive!
 Ariel is a fish 🐟 and cannot walk!
+
+
 Fanfan took Xixi to swim.
 Xixi is a pig 🐷, and cannot swim!
 Fanfan took Koko to swim.
 Koko swam from [2, 3] to [8, 1].
 Fanfan took Ariel to swim.
 Ariel swam from [7, 7] to [8, 1].
+
+
 Fanfan took Xixi to poop.
 Xixi went to [12, 12] to poop.
 Fanfan took Koko to poop.
