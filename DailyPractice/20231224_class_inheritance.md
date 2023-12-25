@@ -2,8 +2,8 @@
 
 **Exercise: Me and My Cute Pets**
 
-1. Given an Animal class, add pets you want to keep to the animal class code (Use inheritance).
-2. Define different methods for different pets.
+1. Given an Animal class, inheritanting the Animal class by pets you want to keep.
+2. Redefine the methods in the Animal class if the pets are not suitable for the original version.
 3. Define a Human class to adopt the animals.
 
 **The code is:**
