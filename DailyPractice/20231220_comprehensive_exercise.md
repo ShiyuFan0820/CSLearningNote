@@ -322,5 +322,10 @@ _**When I collapsed the exercise into small blocks for the first time, I wanted 
 
 **The code is:**
 ```py
-
+class Coffee:
+def __init__(self, name, ingredients, cost, product):
+    self.m_name = name
+    self.m_ingredients = ingredients
+    self.m_cost = cost
+    self.m_product
 ```
