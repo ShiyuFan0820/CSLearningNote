@@ -318,14 +318,4 @@ _**For example, the items in the `self.m_menu` are `espresso/latte/cappuccino/`,
 _**2. Try to put the constructors you want to call into one class:**_  
 _**When I collapsed the exercise into small blocks for the first time, I wanted to build the resouces class and the coffee maker class separately, however, I found it was hard to deduct the resources I already used to make coffee if I put them into two classes, so I adjusted my plan in the end, and in this way, the code performed better.**_
 
-# Use Inheritance to Define Coffee Class
 
-**The code is:**
-```py
-class Coffee:
-def __init__(self, name, ingredients, cost, product):
-    self.m_name = name
-    self.m_ingredients = ingredients
-    self.m_cost = cost
-    self.m_product
-```
