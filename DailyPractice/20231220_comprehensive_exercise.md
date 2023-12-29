@@ -151,6 +151,7 @@ Collapse the chanllenge into small blocks:
 3. Define a payment class to process the payment if the coffee can be made, let the user insert their coins, check whether they have inserted enough money, offer a change if they have inserted too much money, and cancel the order if the money is not enough. Add the successful payment to the profit.
 4. Define a coffee maker method to make the coffee if the payment is successfully paid, and deduct the relevant ingredients from the resources.
 5. Remember the secret key words `off` and `report` that mentioned above.
+6. Modified the `Resources` class to be able to custom initial resources and can add resources during coffee making.
 
 **The code is:**
 ```py
@@ -177,17 +178,30 @@ class Menu:
 
 # Define a Resources class:
 class Resources:
-    def __init__(self):
+    def __init__(self, water, milk, coffee):
         self.m_resources = {
-            "water": 300,
-            "milk": 200,
-            "coffee": 100,
+            "water": water,
+            "milk": milk,
+            "coffee": coffee,
         }
         self.m_unit = {
             "water": "ml",
             "milk": "ml",
             "coffee": "g",
         }
+
+    def add_resource(self):
+        water = int(input("How much water you want to add? "))
+        milk = int(input("How much milk you want to add? "))
+        coffee = int(input("How much coffee you want to add? "))
+        add_ingredients = {
+            "water": water,
+            "milk": milk,
+            "coffee": coffee
+        }
+        for ingredient in self.m_resources:
+            self.m_resources[ingredient] += add_ingredients[ingredient]
+
 
     def report(self):
         for ingredient in self.m_resources:
@@ -240,7 +254,7 @@ coffee_menu.add_coffee("latte", {"water": 200, "coffee": 24, "milk": 150}, 2.5, 
 coffee_menu.add_coffee("cappuccino", {"water": 250, "coffee": 24, "milk": 100}, 3, "🍹️")
 list_coffee = coffee_menu.list_item()
 
-check_resources = Resources()
+check_resources = Resources(300, 300, 100)
 
 payment = Payment()
 
@@ -251,6 +265,8 @@ while is_on:
     if order_name == "report":
         check_resources.report()
         payment.report()
+    elif order_name == "add":
+        check_resources.add_resource()
     elif order_name == "off":
         is_on = False
         print("The machine is logged out.")
