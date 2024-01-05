@@ -27,7 +27,7 @@ Create a new directory `Output`, and create a new directory in the `Output` call
 </div>
 
 ```py
-# Create a "main.py" python file to write the code
+# Create a "main.py" python file to write the code, The path of it is the same with the "Input" and "Output".
 NAME = "[name]"
 
 with open("Input/Names/Invited_names.txt") as name_file: # Directory "Input" and the "main.py" are under the same directory the "./" can be omitted.
