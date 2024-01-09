@@ -51,7 +51,7 @@ Push status:
 _When the program starts executing the `main` method will always be invoked first, some memory from the stack will be allocated to it, also the local variables inside the main block will get some amount of memory according to their data type, this memory areas is called stack frame, when the `main` calls `m` which is equal to `Multiply` method, the stack frame for the function `Multiply` gets created:_
 
 <div align=center>
-<img width="420" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/a9cf4cd4-d04b-4373-aa63-68fabd23bc11">
+<img width="250" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/a9cf4cd4-d04b-4373-aa63-68fabd23bc11">
 </div>
 
 Pop status:
@@ -59,27 +59,22 @@ Pop status:
 _When the function `Multiply` reaches the end of the code, the function `Multiply` will get poped out of the stack and return a value, and similarly when it reaches the end of the `main` block, it will also get popped out from the stack and the console will print the returned value `6`:_
 
 <div align=center>
-<img width="420" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ae4c7dde-fd62-48ad-ac94-77e8d3e25e76">
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ae4c7dde-fd62-48ad-ac94-77e8d3e25e76">
 </div>
 
 <div align=center>
-<img width="420" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/727d0305-6e3c-48d5-9068-dc4c215bd460">
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/727d0305-6e3c-48d5-9068-dc4c215bd460">
 </div>
-
-
-
-
-
 
 ## What is Memory Heap and How it Operates
 
-We already know that values and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, values in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all values are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access the values in this particular order, so if we want to access values by multiple threads (call values anywhere in the program) we also need to store them in memory heap, it's more flexiable than memory stack.
+We already know that arguments and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, arguments and variables in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all arguments and variables are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access them in this particular order, so if we want to access arguments and variables by multiple threads (call arguments and variables anywhere in the program) we also need to store them in memory heap, it's more flexiable than memory stack.
 
 ## Stack Overflow
 
 As mentioned before, the size of the stack has a fixed upper limit, this is defined when the program starts up. When we supass the limit in stack while running the program, we will get the stack overflow error. For example if we write a infinite recursive code, then memory stack could grow as the code executes, once we exhaust the limit, stack overflow will occur.
 
-Something similar to stack overflow also happens in memory heap, it's called out of memory. Memory heap doesn't have a upper limit, but if you forget to delete the values manually, this part of memory could not be freed, causing memory leak, once you run out of the physical memory availalbe, the program could crash and stop.
+Something similar to stack overflow also happens in memory heap, it's called out of memory. Memory heap doesn't have a upper limit, but if you forget to delete the arguments and variables manually, this part of memory could not be freed, causing memory leak, once you run out of the physical memory availalbe, the program could crash and stop.
 
 ## Memory Stack vs Memory Heap
 
