@@ -6,8 +6,46 @@ When the program is running, data must be stored in memory temporaril. How much 
 
 Memory stack is one of the memory regions to store information temporarily when the program is running. Memory stack has two operations -- push and pop. Push is that when has a chains of function calls, a stack frame will be created for each function, the arguments and variables inside the stack must have it's size known at compile time and follow the rules of FILO (first in last out) or LIFO (last in first out). When a function returns, the stack frame will be popped off and end the function, all values will be destoryed, this means in stack the cleanup is automatic when the function returns the value. The size of the stack is daynamic but it has a fixed upper limit.
 
-To show how memory stack operates there is an example: 
+**Example of  FILO (first in last out) or LIFO (last in first out):**
 
+When we define 3 variables, they will be pushed into a memory stack, the first variable defined will be at the bottom of the stack.
+
+_The defined variables:_
+```c
+a = 1
+b = 2
+c = 3
+```
+_Push them into a memory stack:_
+
+<div align=center>
+<img width="490" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/1d7901b1-8524-481d-aac6-ac9491e38ed8">
+</div>
+
+_Popped out when values returned, the last one pushed, the first one out:_
+
+<div align=center>
+<img width="490" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ca163a3d-f8a7-40da-952f-a0824a54529c">
+</div>
+
+**To show how memory stack operates there is an example (C++):** 
+```c
+#include<stdio.h>
+
+int Multiply(int n1, int n2)
+{
+  return n1*n2;
+}
+
+int main()
+{
+  int x = 2;
+  int y = 3;
+  int m = Multiply(x, y);
+  printf("%d", m);
+  return 0;
+}
+```
 
 ## What is Memory Heap and How it Operates
 
