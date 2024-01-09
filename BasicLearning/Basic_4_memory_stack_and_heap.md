@@ -11,7 +11,7 @@ To show how memory stack operates there is an example:
 
 ## What is Memory Heap and How it Operates
 
-We already know that values and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, values in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all values are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access the values in this particular order, so if we want to access values by multiple threads we also need to store them in memory heap.
+We already know that values and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, values in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all values are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access the values in this particular order, so if we want to access values by multiple threads (call values anywhere in the program) we also need to store them in memory heap.
 
 ## Stack Overflow
 
