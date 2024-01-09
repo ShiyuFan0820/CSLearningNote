@@ -11,13 +11,13 @@ To show how memory stack operates there is an example:
 
 ## What is Memory Heap and How it Operates
 
-We already know that values and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, values in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all values are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access the values in this particular order, so if we want to access values by multiple threads (call values anywhere in the program) we also need to store them in memory heap.
+We already know that values and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, values in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all values are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access the values in this particular order, so if we want to access values by multiple threads (call values anywhere in the program) we also need to store them in memory heap, it's more flexiable than memory stack.
 
 ## Stack Overflow
 
-As mentioned before, the size of the stack has a fixed upper limit, this is defined when the program starts up, when we supass the limit in stack while running the program, we will get the stack overflow error.
+As mentioned before, the size of the stack has a fixed upper limit, this is defined when the program starts up. When we supass the limit in stack while running the program, we will get the stack overflow error. For example if we write a infinite recursive code, then memory stack could grow as the code executes, once we exhaust the limit, stack overflow will occur.
 
-Stack overflow can also happen in memory heap, although memory heap is more flexiable than stack.
+Something similar to stack overflow also happens in memory heap, it's called out of memory. Memory heap doesn't have a upper limit, but if you forget to delete the values manually, this part of memory could not be freed, causing memory leak, once you run out of the physical memory availalbe, the program could crash and stop.
 
 ## Memory Stack vs Memory Heap
 
