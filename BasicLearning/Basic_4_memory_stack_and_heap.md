@@ -4,6 +4,7 @@ When the program is running, data must be stored in memory. How much memory a pi
 
 ## What is Memory Stack and How it Operates
 
+Memory stack is one of the memory regions to store information temporarily when the program is running. Memory stack has two operations -- push and pop, push is that when have a chains of function calls, stack frame will be created for each functions, the arguments and viariables inside the stack must have it's size known at compile time and follow the rules of FILO (first in last out) or LIFO (last in first out). 
 
 ## What is Memory Heap and How it Operates
 
