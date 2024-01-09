@@ -68,7 +68,7 @@ _When the function `Multiply` reaches the end of the code, the function `Multipl
 
 ## What is Memory Heap and How it Operates
 
-We already know that arguments and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, arguments and variables in heap will not be destoryed automatically, it's manually. And we also know that in stack frame, all arguments and variables are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access them in this particular order, so if we want to access arguments and variables by multiple threads (call arguments and variables anywhere in the program) we also need to store them in memory heap, it's more flexiable than memory stack.
+We already know that arguments and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, arguments and variables in heap will not be destoryed automatically, it's manually, the lifetime of the data in memory heap is determined by the programmer. And we also know that in stack frame, all arguments and variables are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access them in this particular order which slow down the accessing speed, so if we want to access arguments and variables by multiple threads (call arguments and variables anywhere in the program) we also need to store them in memory heap, it's more flexiable than memory stack. And it's size is not fixed, it can vary during the run time of a program.
 
 ## Stack Overflow
 
