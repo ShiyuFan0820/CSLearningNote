@@ -1,10 +1,10 @@
 # Memory Stack and Heap
 
-When the program is running, data must be stored in memory temporarily. How much memory a piece of data requires, where it is stored, and how it is stored all depend on the type of data. The running program uses two memory regions to store data -- memory stack and memory heap.
+When the program is running, data must be stored in memory temporarily. How much memory a piece of data requires, where it is stored, and how it is stored all depend on the type of data. In memory management there are two memory areas to store data -- memory stack and memory heap.
 
 ## What is Memory Stack and How it Operates
 
-Memory stack is one of the memory regions to store information temporarily when the program is running. Memory stack has two operations -- push and pop. Push is that when has a chains of function calls, a stack frame will be created for each function, the arguments and variables inside the stack must have it's size known at compile time and follow the rules of FILO (first in last out) or LIFO (last in first out). When reaches the end of the function, the stack frame will be popped out, the function will be end and return the values, all variables will be destoryed, this means in stack the cleanup is automatic when the function returns the value. The size of the stack is daynamic but it has a fixed upper limit.
+Memory stack is one of the memory areas to store information temporarily when the program is running. Memory stack has two operations -- push and pop. Push is that when has a chains of function calls, a stack frame will be created for each function, the new frame will be added on the top of the previous frame, the arguments and variables inside the stack must have it's size known at compile time and follow the rules of FILO (first in last out) or LIFO (last in first out). When the function completes, it's stack frame will be popped out, this means in stack the cleanup is automatic when the function returns the values. The size of the stack is daynamic but it has a fixed upper limit which is predefined at compile time.
 
 **Example of  FILO (first in last out) or LIFO (last in first out):**
 
@@ -48,7 +48,7 @@ int main()
 ```
 Push status:
 
-_When the program starts executing the `main` method will always be invoked first, some memory from the stack will be allocated to it, also the local variables inside the main block will get some amount of memory according to their data type, this memory areas is called stack frame, when the `main` calls `m` which is equal to `Multiply` method, the stack frame for the function `Multiply` gets created:_
+_When the program starts executing the `main` method will always be invoked first, some memory from the stack will be allocated to it, also the local variables inside the `main` block will get some amount of memory according to their data type, this memory areas is called stack frame, when the `main` calls `m` which is equal to `Multiply` method, the stack frame for the function `Multiply` gets created:_
 
 <div align=center>
 <img width="250" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/a9cf4cd4-d04b-4373-aa63-68fabd23bc11">
@@ -68,9 +68,11 @@ _When the function `Multiply` reaches the end of the code, the function `Multipl
 
 ## What is Memory Heap and How it Operates
 
-We already know that arguments and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, arguments and variables in heap will not be destoryed automatically, it's manually, the lifetime of the data in memory heap is determined by the programmer. And we also know that in stack frame, all arguments and variables are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access them in this particular order we can't access them anywhere during the runtime, so if we want to access arguments and variables by multiple threads, we also need to store them in memory heap, it's more flexiable than memory stack. And it's size is not fixed, it can vary during the runtime of a program.
+In memory management, the "heap" refers to a region of a computer's memory that is used for dynamic memory allocation, it's different from the heap data structure, it's not an implementation of the heap data structure, it's only used for large free pool of memory.
 
-Memory heap has two operators, which are `new` and `delete`. When we want to create a variable and to store it in the memory heap, we use the keyword `new`, the memory will be allocated on the heap to store the variables and a pointer will point to the address on the heap, the address is randomly allocated, we can ask as many memories as we want as long as we don't run out of the memory on the system itself. The data will not be cleaned up untill we call the keyword `delete`.
+To use memory heap in program in C++, we need to define a local variable in main using the keyward "new", this will allocate a memory in heap to store the value of the variable, and return a pointer to the variable, the pointer points to the starting address on heap. As long as we keep the pointer variable, the value will not be cleared. If we are done using the value, we can use the keyword "delete" to deallocate the memory.
+
+The only way to use memory on heap is through reference, it's like you write a directory (function) with many chapters (variables), each chapter (variable) has it's own content (value or data) stored in the book (heap) , you can access the content (value or data) by the page number (pointer points to a address) linked with the chapter (variables).
 
 **To show how memory heap operates here is an example (C++):** 
 ```c
@@ -103,13 +105,13 @@ int main() {
 ```
 "new" status:
 
-_When invoke the `main` method, the integer `a` will be stored on the memory stack, when call `new` to allocate a memory to `hp` on heap, a pointer will point to a random address on the heap, which is the same for `ht`:_
+_When invoke the `main` method, the integer `a` will be stored on the memory stack, when call `new` the memory is allocated to `hp` to store data and return the address to the pointer `hp`, which is the same for `ht`:_
 
 <div align=center>
 <img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/779554ab-ac9d-4931-9fa6-e9a55c873a4e">
 </div>
 
-_If we don't call the `delete`, the data will not be deleted on the heap:_
+_If we don't call the `delete`, the data will not be deleted on the heap, this piece of memory will still be occupied:_
 
 <div align=center>
 <img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/c2dfb406-32b7-4f98-8e10-731442afa96d">
@@ -122,9 +124,6 @@ _Once the `delete` is called the `ht` and `hp` will be destoryed, the memories p
 <div align=center>
 <img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ba80ba4f-385b-4444-823b-654acf81f42a">
 </div>
-
-
-
 
 ## Stack Overflow
 
