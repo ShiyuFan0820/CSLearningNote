@@ -63,7 +63,7 @@ _When the function `Multiply` reaches the end of the code, the function `Multipl
 </div>
 
 <div align=center>
-<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/727d0305-6e3c-48d5-9068-dc4c215bd460">
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/156e3888-1060-4737-9827-4f81cb37ad15">
 </div>
 
 ## What is Memory Heap and How it Operates
