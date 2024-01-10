@@ -68,7 +68,63 @@ _When the function `Multiply` reaches the end of the code, the function `Multipl
 
 ## What is Memory Heap and How it Operates
 
-We already know that arguments and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, arguments and variables in heap will not be destoryed automatically, it's manually, the lifetime of the data in memory heap is determined by the programmer. And we also know that in stack frame, all arguments and variables are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access them in this particular order which slow down the accessing speed, so if we want to access arguments and variables by multiple threads (call arguments and variables anywhere in the program) we also need to store them in memory heap, it's more flexiable than memory stack. And it's size is not fixed, it can vary during the run time of a program.
+We already know that arguments and variables will be deleted when a function return values in memory stack, to prevent them to be deleted we need to store them in memory heap, arguments and variables in heap will not be destoryed automatically, it's manually, the lifetime of the data in memory heap is determined by the programmer. And we also know that in stack frame, all arguments and variables are follow the rules of FILO (first in last out) or LIFO (last in first out), this means we have to access them in this particular order we can't access them anywhere during the runtime, so if we want to access arguments and variables by multiple threads, we also need to store them in memory heap, it's more flexiable than memory stack. And it's size is not fixed, it can vary during the runtime of a program.
+
+Memory heap has two operators, which are `new` and `delete`. When we want to create a variable and to store it in the memory heap, we use the keyword `new`, the memory will be allocated on the heap to store the variables and a pointer will point to the address on the heap, the address is randomly allocated, we can ask as many memories as we want as long as we don't run out of the memory on the system itself. The data will not be cleaned up untill we call the keyword `delete`.
+
+**To show how memory heap operates here is an example (C++):** 
+```c
+#include <iostream>
+
+int main() {
+    
+    int a = 5;
+    
+    std::cout << "a:"<<a<<std::endl;
+
+    int *hp = new int(3);
+    std::cout << "hp heap memory address:"<<hp<<std::endl;
+    std::cout << "hp heap value:"<<*hp<<std::endl;
+
+    int *ht = new int(4);
+    std::cout << "ht heap memory address:"<<ht<<std::endl;
+    std::cout << "ht heap value:"<<*ht<<std::endl;
+
+    delete hp;
+    std::cout << "hp heap memory address:"<<hp<<std::endl;
+    std::cout << "hp heap value:"<<*hp<<std::endl;
+
+    delete ht;
+    std::cout << "ht heap memory address:"<<ht<<std::endl;
+    std::cout << "ht heap value:"<<*ht<<std::endl;
+
+    return 0;
+}
+```
+"new" status:
+
+_When invoke the `main` method, the integer `a` will be stored on the memory stack, when call `new` to allocate a memory to `hp` on heap, a pointer will point to a random address on the heap, which is the same for `ht`:_
+
+<div align=center>
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/779554ab-ac9d-4931-9fa6-e9a55c873a4e">
+</div>
+
+_If we don't call the `delete`, the data will not be deleted on the heap:_
+
+<div align=center>
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/c2dfb406-32b7-4f98-8e10-731442afa96d">
+</div>
+
+"delete" status:
+
+_Once the `delete` is called the `ht` and `hp` will be destoryed, the memories pointed by the pointers will be deallocated, when you access the address again the value in the address is random:_
+
+<div align=center>
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ba80ba4f-385b-4444-823b-654acf81f42a">
+</div>
+
+
+
 
 ## Stack Overflow
 
