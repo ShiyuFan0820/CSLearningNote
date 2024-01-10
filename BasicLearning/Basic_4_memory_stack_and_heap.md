@@ -134,4 +134,10 @@ Something similar to stack overflow also happens in memory heap, it's called out
 
 ## Memory Stack vs Memory Heap
 
+ | Memory Region| Size | Lifetime | Cleanup | Access Speed | Thread |
+ | :-----: | :------: | :------: | :-------: | :--------: | :-----: |
+ | Memory Stack |  Predefined and have a fixed upper limit| Lifetime of function|   Automatically clean up when reach the end of the function | Relatively fast|Accessed by single thread|
+ | Memory Heap  | Dynamic|    Determined by programmer     |     Manually    | Relatively slow |Accessed by multiple threads|
+
+
 
