@@ -20,3 +20,13 @@
 5. Check if the name in the name data file, if it is, show the corresponding position on the map and add one score to the total score.
 
 **The code is:**
+```py
+
+```
+
+_**Issues Recorded:**_
+
+_1. The hardest part is how to get the coridnations of all provinces on the turtle screen._
+
+
+   
