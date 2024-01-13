@@ -21,14 +21,109 @@
 
 **The code is:**
 ```py
+# Get the cordinations of all provinces:
+from turtle import Turtle, Screen
+## Create a screen and set the bg to an empty map
+screen = Screen()
+screen.setup(width=900, height=800)
+screen.title("Map Game")
+screen.bgpic("blank_map.png")
 
+
+## Get the cordinations of the provinces by click the position on the map
+def get_cor_on_click(x, y):
+    print(x, y)
+
+
+screen.onscreenclick(get_cor_on_click)
+screen.mainloop()
+
+## Convert the positions of provinces into CSV file.
+import pandas
+
+data_dict = {
+    "Province": ["Xinjiang",
+                 "Xizang",
+                 "Qinghai",
+                 "Gansu",
+                 "Sichuan",
+                 "Yunnan",
+                 "Inner Mongolia",
+                 "Ningxia",
+                 "Shanxi",
+                 "Chongqing",
+                 "Guizhou",
+                 "Guangxi",
+                 "Hainan",
+                 "Guangdong",
+                 "Hongkong",
+                 "Macao",
+                 "Hunan",
+                 "Hubei",
+                 "Henan",
+                 "Shanxi",
+                 "Hebei",
+                 "Beijing",
+                 "Tianjin",
+                 "Shandong",
+                 "Jiangsu",
+                 "Shanghai",
+                 "Anhui",
+                 "Zhejiang",
+                 "Jiangxi",
+                 "Fujian",
+                 "Taiwan",
+                 "Liaoning",
+                 "Jilin",
+                 "Heilongjiang"
+                 ],
+    "Position": [
+        (-196, 121),
+        (-190, -52),
+        (-92, 14),
+        (-84, 82),
+        (-15, -73),
+        (-41, -180),
+        (68, 93),
+        (26, 28),
+        (64, -12),
+        (42, -97),
+        (30, -148),
+        (48, -191),
+        (74, -265),
+        (124, -196),
+        (134, -218),
+        (114, -226),
+        (98, -131),
+        (105, -79),
+        (117, -30),
+        (96, 31),
+        (135, 45),
+        (142, 97),
+        (151, 73),
+        (165, 19),
+        (190, -26),
+        (217, -66),
+        (163, -57),
+        (204, -97),
+        (152, -127),
+        (183, -151),
+        (227, -181),
+        (211, 113),
+        (243, 152),
+        (261, 213)
+    ]
+}
+
+province_data = pandas.DataFrame(data_dict)
+province_data.to_csv("province_data.csv")
 ```
 
 _**Issues Recorded:**_
 
 _1. The hardest part is how to get the coridnations of all provinces on the turtle screen._  
 
-_Using the build-in function `onscreenclick` in turtle to print the cordinations and collect the data as a CSV file.
+_Using the build-in function `onscreenclick` in turtle to print the cordinations and collect the data as a CSV file._
 
 
    
