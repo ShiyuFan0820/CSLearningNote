@@ -26,7 +26,9 @@
 
 _**Issues Recorded:**_
 
-_1. The hardest part is how to get the coridnations of all provinces on the turtle screen._
+_1. The hardest part is how to get the coridnations of all provinces on the turtle screen._  
+
+_Using the build-in function `onscreenclick` in turtle to print the cordinations and collect the data as a CSV file.
 
 
    
