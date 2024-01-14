@@ -108,13 +108,13 @@ int main() {
 _When invoke the `main` method, the integer `a` will be stored on the memory stack, when call `new` the memory is allocated to `hp` to store data and return the address to the pointer `hp`, which is the same for `ht`:_
 
 <div align=center>
-<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/779554ab-ac9d-4931-9fa6-e9a55c873a4e">
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/72e01ece-285a-47a1-b120-836f039ad861">
 </div>
 
 _If we don't call the `delete`, the data will not be deleted on the heap, this piece of memory will still be occupied:_
 
 <div align=center>
-<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/c2dfb406-32b7-4f98-8e10-731442afa96d">
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/7a6aa9ef-6bbb-4896-a880-c78009f5d97c">
 </div>
 
 "delete" status:
@@ -122,7 +122,7 @@ _If we don't call the `delete`, the data will not be deleted on the heap, this p
 _Once the `delete` is called the `ht` and `hp` will be destoryed, the memories pointed by the pointers will be deallocated, when you access the address again the value in the address is random:_
 
 <div align=center>
-<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ba80ba4f-385b-4444-823b-654acf81f42a">
+<img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/ba80ba4f-385b-4444-823b-654acf81f42a">
 </div>
 
 ## Stack Overflow
