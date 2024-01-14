@@ -4,7 +4,10 @@ Array and linked list are both data structures used to store and organize elemen
 
 ## What is Array and How it Operates?
 
-Array is List in Python, vector in C++, and ArrayList in Java.
+Array is List in Python, vector in C++, and ArrayList in Java. It is a contiguous block of memory where elements are stored, and can be access using an index or key.
+
+
+
 
 
 
