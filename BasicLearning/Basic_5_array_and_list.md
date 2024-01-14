@@ -1,1 +1,1 @@
-# Arrary and List
+# Array and List
