@@ -4,6 +4,7 @@ Array and linked list are both data structures used to store and organize elemen
 
 ## Array 
 
+Array is List in Python, vector in C++, and ArrayList in Java.
 
 ## Linked List
 
