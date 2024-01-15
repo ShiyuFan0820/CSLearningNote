@@ -24,7 +24,7 @@ In this situation we also need to shift elements, the time is O(n).
 3. When insert an element at the end of an array.  
 If there is space in the array, we just add the element to the next higher index of the array, so the time is O(1), if the array is full we have to create a new array and copy all the previous elements to the new array, the time is O(n).
 
-**For Example:**  
+**Example**  
 If we wanted to store a string of integers in an array, it would look like this in memory:
 
 <div align=center>
@@ -37,6 +37,7 @@ Assuming that the address of the first element is 200, if we want to calculate t
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/f6c265a1-e92f-42ba-9193-e570e3bc3eb9">
 </div>
 
+**Simulate the Operations of Array and Write a Array Class in Python**
 
 
 
