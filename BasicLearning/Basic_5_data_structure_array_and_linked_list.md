@@ -72,6 +72,15 @@ class Array:
             if ele is not None:
                 array_result += str(ele) + ","
         print(array_result)
+
+
+array = Array()
+array.add(1)
+array.add(1)
+array.delete(0)
+array.add(2)
+array.add(2)
+array.size()
 ```
 
 
