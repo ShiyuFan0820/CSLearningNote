@@ -15,8 +15,8 @@ Elements in array can be accessed in constant time O(1)<sup>*note</sup> since el
 _*note: Big O notation `O(n)` is Linear Time Complexity, `n` is the total input, the time complexity of an algorithm is directly proportional to the size of the input, as the input size grows, the time taken by the algorithm also grows linearly. For example, doubling the input size of an algorithm, would roughly double the time it takes to excute the algorithm._
 
 **Insertion and Deletion:**  
-1. When insert an element at the beginning of an array. 
- In this situation we need to shift each element by one position towards the higher index, so the time taken will be proportional to the size of the array, it is time O(n).
+1. When insert an element at the beginning of an array.  
+In this situation we need to shift each element by one position towards the higher index, so the time taken will be proportional to the size of the array, it is time O(n).
 
 2. When insert an element in the middle of an array.  
 In this situation we also need to shift elements, the time is O(n).
