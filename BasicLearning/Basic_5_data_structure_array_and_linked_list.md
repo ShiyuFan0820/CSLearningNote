@@ -38,7 +38,41 @@ Assuming that the address of the first element is 200, if we want to calculate t
 </div>
 
 **Simulate the Operations of Array and Write a Array Class in Python**
+```py
+class Array:
+    def __init__(self):
+        self.m_array = [None] * 4
+        self.m_size = 0
 
+    def add(self, val):
+        if self.m_size > len(self.m_array):
+            new_array = [None] * (len(self.m_array) * 2)
+            for index in range(len(self.m_array)):
+                new_array[index] = self.m_array[index]
+            self.m_array = new_array
+        self.m_array[self.m_size] = val
+        self.m_size += 1
+        self.print_array()
+
+    def delete(self, idx):
+        self.m_array[idx] = None
+        self.m_size -= 1
+        self.print_array()
+
+    def get(self, idx):
+        get_ele = self.m_array[idx]
+        print(f"The element of index {idx} is {get_ele}.")
+
+    def size(self):
+        print(f"The total size of the array is {len(self.m_array)}, the size being used now is {self.m_size}.")
+
+    def print_array(self):
+        array_result = ""
+        for ele in self.m_array:
+            if ele is not None:
+                array_result += str(ele) + ","
+        print(array_result)
+```
 
 
 ## What is Linked List and How it Operates?
