@@ -19,7 +19,7 @@ _*note: Big O notation `O(n)` is Linear Time Complexity, `n` is input, the time 
 
 2. When insert an element in the middle of an array.  
 
-3.When insert an element at the end of an array.  
+3. When insert an element at the end of an array.  
 
 
 ## What is Linked List and How it Operates?
