@@ -15,7 +15,11 @@ Elements in array can be accessed in constant time O(1)<sup>*note</sup> since el
 _*note: Big O notation `O(n)` is Linear Time Complexity, `n` is input, the time complexity of an algorithm is directly proportional to the size of the input, as the input size grows, the time taken by the algorithm also grows linearly. For example, doubling the input size of an algorithm, would roughly double the time it takes to excute the algorithm._
 
 **Insertion and Deletion:**  
+1. When insert an element at the beginning of an array.  
 
+2. When insert an element in the middle of an array.  
+
+3.When insert an element at the end of an array.  
 
 
 ## What is Linked List and How it Operates?
