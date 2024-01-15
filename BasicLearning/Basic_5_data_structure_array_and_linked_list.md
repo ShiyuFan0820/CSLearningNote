@@ -4,11 +4,16 @@ Array and linked list are both data structures used to store and organize elemen
 
 ## What is Array and How it Operates?
 
+**Definition:**  
 Array is List in Python, vector in C++, and ArrayList in Java. It is a contiguous block of memory where elements are stored, and can be access using an index or key.
 
+**Memory Allocation:**  
+In array, memory is allocated statically or dynamically, the size of the array is fixed during declaration and can be resized during runtime if we want to add new element in the array when the memory in array has run out.
 
+**Access Time:**  
+Elements in array can be accessed in constant time O(1)<sup>*note</sup> since elements are stored in contiguous block.
 
-
+_*note: Big O notation `O(n)` is Linear Time Complexity, `n` is input, the time complexity of an algorithm is directly proportional to the size of the input, as the input size grows, the time taken by the algorithm also grows linearly. For example, doubling the input size of an algorithm, would roughly double the time it takes to excute the algorithm._
 
 
 ## What is Linked List and How it Operates?
