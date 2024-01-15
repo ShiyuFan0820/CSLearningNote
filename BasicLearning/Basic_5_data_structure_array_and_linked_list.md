@@ -7,7 +7,7 @@ Array and linked list are both data structures used to store and organize elemen
 Array is List in Python, vector in C++, and ArrayList in Java. It is a contiguous block of memory heap where elements are stored, and can be access using an index or key. 
 
 **Memory Allocation:**  
-In array, memory is allocated statically or dynamically, the size of the array is fixed during declaration and can be resized during runtime if we want to add new element in the array when the memory in array has run out.
+In array, memory is allocated statically or dynamically, the size of the array is fixed during declaration and can be resized during runtime if we want to add new element in the array. But because the memory allocated is a contiguous block, if the size of elements in array surpass the available contiguous memory, the out of memory error will occur.
 
 **Access Time:**  
 Elements in array can be accessed in constant time O(1)<sup>*note</sup> since elements are stored in contiguous block, we can randomly access the address of any element as long as we know the address of the head element.
