@@ -42,29 +42,50 @@ Assuming that the address of the first element is 200, if we want to calculate t
 class Array:
     def __init__(self):
         self.m_array = [None] * 4
-        self.m_size = 0
+        self.used_size = 0
+        self.count_idx = 0
+        self.m_delete_idx = ""
 
     def add(self, val):
-        if self.m_size > len(self.m_array):
+        if self.used_size > len(self.m_array):
             new_array = [None] * (len(self.m_array) * 2)
             for index in range(len(self.m_array)):
                 new_array[index] = self.m_array[index]
             self.m_array = new_array
-        self.m_array[self.m_size] = val
-        self.m_size += 1
+        self.m_array[self.used_size] = val
+        self.used_size += 1
         self.print_array()
 
+"""
+When I first wrote the delete method I wrote like this:
     def delete(self, idx):
         self.m_array[idx] = None
         self.m_size -= 1
+        self.print_array()
+        
+The problem is:
+I didn't shift all the elements after the index of input forward, this caused if I deleted the element which was not at the last position, after that when I called the add method, the element at the last position would be replace to the new element and the used size would add 1 and when I called size method and printed the new array, the elements printed would be one less than the used size reported by the size method.
+"""
+    def delete(self, idx): 
+        replace_idx = idx
+        next_idx = idx + 1
+        while self.m_array[replace_idx] is not None:
+            self.m_array[replace_idx] = self.m_array[next_idx]
+            replace_idx += 1
+            next_idx += 1
+        self.used_size -= 1
         self.print_array()
 
     def get(self, idx):
         get_ele = self.m_array[idx]
         print(f"The element of index {idx} is {get_ele}.")
 
+    def replace(self, idx, val):
+        self.m_array[idx] = val
+        self.print_array()
+
     def size(self):
-        print(f"The total size of the array is {len(self.m_array)}, the size being used now is {self.m_size}.")
+        print(f"The total size of the array is {len(self.m_array)}, the size being used now is {self.used_size}.")
 
     def print_array(self):
         array_result = ""
@@ -73,14 +94,6 @@ class Array:
                 array_result += str(ele) + ","
         print(array_result)
 
-
-array = Array()
-array.add(1)
-array.add(1)
-array.delete(0)
-array.add(2)
-array.add(2)
-array.size()
 ```
 
 
