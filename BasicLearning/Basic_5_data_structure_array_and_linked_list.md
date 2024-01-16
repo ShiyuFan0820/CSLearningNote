@@ -47,7 +47,7 @@ class Array:
         self.m_delete_idx = ""
 
     def add(self, val):
-        if self.used_size > len(self.m_array):
+        if self.used_size >= len(self.m_array):
             new_array = [None] * (len(self.m_array) * 2)
             for index in range(len(self.m_array)):
                 new_array[index] = self.m_array[index]
