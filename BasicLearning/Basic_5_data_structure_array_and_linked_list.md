@@ -140,3 +140,9 @@ Inserting an element in the middle of the list means to traverse the list till t
 Inserting an element at the end of the list means to traverse the whole list and creat a new node and adjust the link, the time is O(n).
 
 ## Array vs Linked List
+
+|Data Structure|Size Flexibility|Memory Allocation|Access Efficiency|Memory Usage|Insertion/Deletion|
+|:--------------:|:-----------------:|:----------------:|:-----------------:|:-------------:|:-----------------:|
+|Array | Size is known at compile time and can resize at runtime (resizing is expensive)| Require contiguous memory block | Accessing is efficient using index| Only stores contiguous data, could cause out of memory if there is no enough contiguous block to store data| Less efficient when insert in the beginning or middle position because it requires shifting elements |
+|Linked List| Easy to grow by adding new nodes| Elements can be stored in scattered memory, linked by pointers|Accessing is inefficient as traversing from the element at the beginning| Additional memory for storing pointer in each node. | More efficient, just change the pointers if the node location is known |
+
