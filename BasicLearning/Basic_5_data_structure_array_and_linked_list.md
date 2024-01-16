@@ -6,25 +6,8 @@ Array and linked list are both data structures used to store and organize elemen
 
 Array is List in Python, vector in C++, and ArrayList in Java. It is a contiguous block of memory heap where elements are stored, and can be access using an index or key. 
 
-**Memory Allocation:**  
-In array, memory is allocated statically or dynamically, the size of the array is fixed during declaration and can be resized during runtime if we want to add new element in the array. But because the memory allocated is a contiguous block, if the size of elements in array surpass the available contiguous memory, the out of memory error will occur.
-
-**Access Time:**  
-Elements in array can be accessed in constant time O(1)<sup>*note</sup> since elements are stored in contiguous block, we can randomly access the address of any element as long as we know the address of the head element.
-
-_*note: Big O notation `O(n)` is Linear Time Complexity, `n` is the total input, the time complexity of an algorithm is directly proportional to the size of the input, as the input size grows, the time taken by the algorithm also grows linearly. For example, doubling the input size of an algorithm, would roughly double the time it takes to excute the algorithm._
-
-**Insertion and Deletion:**  
-1. When insert an element at the beginning of an array.  
-In this situation we need to shift each element by one position towards the higher index, so the time taken will be proportional to the size of the array, it is time O(n).
-
-2. When insert an element in the middle of an array.  
-In this situation we also need to shift elements, the time is O(n).
-
-3. When insert an element at the end of an array.  
-If there is space in the array, we just add the element to the next higher index of the array, so the time is O(1), if the array is full we have to create a new array and copy all the previous elements to the new array, the time is O(n).
-
 **Example**  
+
 If we wanted to store a string of integers in an array, it would look like this in memory:
 
 <div align=center>
@@ -36,6 +19,27 @@ Assuming that the address of the first element is 200, if we want to calculate t
 <div align=center>
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/f6c265a1-e92f-42ba-9193-e570e3bc3eb9">
 </div>
+
+**Memory Allocation:**  
+
+In array, memory is allocated statically or dynamically, the size of the array is fixed during declaration and can be resized during runtime if we want to add new element in the array. But because the memory allocated is a contiguous block, if the size of elements in array surpass the available contiguous memory, the out of memory error will occur.
+
+**Access Time:**  
+
+Elements in array can be accessed in constant time O(1)<sup>*note</sup> since elements are stored in contiguous block, we can randomly access the address of any element as long as we know the address of the head element.
+
+_*note: Big O notation `O(n)` is Linear Time Complexity, `n` is the total input, the time complexity of an algorithm is directly proportional to the size of the input, as the input size grows, the time taken by the algorithm also grows linearly. For example, doubling the input size of an algorithm, would roughly double the time it takes to excute the algorithm._
+
+**Insertion and Deletion:**  
+
+1. When insert an element at the beginning of an array.  
+In this situation we need to shift each element by one position towards the higher index, so the time taken will be proportional to the size of the array, it is time O(n).
+
+2. When insert an element in the middle of an array.  
+In this situation we also need to shift elements, the time is O(n).
+
+3. When insert an element at the end of an array.  
+If there is space in the array, we just add the element to the next higher index of the array, so the time is O(1), if the array is full we have to create a new array and copy all the previous elements to the new array, the time is O(n).
 
 **Simulate the Operations of Array and Write a Array Class in Python**
 ```py
@@ -97,6 +101,25 @@ I didn't shift all the elements after the index of input forward, this caused if
 
 
 ## What is Linked List and How it Operates?
+
+Linked List is List in C++, LinkedList in Java, python doesn't have Linked List. It's a data structure where elements are stored in discontinuous heap memory, each element is randomly stored in a node which contains a value part and a address part (or a pointer) to the next node.
+
+**Example:**
+
+The same example, if we wanted to store a string of integers in a linked list, it would look like this in memory:
+
+<div align=center>
+<img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/0072d29e-6c50-4852-a6f9-d4d510d80b4c">
+</div>
+
+**Memory Allocation:**
+
+Memory are allocated dynamically in Linked List elements are stored in nodes
+
+**Access Time:**
+
+
+**Insertion and Deletion:**
 
 
 
