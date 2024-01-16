@@ -32,13 +32,16 @@ _*note: Big O notation `O(n)` is Linear Time Complexity, `n` is the total input,
 
 **Insertion and Deletion:**  
 
-1. When insert an element at the beginning of an array.  
+1. When insert/delet an element at the beginning of an array.  
+
 In this situation we need to shift each element by one position towards the higher index, so the time taken will be proportional to the size of the array, it is time O(n).
 
-2. When insert an element in the middle of an array.  
+2. When insert/delete an element in the middle of an array.  
+
 In this situation we also need to shift elements, the time is O(n).
 
-3. When insert an element at the end of an array.  
+3. When insert/delete an element at the end of an array.  
+
 If there is space in the array, we just add the element to the next higher index of the array, so the time is O(1), if the array is full we have to create a new array and copy all the previous elements to the new array, the time is O(n).
 
 **Simulate the Operations of Array and Write a Array Class in Python**
@@ -106,7 +109,7 @@ Linked List is List in C++, LinkedList in Java, python doesn't have Linked List.
 
 **Example:**
 
-The same example, if we wanted to store a string of integers in a linked list, it would look like this in memory:
+The same example, if we wanted to store a string of integers in a Linked List, it would look like this in memory:
 
 <div align=center>
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/0072d29e-6c50-4852-a6f9-d4d510d80b4c">
@@ -114,13 +117,26 @@ The same example, if we wanted to store a string of integers in a linked list, i
 
 **Memory Allocation:**
 
-Memory are allocated dynamically in Linked List elements are stored in nodes
+Memory are allocated dynamically in Linked List and elements are stored in nodes, in this way programmer could take advantage of the scattered memory.
+
+But Linked list could take up more memory than array because it needs to store an additional address to the next element.
 
 **Access Time:**
 
+Accessing elements in a linked list requires traversing the list from the beginning as the pointer in stack will only stores the head node, so the access time is O(n).
 
 **Insertion and Deletion:**
 
+1. When insert/delete an element at the beginning of a Linked List.  
 
+Inserting an element at the beginning of the list means to creat a new node and adjust the link, the time is O(1).
+
+2. When insert/delete an element in the middle of a Linked List.  
+
+Inserting an element in the middle of the list means to traverse the list till that position and create a new node and adjust the link, the time complexity is O(n).
+
+3. When insert/delete an element at the end of a Linked List.  
+
+Inserting an element at the end of the list means to traverse the whole list and creat a new node and adjust the link, the time is O(n).
 
 ## Array vs Linked List
