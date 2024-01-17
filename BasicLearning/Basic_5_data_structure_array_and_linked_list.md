@@ -50,7 +50,6 @@ class Array:
     def __init__(self):
         self.m_array = [None] * 4
         self.m_used_size = 0
-        self.m_delete_idx = ""
 
     def add(self, val):
         if self.m_used_size >= len(self.m_array):
@@ -60,19 +59,33 @@ class Array:
             self.m_array = new_array
         self.m_array[self.m_used_size] = val
         self.m_used_size += 1
+        print(f"Array after adding {val}:")
         self.print_array()
 
-"""
-When I first wrote the delete method I wrote like this:
-    def delete(self, idx):
+    def delete_by_value(self, val):
+        target_idx = 0
+        while self.m_array[target_idx] != val:
+            target_idx += 1
+        replace_idx = target_idx
+        next_idx = replace_idx + 1
+        while self.m_array[replace_idx] is not None:
+            self.m_array[replace_idx] = self.m_array[next_idx]
+            replace_idx += 1
+            next_idx += 1
+        self.m_used_size -= 1
+        print(f"Array after deleting by value {val}:")
+        self.print_array()
+
+    def delete_by_index(self, idx):
+        """
+         When I first wrote the delete code I wrote like this:
         self.m_array[idx] = None
         self.m_used_size -= 1
         self.print_array()
-        
-The problem is:
-I didn't shift all the elements after the index of input forward, this caused if I deleted the element which was not at the last position, the used size would be subtracted by 1, after that when I called the add method, the element at the last position would be replaced to the new element and the used size would be added by 1 and when I called size method and printed the new array, the elements printed would be one less than the used size reported by the size method.
-"""
-    def delete(self, idx):
+
+        The problem is:
+        I didn't shift all the elements after the index of input forward, this caused if I deleted the element which was not at the last position, after that when I called the add method, the element at the last position would be replaced to the new element and the used size would add 1 and when I called size method and printed the new array, the elements printed would be one less than the used size reported by the size method.
+        """
         replace_idx = idx
         next_idx = idx + 1
         while self.m_array[replace_idx] is not None:
@@ -80,26 +93,63 @@ I didn't shift all the elements after the index of input forward, this caused if
             replace_idx += 1
             next_idx += 1
         self.m_used_size -= 1
+        print(f"Array after deleting by index {idx}:")
         self.print_array()
 
     def get(self, idx):
         get_ele = self.m_array[idx]
-        print(f"The element of index {idx} is {get_ele}.")
+        print(f"The element of index {idx} is {get_ele}.\n")
 
     def replace(self, idx, val):
         self.m_array[idx] = val
+        print(f"Array after replacing value of index {idx} with {val}:")
         self.print_array()
 
     def size(self):
-        print(f"The total size of the array is {len(self.m_array)}, the size being used now is {self.m_used_size}.")
+        print(f"The total size of the array is {len(self.m_array)}, the size being used now is {self.m_used_size}.\n")
 
     def print_array(self):
         array_result = ""
         for ele in self.m_array:
             if ele is not None:
                 array_result += str(ele) + ","
-        print(array_result)
+        print(f"{array_result}\n")
 
+
+array = Array()
+array.add(1)
+array.add(2)
+array.add(3)
+array.get(0)
+array.replace(2, 4)
+array.size()
+array.delete_by_index(0)
+array.delete_by_value(4)
+
+
+# Run the code the output is:
+
+Array after adding 1:
+1,
+
+Array after adding 2:
+1,2,
+
+Array after adding 3:
+1,2,3,
+
+The element of index 0 is 1.
+
+Array after replacing value of index 2 with 4:
+1,2,4,
+
+The total size of the array is 4, the size being used now is 3.
+
+Array after deleting by index 0:
+2,4,
+
+Array after deleting by value 4:
+2,
 ```
 
 
