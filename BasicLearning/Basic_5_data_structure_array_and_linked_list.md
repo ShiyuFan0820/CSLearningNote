@@ -139,6 +139,109 @@ Inserting an element in the middle of the list means to traverse the list till t
 
 Inserting an element at the end of the list means to traverse the whole list and creat a new node and adjust the link, the time is O(n).
 
+**Simulate the Operations of Linked List and Write a Linked List Class in Python**
+```py
+class Node:
+    def __init__(self, val):
+        self.m_value = val
+        self.m_pointer = None
+
+
+class LinkedList:
+    def __init__(self):
+        self.m_head = None
+
+    def is_empty(self):
+        return self.m_head
+
+    def add(self, val):
+        new_node = Node(val)
+        if self.is_empty() is None:
+            self.m_head = new_node
+        else:
+            current_node = self.m_head
+            while current_node.m_pointer:
+                current_node = current_node.m_pointer
+            current_node.m_pointer = new_node
+        print(f"Linked List after adding val {val}:")
+        self.print_list()
+
+    def delete_by_value(self, val):
+        current_node = self.m_head
+        if current_node.m_value == val:
+            self.m_head = current_node.m_pointer
+            print(f"Linked List after deleting value {val}:")
+            self.print_list()
+            return
+        previous_node = None
+        while current_node.m_value != val:
+            if current_node.m_pointer is None:
+                print(f"There is no value {val} in the list.")
+                return
+            else:
+                previous_node = current_node
+                current_node = current_node.m_pointer
+        previous_node.m_pointer = current_node.m_pointer
+        print(f"Linked List after deleting value {val}:")
+        self.print_list()
+
+    def delete_by_index(self, idx):
+        idx_count = 0
+        current_node = self.m_head
+        if idx == idx_count:
+            self.m_head = current_node.m_pointer
+        previous_node = None
+        while idx > idx_count:
+            previous_node = current_node
+            current_node = current_node.m_pointer
+            idx_count += 1
+        previous_node.m_pointer = current_node.m_pointer
+        print(f"Linked List after deleting index {idx}:")
+        self.print_list()
+
+    def print_list(self):
+        current_node = self.m_head
+        while current_node:
+            print(f"{current_node.m_value}, -->")
+            current_node = current_node.m_pointer
+        print("None\n")
+
+
+linkedlist = LinkedList()
+linkedlist.add(1)
+linkedlist.add(2)
+linkedlist.add(3)
+linkedlist.delete_by_value(1)
+linkedlist.delete_by_index(1)
+
+
+# Run the code the output is:
+
+Linked List after adding val 1:
+1, -->
+None
+
+Linked List after adding val 2:
+1, -->
+2, -->
+None
+
+Linked List after adding val 3:
+1, -->
+2, -->
+3, -->
+None
+
+Linked List after deleting value 1:
+2, -->
+3, -->
+None
+
+Linked List after deleting index 1:
+2, -->
+None
+```
+
 ## Array vs Linked List
 
 |Data Structure|Size Flexibility|Memory Allocation|Access Efficiency|Memory Usage|Insertion/Deletion|
