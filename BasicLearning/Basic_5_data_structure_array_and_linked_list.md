@@ -45,6 +45,8 @@ In this situation we also need to shift elements, the time is O(n).
 If there is space in the array, we just add the element to the next higher index of the array, so the time is O(1), if the array is full we have to create a new array and copy all the previous elements to the new array, the time is O(n).
 
 **Simulate the Operations of Array and Write a Array Class in Python**
+
+_The code is:_
 ```py
 class Array:
     def __init__(self):
@@ -125,10 +127,10 @@ array.replace(2, 4)
 array.size()
 array.delete_by_index(0)
 array.delete_by_value(4)
+```
 
-
-# Run the code the output is:
-
+_Run the code the output is:_
+```py
 Array after adding 1:
 1,
 
@@ -190,11 +192,13 @@ Inserting an element in the middle of the list means to traverse the list till t
 Inserting an element at the end of the list means to traverse the whole list and creat a new node and adjust the link, the time is O(n).
 
 **Simulate the Operations of Linked List and Write a Linked List Class in Python**
+
+_The code is:_
 ```py
 class Node:
     def __init__(self, val):
         self.m_value = val
-        self.m_pointer = None
+        self.m_next = None
 
 
 class LinkedList:
@@ -206,32 +210,32 @@ class LinkedList:
 
     def add(self, val):
         new_node = Node(val)
-        if self.is_empty() is None:
+        if not self.is_empty():
             self.m_head = new_node
         else:
             current_node = self.m_head
-            while current_node.m_pointer:
-                current_node = current_node.m_pointer
-            current_node.m_pointer = new_node
+            while current_node.m_next:
+                current_node = current_node.m_next
+            current_node.m_next = new_node
         print(f"Linked List after adding val {val}:")
         self.print_list()
 
     def delete_by_value(self, val):
         current_node = self.m_head
         if current_node.m_value == val:
-            self.m_head = current_node.m_pointer
+            self.m_head = current_node.m_next
             print(f"Linked List after deleting value {val}:")
             self.print_list()
             return
         previous_node = None
         while current_node.m_value != val:
-            if current_node.m_pointer is None:
+            if not current_node.m_next:
                 print(f"There is no value {val} in the list.")
                 return
             else:
                 previous_node = current_node
-                current_node = current_node.m_pointer
-        previous_node.m_pointer = current_node.m_pointer
+                current_node = current_node.m_next
+        previous_node.m_next = current_node.m_next
         print(f"Linked List after deleting value {val}:")
         self.print_list()
 
@@ -239,22 +243,24 @@ class LinkedList:
         idx_count = 0
         current_node = self.m_head
         if idx == idx_count:
-            self.m_head = current_node.m_pointer
+            self.m_head = current_node.m_next
         previous_node = None
         while idx > idx_count:
             previous_node = current_node
-            current_node = current_node.m_pointer
+            current_node = current_node.m_next
             idx_count += 1
-        previous_node.m_pointer = current_node.m_pointer
+        previous_node.m_next = current_node.m_next
         print(f"Linked List after deleting index {idx}:")
         self.print_list()
 
     def print_list(self):
         current_node = self.m_head
+        output = ""
         while current_node:
-            print(f"{current_node.m_value}, -->")
-            current_node = current_node.m_pointer
-        print("None\n")
+            output += f"{current_node.m_value}-->"
+            current_node = current_node.m_next
+        output += "None"
+        print(output)
 
 
 linkedlist = LinkedList()
@@ -264,32 +270,20 @@ linkedlist.add(3)
 linkedlist.delete_by_value(1)
 linkedlist.delete_by_index(1)
 
+```
 
-# Run the code the output is:
-
+_Run the code the output is:_
+```py
 Linked List after adding val 1:
-1, -->
-None
-
+1-->None
 Linked List after adding val 2:
-1, -->
-2, -->
-None
-
+1-->2-->None
 Linked List after adding val 3:
-1, -->
-2, -->
-3, -->
-None
-
+1-->2-->3-->None
 Linked List after deleting value 1:
-2, -->
-3, -->
-None
-
+2-->3-->None
 Linked List after deleting index 1:
-2, -->
-None
+2-->None
 ```
 
 ## Array vs Linked List
