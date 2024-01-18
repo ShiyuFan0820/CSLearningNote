@@ -118,15 +118,16 @@ class Array:
         print(f"{array_result}\n")
 
 
-array = Array()
-array.add(1)
-array.add(2)
-array.add(3)
-array.get(0)
-array.replace(2, 4)
-array.size()
-array.delete_by_index(0)
-array.delete_by_value(4)
+if __name__ == "__main__":
+    array = Array()
+    array.add(1)
+    array.add(2)
+    array.add(3)
+    array.get(0)
+    array.replace(2, 4)
+    array.size()
+    array.delete_by_index(0)
+    array.delete_by_value(4)
 ```
 
 _Run the code the output is:_
@@ -263,12 +264,13 @@ class LinkedList:
         print(output)
 
 
-linkedlist = LinkedList()
-linkedlist.add(1)
-linkedlist.add(2)
-linkedlist.add(3)
-linkedlist.delete_by_value(1)
-linkedlist.delete_by_index(1)
+if __name__ == "__main__":
+    linkedlist = LinkedList()
+    linkedlist.add(1)
+    linkedlist.add(2)
+    linkedlist.add(3)
+    linkedlist.delete_by_value(1)
+    linkedlist.delete_by_index(1)
 
 ```
 
