@@ -1,6 +1,6 @@
 # Binary Tree
 
-Binary tree is one kind of data structures used to store and organize data, binary tree is widely used in computer science and algorithms due to their efficient structure for certain types of operations, such as searching, insertion, and deletion.
+Binary tree is one kind of data structures used to store and organize data, binary tree is widely used in computer science and algorithms due to its efficient structure for certain types of operations, such as searching, insertion, and deletion.
 
 ## What is Binary Tree
 
