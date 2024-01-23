@@ -8,6 +8,26 @@ In a Linked List, elements are stored in nodes and can be accessd in a single di
 
 A binary tree is a special type of trees, each node in a binary tree has at most two children nodes, the left and right nodes.
 
+_Linked List:_
+
+<div align=center>
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/5e53698e-6b98-4ab6-b56e-bc16d7bb59fd">
+</div>
+
+_Tree structure:_
+
+<div align=center>
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/23d81fff-d318-4653-bb6e-72a284ac566b">
+</div>
+
+_Binary tree:_
+
+<div align=center>
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/f62b03be-6f37-4df9-95f2-f962621cf4da">
+</div>
+
+
+
 ## What is Binary Search Tree
 
 
