@@ -4,7 +4,7 @@ Binary tree is one kind of data structures used to store and organize data, bina
 
 ## What is Binary Tree
 
-In a Linked List, elements are stored in nodes and can be accessd in a single direction, a binary tree is similar to a Linked List, the only difference is that a node can link one other node in a Linked List, but can link multiple nodes in a binary tree.
+In a Linked List, elements are stored in nodes and can be accessd in a single direction, a tree is similar to a Linked List, the only difference is that a node can link one other node in a Linked List, but can link multiple nodes in a tree.
 
 ## What is Binary Search Tree
 
