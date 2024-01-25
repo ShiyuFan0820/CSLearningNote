@@ -30,7 +30,7 @@ _Binary tree:_
 
 ## What is Binary Search Tree
 
-
+Binary search tree is a special binary tree, it just has one additional rule that is every node's value must be more than its left child's value and less than its right child's value.
 
 ## Binary Search Tree VS Binary Tree 
 
