@@ -1,5 +1,7 @@
 # Binary Tree and Binary Search Tree
 
+## Definition of Binary Tree and Binary Search Tree
+
 **What is Binary Tree?**
 
 In a Linked List, elements are stored in nodes and can be accessd in a single direction, a tree is a specialized form of a Linked List, the only difference is that a node can link one other node in a Linked List, but in a tree it can link multiple nodes, the nodes next the current node are called children nodes of the current node, the current node is called parent node, the root node is the node which doesn't have a parent, the node which doesn't have children is called leaf. 
@@ -41,6 +43,8 @@ _Invalid binary search tree:_
 <div align=center>
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/35b53a2a-0db3-4f2a-8c4f-efc21aeff486">
 </div>
+
+## Time Complexity of Binary Tree and Binary Search Tree
 
 
 
