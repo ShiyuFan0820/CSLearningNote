@@ -39,7 +39,7 @@ _Valid binary search tree:_
 <img width="400" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/22da0f1b-3706-4250-848e-d6b390f39e4d">
 </div>
 
-_In valid binary search tree:_
+_Invalid binary search tree:_
 
 <div align=center>
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/35b53a2a-0db3-4f2a-8c4f-efc21aeff486">
