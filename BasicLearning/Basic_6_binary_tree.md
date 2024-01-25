@@ -1,12 +1,13 @@
 # Binary Tree and Binary Search Tree
 
-Binary tree is one kind of data structures used to store and organize data, binary tree is widely used in computer science and algorithms due to its efficient structure for certain types of operations, such as searching, insertion, and deletion.
 
 **What is Binary Tree?**
 
-In a Linked List, elements are stored in nodes and can be accessd in a single direction, a tree is similar to a Linked List, the only difference is that a node can link one other node in a Linked List, but in a tree it can link multiple nodes, the nodes next the current node are called children nodes of the current node, the current node is called parent node, the root node is the node which doesn't have a parent, the node which doesn't have children is called leaf.
+In a Linked List, elements are stored in nodes and can be accessd in a single direction, a tree is a specialized form of a Linked List, the only difference is that a node can link one other node in a Linked List, but in a tree it can link multiple nodes, the nodes next the current node are called children nodes of the current node, the current node is called parent node, the root node is the node which doesn't have a parent, the node which doesn't have children is called leaf. 
 
-A binary tree is a specific type of trees, each node in a binary tree has at most two children nodes, the left and right nodes.
+A tree structure is more hierarchical structure, it can represent relationships in a more complex way compared to a simple linear linked list.
+
+Binary tree is a specific type of trees, each node in a binary tree has at most two children nodes, the left subtree and right subtree, binary tree is widely used in computer science and algorithms due to its efficient structure for certain types of operations, such as searching, insertion, and deletion.
 
 _Linked List:_
 
