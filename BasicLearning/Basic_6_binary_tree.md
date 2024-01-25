@@ -23,14 +23,26 @@ _Tree structure:_
 _Binary tree:_
 
 <div align=center>
-<img width="500" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/1fbad6b0-9b33-4899-8d87-255d14717e9e">
+<img width="450" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/1fbad6b0-9b33-4899-8d87-255d14717e9e">
 </div>
 
 
 
 ## What is Binary Search Tree
 
-Binary search tree is a special binary tree, it just has one additional rule that is every node's value must be more than its left child's value and less than its right child's value.
+Binary search tree is a special binary tree, it just has one additional rule that is every node's value must be more than its left child's value and less than its right child's value, this is the rule to validate whether a binary search tree is valid.
+
+_Valid binary search tree:_
+
+<div align=center>
+<img width="400" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/22da0f1b-3706-4250-848e-d6b390f39e4d">
+</div>
+
+_In valid binary search tree:_
+
+<div align=center>
+<img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/35b53a2a-0db3-4f2a-8c4f-efc21aeff486">
+</div>
 
 ## Binary Search Tree VS Binary Tree 
 
