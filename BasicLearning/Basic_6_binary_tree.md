@@ -1,8 +1,8 @@
-# Binary Tree
+# Binary Tree and Binary Search Tree
 
 Binary tree is one kind of data structures used to store and organize data, binary tree is widely used in computer science and algorithms due to its efficient structure for certain types of operations, such as searching, insertion, and deletion.
 
-## What is Binary Tree
+**What is Binary Tree?**
 
 In a Linked List, elements are stored in nodes and can be accessd in a single direction, a tree is similar to a Linked List, the only difference is that a node can link one other node in a Linked List, but in a tree it can link multiple nodes, the nodes next the current node are called children nodes of the current node, the current node is called parent node, the root node is the node which doesn't have a parent, the node which doesn't have children is called leaf.
 
@@ -28,7 +28,7 @@ _Binary tree:_
 
 
 
-## What is Binary Search Tree
+**What is Binary Search Tree?**
 
 Binary search tree is a special binary tree, it just has one additional rule that is every node's value must be more than its left child's value and less than its right child's value, this is the rule to validate whether a binary search tree is valid.
 
@@ -44,7 +44,6 @@ _In valid binary search tree:_
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/35b53a2a-0db3-4f2a-8c4f-efc21aeff486">
 </div>
 
-## Binary Search Tree VS Binary Tree 
 
 
 
