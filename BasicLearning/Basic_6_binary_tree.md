@@ -87,11 +87,18 @@ In conclusion, binary search tree is efficient for searching, inserting and dele
 class NODES:
     def __init__(self, val):
         self.m_value = val
-        self.m_left = None
-        self.m_right = None
+        self.m_next_left = None
+        self.m_next_right = None
 
 
 class BST:
     def __init__(self):
         self.m_root = None
+    
+    def insert(self, val):
+        pass
+    
+    def delete(self, val):
+        pass
+    
 ```
