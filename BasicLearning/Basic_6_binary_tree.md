@@ -48,13 +48,14 @@ _Invalid binary search tree:_
 
 **Depth of a Binary Tree:**
 
-The depth of a node is the distance from the node to the root. The depth of a binary tree is the longest distance between the leaf and the root. The depth is related to numbers and sort of nodes.
+The depth of a node is the length of the path from the root to that node. The depth of a binary tree is the maximum depth among all nodes in the tree. The depth is related to numbers and sort of nodes.
 
 <div align=center>
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/3963908c-00fe-4aa2-b6ca-65a1d77e4e6d">
 </div>
 
 **Tree Balance:**
+
 
 
 
