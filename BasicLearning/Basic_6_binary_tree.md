@@ -66,7 +66,12 @@ The depth of a node is the length of the path from the root to that node. The de
 
 The balance of a tree often refers to whether the tree is maintaining a relatively even distribution of nodes in the left and right subtrees. A balanced tree is a tree in which the height of the two subtrees of any node differs by no more than one, if it's more than one, the tree is considered unbalanced.
 
-**Time Complexity:**
+**Time Complexity of Bianry Tree:**
 
+_Two extreme balance situations:_
+
+<div align=center>
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/4898a92c-323e-4218-91ec-5d632d6fc225">
+</div>
 
 
