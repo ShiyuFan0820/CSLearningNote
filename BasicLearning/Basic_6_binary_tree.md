@@ -44,7 +44,7 @@ _Invalid binary search tree:_
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/35b53a2a-0db3-4f2a-8c4f-efc21aeff486">
 </div>
 
-## Time Complexity of Binary Tree and Binary Search Tree
+## Time Complexity of Binary Tree
 
 **Height of a Binary Tree:**
 
@@ -64,7 +64,9 @@ The depth of a node is the length of the path from the root to that node. The de
 
 **Tree Balance:**
 
+The balance of a tree often refers to whether the tree is maintaining a relatively even distribution of nodes in the left and right subtrees. A balanced tree is a tree in which the height of the two subtrees of any node differs by no more than one, if it's more than one, the tree is considered unbalanced.
 
+**Time Complexity:**
 
 
 
