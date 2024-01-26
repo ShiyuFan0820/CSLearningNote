@@ -94,11 +94,20 @@ class NODES:
 class BST:
     def __init__(self):
         self.m_root = None
-    
+
+    def is_empty(self):
+        if not self.m_root:
+            return True
+
     def insert(self, val):
-        pass
-    
+        if self.is_empty():
+            node = NODES(val)
+            self.m_root = node
+
     def delete(self, val):
         pass
-    
+
+    def print_tree(self):
+        pass
+
 ```
