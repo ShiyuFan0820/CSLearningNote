@@ -35,7 +35,7 @@ Binary search tree is a specific binary tree, it just has one additional rule th
 _Valid binary search tree:_
 
 <div align=center>
-<img width="400" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/22da0f1b-3706-4250-848e-d6b390f39e4d">
+<img width="380" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/22da0f1b-3706-4250-848e-d6b390f39e4d">
 </div>
 
 _Invalid binary search tree:_
@@ -46,15 +46,24 @@ _Invalid binary search tree:_
 
 ## Time Complexity of Binary Tree and Binary Search Tree
 
+**Height of a Binary Tree:**
+
+Height of a node is the longest distance from the node to a leaf, and hight of a tree is the longest distance from the root to a leaf.
+
+<div align=center>
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/15571402-2331-41a2-87be-aec9accb4040">
+</div>
+
 **Depth of a Binary Tree:**
 
 The depth of a node is the length of the path from the root to that node. The depth of a binary tree is the maximum depth among all nodes in the tree. The depth is related to numbers and sort of nodes.
 
 <div align=center>
-<img width="600" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/3963908c-00fe-4aa2-b6ca-65a1d77e4e6d">
+<img width="650" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/3963908c-00fe-4aa2-b6ca-65a1d77e4e6d">
 </div>
 
 **Tree Balance:**
+
 
 
 
