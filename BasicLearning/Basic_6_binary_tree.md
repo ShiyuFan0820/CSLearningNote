@@ -135,7 +135,6 @@ class BST:
         self.m_root = root
         self.m_lchild = None
         self.m_rchild = None
-        self.m_depth = 1
 
     def insert(self, val):
         if self.m_root is None:
