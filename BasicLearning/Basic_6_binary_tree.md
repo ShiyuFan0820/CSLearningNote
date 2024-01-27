@@ -84,6 +84,7 @@ In conclusion, binary search tree is efficient for searching, inserting and dele
 
 ## Binary Search Tree Implementation in Python
 ```py
+# Using iteration:
 class NODES:
     def __init__(self, val):
         self.m_value = val
@@ -97,17 +98,73 @@ class BST:
 
     def is_empty(self):
         if not self.m_root:
-            return True
+            return not self.m_root
 
     def insert(self, val):
+        new_node = NODES(val)
         if self.is_empty():
-            node = NODES(val)
-            self.m_root = node
+            self.m_root = new_node
+        else:
+            current_node = self.m_root
+            while True:
+                if val < current_node.m_value:
+                    if current_node.m_next_left is None:
+                        current_node.m_next_left = new_node
+                        break
+                    else:
+                        current_node = current_node.m_next_left
+                else:
+                    if current_node.m_next_right is None:
+                        current_node.m_next_right = new_node
+                        break
+                    else:
+                        current_node = current_node.m_next_right
 
     def delete(self, val):
         pass
 
     def print_tree(self):
         pass
+
+```
+
+```py
+# Using recursion:
+class BST:
+    def __init__(self, root):
+        self.m_root = root
+        self.m_lchild = None
+        self.m_rchild = None
+        self.m_depth = 1
+
+    def insert(self, val):
+        if self.m_root is None:
+            self.m_root = val
+            return
+        if val < self.m_root:
+            if self.m_lchild:
+                self.m_lchild.insert(val)
+            else:
+                self.m_lchild = BST(val)
+        else:
+            if self.m_rchild:
+                self.m_rchild.insert(val)
+            else:
+                self.m_rchild = BST(val)
+
+    def search(self, val):
+        if val == self.m_root:
+            print(f"Node {val} is found!")
+            return
+        elif val < self.m_root:
+            if self.m_lchild:
+                self.m_lchild.search(val)
+            else:
+                print(f"Node {val} is not found in the tree!")
+        else:
+            if self.m_rchild:
+                self.m_rchild.search(val)
+            else:
+                print(f"Node {val} is not found in the tree!")
 
 ```
