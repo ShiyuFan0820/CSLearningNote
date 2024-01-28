@@ -107,7 +107,7 @@ class BST:
         else:
             current_node = self.m_root
             while True:
-                if val < current_node.m_value:
+                if val <= current_node.m_value:
                     if current_node.m_next_left is None:
                         current_node.m_next_left = new_node
                         break
@@ -122,6 +122,25 @@ class BST:
 
     def delete(self, val):
         pass
+
+    def search(self, val):
+        current_node = self.m_root
+        while True:
+            if val == current_node.m_value:
+                print(f"Node {val} is found!")
+                break
+            elif val < current_node.m_value:
+                if current_node.m_next_left is None:
+                    print(f"Node {val} is not in the tree!")
+                    break
+                else:
+                    current_node = current_node.m_next_left
+            else:
+                if current_node.m_next_right is None:
+                    print(f"Node {val} is not in the tree!")
+                    break
+                else:
+                    current_node = current_node.m_next_right
 
     def print_tree(self):
         pass
@@ -165,5 +184,11 @@ class BST:
                 self.m_rchild.search(val)
             else:
                 print(f"Node {val} is not found in the tree!")
+
+    def delete(self, val):
+        pass
+
+    def print_tree(self, val):
+        pass
 
 ```
