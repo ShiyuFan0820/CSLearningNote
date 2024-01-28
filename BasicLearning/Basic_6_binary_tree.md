@@ -83,13 +83,19 @@ The best case is like a binary search tree, and it almost doubled the number of 
 In conclusion, binary search tree is efficient for searching, inserting and deleting by exploiting the ordering property.
 
 ## Binary Search Tree Implementation in Python
+
+To create a bianry search tree we can use iteration and recursion, to traverse in a binary search tree, there are three visitting method -- pre-order, in-order and post-order. 
+
+The visitting order of pre-order is that firstly visit the root node, then the left nodes, and lastly the right nodes.
+
+_The code is:_
 ```py
 # Using iteration:
 class NODES:
     def __init__(self, val):
         self.m_value = val
-        self.m_next_left = None
-        self.m_next_right = None
+        self.m_lchild = None
+        self.m_rchild = None
 
 
 class BST:
@@ -108,17 +114,17 @@ class BST:
             current_node = self.m_root
             while True:
                 if val <= current_node.m_value:
-                    if current_node.m_next_left is None:
-                        current_node.m_next_left = new_node
+                    if current_node.m_lchild is None:
+                        current_node.m_lchild = new_node
                         break
                     else:
-                        current_node = current_node.m_next_left
+                        current_node = current_node.m_lchild
                 else:
-                    if current_node.m_next_right is None:
-                        current_node.m_next_right = new_node
+                    if current_node.m_rchild is None:
+                        current_node.m_rchild = new_node
                         break
                     else:
-                        current_node = current_node.m_next_right
+                        current_node = current_node.m_rchild
 
     def delete(self, val):
         pass
@@ -130,20 +136,43 @@ class BST:
                 print(f"Node {val} is found!")
                 break
             elif val < current_node.m_value:
-                if current_node.m_next_left is None:
+                if current_node.m_lchild is None:
                     print(f"Node {val} is not in the tree!")
                     break
                 else:
-                    current_node = current_node.m_next_left
+                    current_node = current_node.m_lchild
             else:
-                if current_node.m_next_right is None:
+                if current_node.m_rchild is None:
                     print(f"Node {val} is not in the tree!")
                     break
                 else:
-                    current_node = current_node.m_next_right
+                    current_node = current_node.m_rchild
 
-    def print_tree(self):
-        pass
+    def preorder_visit(self):
+        head_node = self.m_root
+        current_node = head_node
+        while True:
+            print(f"Preorder visit: {current_node.m_value}")
+            if current_node.m_lchild:
+                current_node = current_node.m_lchild
+            else:
+                break
+        current_node = head_node.m_rchild
+        while True:
+            if current_node:
+                print(f"Preorder visit: {current_node.m_value}")
+                current_node = current_node.m_rchild
+            else:
+                break
+
+
+bst = BST()
+bst.insert(10)
+bst.insert(8)
+bst.insert(15)
+bst.insert(4)
+bst.search(10)
+bst.preorder_visit()
 
 ```
 
@@ -154,6 +183,7 @@ class BST:
         self.m_root = root
         self.m_lchild = None
         self.m_rchild = None
+        self.m_depth = 1
 
     def insert(self, val):
         if self.m_root is None:
@@ -170,6 +200,9 @@ class BST:
             else:
                 self.m_rchild = BST(val)
 
+    def delete(self, val):
+        pass
+
     def search(self, val):
         if val == self.m_root:
             print(f"Node {val} is found!")
@@ -185,10 +218,19 @@ class BST:
             else:
                 print(f"Node {val} is not found in the tree!")
 
-    def delete(self, val):
-        pass
+    def preorder_visit(self):
+        print(f"Preorder visit: {self.m_root}")
+        if self.m_lchild:
+            self.m_lchild.preorder_visit()
+        if self.m_rchild:
+            self.m_rchild.preorder_visit()
 
-    def print_tree(self, val):
-        pass
+
+bst = BST(10)
+bst.insert(8)
+bst.insert(15)
+bst.insert(4)
+bst.search(10)
+bst.preorder_visit()
 
 ```
