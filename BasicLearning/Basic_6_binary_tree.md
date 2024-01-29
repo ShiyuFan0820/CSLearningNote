@@ -88,7 +88,7 @@ To create a bianry search tree we can use iteration and recursion, to traverse i
 
 The visitting order of pre-order is that firstly visit the root, then the left subtree, and lastly the right subtree, each node is visited before its children.
 
-The visitting order of in-order is a acsending order of their value, it starts from the leftmost node (the one with the smallest value) and goes to the rightmost node (the one with the lagerest value).
+The visitting order of in-order is a acsending order of their value, it starts from the leftmost node (the one with the smallest value) and goes to the rightmost node (the one with the largest value).
 
 _The code is:_
 ```py
