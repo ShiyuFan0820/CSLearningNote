@@ -167,6 +167,17 @@ class BST:
             else:
                 break
 
+    def inorder_visit(self):
+        current_node = self.m_root
+        inorder_list = []
+        while current_node or inorder_list:
+            while current_node:
+                inorder_list.append(current_node)
+                current_node = current_node.m_lchild
+            current_node = inorder_list.pop()
+            print(f"In-order visit: {current_node.m_value}")
+            current_node = current_node.m_rchild
+
 
 bst = BST()
 bst.insert(10)
@@ -175,6 +186,7 @@ bst.insert(15)
 bst.insert(4)
 bst.search(10)
 bst.preorder_visit()
+bst.inorder_visit()
 
 ```
 
@@ -185,7 +197,6 @@ class BST:
         self.m_root = root
         self.m_lchild = None
         self.m_rchild = None
-        self.m_depth = 1
 
     def insert(self, val):
         if self.m_root is None:
@@ -227,6 +238,13 @@ class BST:
         if self.m_rchild:
             self.m_rchild.preorder_visit()
 
+    def inorder_visit(self):
+        if self.m_lchild:
+            self.m_lchild.inorder_visit()
+        print(f"In-order visit: {self.m_root}")
+        if self.m_rchild:
+            self.m_rchild.inorder_visit()
+
 
 bst = BST(10)
 bst.insert(8)
@@ -234,5 +252,6 @@ bst.insert(15)
 bst.insert(4)
 bst.search(10)
 bst.preorder_visit()
+bst.inorder_visit()
 
 ```
