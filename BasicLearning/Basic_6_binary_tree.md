@@ -84,11 +84,13 @@ In conclusion, binary search tree is efficient for searching, inserting and dele
 
 ## Binary Search Tree Implementation in Python
 
-To create a bianry search tree we can use iteration and recursion, to traverse in a binary search tree, there are three visitting method -- pre-order, in-order and post-order. 
+To create a bianry search tree we can use iteration and recursion, to traverse in a binary search tree, there are three visiting method -- pre-order, in-order and post-order. 
 
-The visitting order of pre-order is that firstly visit the root, then the left subtree, and lastly the right subtree, each node is visited before its children.
+The visiting order of pre-order is that for each subtree firstly visit the root, then the left subtree, and lastly the right subtree, each node is visited before its children.
 
-The visitting order of in-order is a acsending order of their value, it starts from the leftmost node (the one with the smallest value) and goes to the rightmost node (the one with the largest value).
+The visiting order of in-order is a acsending order of their value, for each subtree it starts from the leftmost node (the one with the smallest value), then the root value and lastly goes to the rightmost node (the one with the largest value).
+
+The visiting order of post-order is for each subtree it starts from the left most node, then the rightmost node, lastly the root.
 
 _The code is:_
 ```py
