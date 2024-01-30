@@ -222,7 +222,36 @@ class BST:
                 self.m_rchild = BST(val)
 
     def delete(self, val):
-        pass
+        if self.m_root is None:
+            print("The tree is empty!")
+            return
+        if val < self.m_root:
+            if self.m_lchild:
+                self.m_lchild = self.m_lchild.delete(val)
+            else:
+                print(f"Value {val} is not in the Tree!")
+        elif val > self.m_root:
+            if self.m_rchild:
+                self.m_rchild = self.m_rchild.delete(val)
+            else:
+                print(f"Value {val} is not in the Tree!")
+        else:
+            # Case_1: Node with 1 child or no child
+            if self.m_lchild is None:
+                replace_node = self.m_rchild
+                self.m_root = None
+                return replace_node
+            if self.m_rchild is None:
+                replace_node = self.m_lchild
+                self.m_root = None
+                return replace_node
+            # Case_2 Node with 2 child, find the smallest value in the right subtree
+            replace_node = self.m_rchild
+            while replace_node.m_lchild:
+                replace_node = replace_node.m_lchild
+            self.m_root = replace_node
+            self.m_rchild = self.m_rchild.delete(replace_node)
+        return
 
     def search(self, val):
         if val == self.m_root:
@@ -270,5 +299,7 @@ bst.search(10)
 bst.preorder_visit()
 bst.inorder_visit()
 bst.postorder_visit()
+bst.delete(8)
+bst.inorder_visit()
 
 ```
