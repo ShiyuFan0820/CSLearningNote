@@ -90,7 +90,7 @@ The visiting order of pre-order is that for each subtree firstly visit the root,
 
 The visiting order of in-order is a acsending order of their value, for each subtree it starts from the leftmost node (the one with the smallest value), then the root value and lastly goes to the rightmost node (the one with the largest value).
 
-The visiting order of post-order is for each subtree it starts from the left most node, then the rightmost node, lastly the root.
+The visiting order of post-order is for each subtree, it starts from the left most node, then the rightmost node, lastly the root.
 
 _The code is:_
 ```py
