@@ -247,13 +247,22 @@ class BST:
         if self.m_rchild:
             self.m_rchild.inorder_visit()
 
+    def postorder_visit(self):
+        if self.m_lchild:
+            self.m_lchild.postorder_visit()
+        if self.m_rchild:
+            self.m_rchild.postorder_visit()
+        print(f"Post-order visit: {self.m_root}")
+
 
 bst = BST(10)
 bst.insert(8)
+bst.insert(9)
 bst.insert(15)
 bst.insert(4)
 bst.search(10)
 bst.preorder_visit()
 bst.inorder_visit()
+bst.postorder_visit()
 
 ```
