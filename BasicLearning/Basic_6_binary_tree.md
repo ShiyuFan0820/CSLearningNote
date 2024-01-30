@@ -153,21 +153,16 @@ class BST:
                     current_node = current_node.m_rchild
 
     def preorder_visit(self):
-        head_node = self.m_root
-        current_node = head_node
-        while True:
-            print(f"Preorder visit: {current_node.m_value}")
-            if current_node.m_lchild:
-                current_node = current_node.m_lchild
-            else:
-                break
-        current_node = head_node.m_rchild
-        while True:
-            if current_node:
+        current_node = self.m_root
+        preorder_list = []
+        while current_node or preorder_list:
+            while current_node:
                 print(f"Preorder visit: {current_node.m_value}")
+                preorder_list.append(current_node)
+                current_node = current_node.m_lchild
+            if preorder_list:
+                current_node = preorder_list.pop()
                 current_node = current_node.m_rchild
-            else:
-                break
 
     def inorder_visit(self):
         current_node = self.m_root
@@ -180,15 +175,26 @@ class BST:
             print(f"In-order visit: {current_node.m_value}")
             current_node = current_node.m_rchild
 
+    def postorder_visit(self):
+        current_node = self.m_root
+        postorder_list = []
+        while current_node:
+            postorder_list.append(current_node)
+            current_node = current_node.m_lchild
+        current_node = postorder_list.pop()
+        print(f"Post-order visit: {current_node.m_value}")
+
 
 bst = BST()
 bst.insert(10)
 bst.insert(8)
+bst.insert(9)
 bst.insert(15)
 bst.insert(4)
 bst.search(10)
 bst.preorder_visit()
 bst.inorder_visit()
+bst.postorder_visit()
 
 ```
 
