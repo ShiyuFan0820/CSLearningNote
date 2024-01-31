@@ -238,20 +238,16 @@ class BST:
         else:
             # Case_1: Node with 1 child or no child
             if self.m_lchild is None:
-                replace_node = self.m_rchild
-                self.m_root = None
-                return replace_node
+                return self.m_rchild
             if self.m_rchild is None:
-                replace_node = self.m_lchild
-                self.m_root = None
-                return replace_node
-            # Case_2 Node with 2 child, find the smallest value in the right subtree
+                return self.m_lchild
+            # Case_2 Node with 2 child, find the smallest value in the right subtree, or find the largest value in the left subtree, here we follow the first principle
             replace_node = self.m_rchild
             while replace_node.m_lchild:
                 replace_node = replace_node.m_lchild
-            self.m_root = replace_node
-            self.m_rchild = self.m_rchild.delete(replace_node)
-        return
+            self.m_root = replace_node.m_root
+            self.m_rchild = self.m_rchild.delete(replace_node.m_root)
+        return self
 
     def search(self, val):
         if val == self.m_root:
@@ -289,7 +285,6 @@ class BST:
             self.m_rchild.postorder_visit()
         print(f"Post-order visit: {self.m_root}")
 
-
 bst = BST(10)
 bst.insert(8)
 bst.insert(9)
@@ -300,6 +295,7 @@ bst.preorder_visit()
 bst.inorder_visit()
 bst.postorder_visit()
 bst.delete(8)
+print("Tree after deleting: ")
 bst.inorder_visit()
 
 ```
