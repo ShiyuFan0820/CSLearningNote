@@ -211,12 +211,19 @@ class BST:
 
     def postorder_visit(self):
         current_node = self.m_root
-        postorder_list = []
-        while current_node:
-            postorder_list.append(current_node)
-            current_node = current_node.m_lchild
-        current_node = postorder_list.pop()
-        print(f"Post-order visit: {current_node.m_value}")
+        visit_list = []
+        last_visited = None
+        while current_node or visit_list:
+            while current_node:
+                visit_list.append(current_node)
+                current_node = current_node.m_lchild
+            top_node = visit_list[-1]
+            if top_node.m_rchild and last_visited != top_node.m_rchild:
+                current_node = top_node.m_rchild
+            else:
+                visit_list.pop()
+                print(f"Post-order visit: {top_node.m_value}")
+                last_visited = top_node
 
 
 bst = BST()
