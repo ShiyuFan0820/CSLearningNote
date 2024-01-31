@@ -131,7 +131,41 @@ class BST:
                         current_node = current_node.m_rchild
 
     def delete(self, val):
-        pass
+        current_node = self.m_root
+        parent_node = None
+        # Search for the node to be deleted:
+        while current_node and current_node.m_value != val:
+            parent_node = current_node
+            if val < current_node.m_value:
+                current_node = current_node.m_lchild
+            else:
+                current_node = current_node.m_rchild
+        # If node is not found:
+        if not current_node:
+            print(f"Node {val} is not in the Tree!")
+            return
+        # Case 1: Node with no child or 1 child
+        if not current_node.m_lchild or not current_node.m_rchild:
+            if current_node.m_lchild:
+                child = current_node.m_lchild
+            else:
+                child = current_node.m_rchild
+            if parent_node.m_lchild == current_node:
+                parent_node.m_lchild = child
+            else:
+                parent_node.m_rchild = child
+        # Case 2: Node with 2 children, find the smallest node in the right subtree means to find a node in right subtree which doesn't have a left subtree
+        else:
+            successor_parent = current_node
+            successor = current_node.m_rchild
+            while successor.m_lchild:
+                successor_parent = successor
+                successor = successor.m_lchild
+            current_node.m_value = successor.m_value
+            if successor_parent.m_lchild == successor:
+                successor_parent.m_lchild = successor.m_rchild
+            else:
+                successor_parent.m_rchild = successor.m_rchild
 
     def search(self, val):
         current_node = self.m_root
@@ -195,6 +229,9 @@ bst.search(10)
 bst.preorder_visit()
 bst.inorder_visit()
 bst.postorder_visit()
+bst.delete(8)
+print("Tree after deleting: ")
+bst.inorder_visit()
 
 ```
 
