@@ -82,15 +82,19 @@ The best case is like a binary search tree, and it almost doubled the number of 
 
 In conclusion, binary search tree is efficient for searching, inserting and deleting by exploiting the ordering property.
 
+## Traversal Method in a Binary Search Tree
+
+To traverse in a binary search tree, there are three visiting method -- pre-order, in-order and post-order. 
+
+The visiting order of pre-order is that for each subtree firstly visit the root, then the left subtree, and lastly the right subtree, each node is visited before its children. This method is convenient for creating a copy of a tree.
+
+The visiting order of in-order is a acsending order of their value, for each subtree it starts from the leftmost node (the one with the smallest value), then the root value and lastly goes to the rightmost node (the one with the largest value). This method is useful for retrieving elements in a tree where the order matters.
+
+The visiting order of post-order is for each subtree, it starts from the left most node, then the rightmost node, lastly the root. This method is useful for freeing memory in a tree.
+
 ## Binary Search Tree Implementation in Python
 
-To create a bianry search tree we can use iteration and recursion, to traverse in a binary search tree, there are three visiting method -- pre-order, in-order and post-order. 
-
-The visiting order of pre-order is that for each subtree firstly visit the root, then the left subtree, and lastly the right subtree, each node is visited before its children.
-
-The visiting order of in-order is a acsending order of their value, for each subtree it starts from the leftmost node (the one with the smallest value), then the root value and lastly goes to the rightmost node (the one with the largest value).
-
-The visiting order of post-order is for each subtree, it starts from the left most node, then the rightmost node, lastly the root.
+To create a bianry search tree we can use iteration and recursion. The code below uses both ways to implement operations in a binary search tree.
 
 _The code is:_
 ```py
