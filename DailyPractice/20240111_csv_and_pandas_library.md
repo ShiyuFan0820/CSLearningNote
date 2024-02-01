@@ -11,7 +11,11 @@
 
 **What will be made in the end:**
 
+<div align=center>
+<img width="700" alt="image" src="https://github.com/ShiyuFan0820/PythonLearningNote/assets/149340606/4bcce553-ecde-474a-8200-df6a0fcb26d9">
+</div>
 
+[Python Daily Practice -- Map Game (Click to watch the video)](https://youtu.be/pAmmX2WsfeE)
 
 **Collapse the exercise into small blocks:**
 
