@@ -6,6 +6,8 @@
 2. Let users enter the name of the province.
 3. Once the users enter the name and hit the "ok" button, if it's actually exists, add the name to the map.
 4. Show the numbers of the correct names that the users entered.
+5. Set a secret word "Exit" to end the game.
+6. When the game is end, collect the provinces that are not answered right and print them.
 
 **What will be made in the end:**
 
@@ -17,9 +19,12 @@
 2. Create a Turtle screen and set the map picture as the background.
 3. Get the x and y cordinations of provinces on the screen.
 4. Let users enter the name, one name at one time.
-5. Check if the name in the name data file, if it is, show the corresponding position on the map and add one score to the total score.
+5. Check if the name in the name data file, if it is, show the corresponding position on the map by creating a turtle to draw the name, and add one score to the total score.
+6. When the game is end, check which provinces are answered right, using for loop add the provinces which are not answered in a missing list.
 
 **The code is:**
+
+1. Get the cordinations of all provinces:
 ```py
 # Get the cordinations of all provinces:
 from turtle import Turtle, Screen
@@ -118,6 +123,48 @@ data_dict = {
 province_data = pandas.DataFrame(data_dict)
 province_data.to_csv("province_data.csv")
 ```
+
+2. The main code:
+ ```py
+import turtle
+from turtle import Screen, Turtle
+import pandas
+
+
+# Read the province data file
+provinces_data = pandas.read_csv("province_data.csv")
+all_provinces = provinces_data.province.to_list()
+# Create the screen of the game
+map_screen = Screen()
+map_screen.setup(width=900, height=800)
+map_screen.title("Map Game")
+map_screen.bgpic("blank_map.png")
+
+
+right_answer = []
+while len(right_answer) < 34:
+    # Create an input board
+    answer_input = map_screen.textinput(title=f"{len(right_answer)}/34 Guess the Provinces", prompt="What's the name of the provinces?").title()
+    if answer_input == "Exit":
+        # When the game is end, collect the provinces that are not answered right
+        missing_provinces = []
+        for province in all_provinces:
+            if province not in right_answer:
+                missing_provinces.append(province)
+        print(f"You got {len(right_answer)} name of the provinces right, but still get {len(missing_provinces)} provinces to learn.")
+        print(missing_provinces)
+        break
+    # Check if the answer is in the data file
+    if answer_input in all_provinces:
+        right_answer.append(answer_input)
+        t = Turtle()
+        t.hideturtle()
+        t.penup()
+        draw_province = provinces_data[provinces_data.province == answer_input]
+        t.goto(int(draw_province.x), int(draw_province.y))
+        t.write(answer_input)
+
+ ```
 
 _**Issues Recorded:**_
 
