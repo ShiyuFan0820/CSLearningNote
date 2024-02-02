@@ -17,6 +17,8 @@
 
 [Python Daily Practice -- Map Game (Click to watch the video)](https://youtu.be/pAmmX2WsfeE)
 
+_Note: I tried serval ways to move the input window to the upper left corner, but it still in the middle of the Turtle screen, I will leave this issue for now :(._
+
 **Collapse the exercise into small blocks:**
 
 1. Download an empty map from the internet.
