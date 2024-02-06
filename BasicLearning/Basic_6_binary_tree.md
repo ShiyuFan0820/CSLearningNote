@@ -111,8 +111,7 @@ class BST:
         self.m_root = None
 
     def is_empty(self):
-        if not self.m_root:
-            return not self.m_root
+            return self.m_root is None
 
     def insert(self, val):
         new_node = NODES(val)
