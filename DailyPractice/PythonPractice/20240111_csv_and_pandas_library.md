@@ -1,4 +1,4 @@
-# CSV Data and Pandas Library (Updated in 1/2/2024)
+# CSV Data and Pandas Library (Updated on 1/2/2024)
 
 **Exercise: Map Game**
 
