@@ -158,7 +158,7 @@ Array after deleting by value 4:
 
 ## What is Linked List and How it Operates?
 
-Linked List is List in C++, LinkedList in Java, python doesn't have Linked List. It's a data structure where elements are stored in discontinuous heap memory, each element is randomly stored in a node which contains a value part and a address part (or a pointer) to the next node.
+Linked List is List in C++, LinkedList in Java, python doesn't have Linked List. It's a data structure where elements are stored in discontinuous heap memory, each element is randomly stored in a node which contains a value part and an address part (or a pointer) to the next node.
 
 **Example:**
 
