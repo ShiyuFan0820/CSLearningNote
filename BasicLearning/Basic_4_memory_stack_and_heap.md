@@ -127,7 +127,7 @@ _Once the `delete` is called the `ht` and `hp` will be destoryed, the memories p
 
 ## Stack Overflow
 
-As mentioned before, the size of the stack has a fixed upper limit, this is defined when the program starts up. When we supass the limit in stack while running the program, we will get the stack overflow error. For example if we write a infinite recursive code, then memory stack could grow as the code executes, once we exhaust the limit, stack overflow will occur.
+As mentioned before, the size of the stack has a fixed upper limit, this is defined when the program starts up. When we supass the limit in stack while running the program, we will get the stack overflow error. For example if we write a very large recursive code, then memory stack could grow as the code executes, once we exhaust the limit, stack overflow will occur.
 
 Something similar to stack overflow also happens in memory heap, it's called out of memory. Memory heap doesn't have a upper limit, but if you forget to delete the arguments and variables manually, this part of memory could not be freed, causing memory leak, once you run out of the physical memory available, the program could crash and stop.
 
