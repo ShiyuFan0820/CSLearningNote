@@ -70,7 +70,7 @@ _When the function `Multiply` reaches the end of the code, the function `Multipl
 
 In memory management, the "heap" refers to a region of a computer's memory that is used for dynamic memory allocation, it's different from the heap data structure, it's not an implementation of the heap data structure, it's only used for large free pool of memory.
 
-To use memory heap in program in C++, we need to define a local variable in main using the keyward "new", this will allocate a memory in heap to store the value of the variable, and return a pointer to the variable, the pointer points to the starting address on heap. As long as we keep the pointer variable, the value will not be cleared. If we are done using the value, we can use the keyword "delete" to deallocate the memory.
+To use memory heap in program in C++, we need to define a local variable in main using the keyword "new", this will allocate a memory in heap to store the value of the variable, and return a pointer to the variable, the pointer points to the starting address on heap. As long as we keep the pointer variable, the value will not be cleared. If we are done using the value, we can use the keyword "delete" to deallocate the memory.
 
 The only way to use memory on heap is through reference, it's like you write a directory (function) with many chapters (variables), each chapter (variable) has it's own content (value or data) stored in the book (heap) , you can access the content (value or data) by the page number (pointer points to a address) linked with the chapter (variables).
 
