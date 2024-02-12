@@ -397,28 +397,50 @@ class BST:
 
     def find_in_node(self, node, val):
         if val < node.get_val():
-            left_val = node.get_left()
-            if left_val:
+            if node.m_left:
                 self.find_in_node(node.m_left, val)
             else:
                 print(f"Value {val} doesn't exist!")
         elif val > node.get_val():
-            right_val = node.get_right()
-            if right_val:
+            if node.m_right:
                 self.find_in_node(node.m_right, val)
             else:
                 print(f"Value {val} doesn't exist!")
         else:
             print(f"Value {val} found!")
 
-    def in_order(self):
-        pass
-    
-    def pre_order(self):
-        pass
-    
-    def post_order(self):
-        pass
+    def in_order(self, node):
+        if node.m_left:
+            self.in_order(node.m_left)
+        print(f"Visiting: {node.get_val()}")
+        if node.m_right:
+            self.in_order(node.m_right)
+
+    def print_inorder(self):
+        print("--------In-order Visit--------")
+        self.in_order(self.m_root)
+
+    def pre_order(self, node):
+        print(f"Visiting: {node.get_val()}")
+        if node.m_left:
+            self.pre_order(node.m_left)
+        if node.m_right:
+            self.pre_order(node.m_right)
+
+    def print_preorder(self):
+        print("--------Pre-order Visit--------")
+        self.pre_order(self.m_root)
+
+    def post_order(self, node):
+        if node.m_left:
+            self.post_order(node.m_left)
+        if node.m_right:
+            self.post_order(node.m_right)
+        print(f"Visiting: {node.get_val()}")
+
+    def print_postorder(self):
+        print("--------Post-order Visit--------")
+        self.post_order(self.m_root)
 
 
 bst = BST(10)
@@ -432,6 +454,9 @@ bst.insert(20)
 bst.find(10)
 bst.find(8)
 bst.find(6)
+bst.print_inorder()
+bst.print_preorder()
+bst.print_postorder()
 
 ```
 
