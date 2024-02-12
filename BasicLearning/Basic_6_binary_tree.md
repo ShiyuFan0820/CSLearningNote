@@ -246,7 +246,7 @@ bst.inorder_visit()
 ```
 
 ```py
-# Using recursion:
+# Using recursion 1:
 class BST:
     def __init__(self, root):
         self.m_root = root
@@ -344,6 +344,94 @@ bst.postorder_visit()
 bst.delete(8)
 print("Tree after deleting: ")
 bst.inorder_visit()
+
+```
+
+```py
+# Using recursion 2:
+class NODE:
+    def __init__(self, val):
+        self.m_val = val
+        self.m_left = None
+        self.m_right = None
+
+    def get_val(self):
+        return self.m_val
+
+    def get_right(self):
+        return self.m_right
+
+    def get_left(self):
+        return self.m_left
+
+    def set_right(self, right_val):
+        self.m_right = right_val
+
+    def set_left(self, left_val):
+        self.m_left = left_val
+
+
+class BST:
+    def __init__(self, root_val):
+        self.m_root = NODE(root_val)
+
+    def insert(self, val):
+        self.insert_to_node(self.m_root, val)
+
+    def insert_to_node(self, node, val):
+        if val < node.get_val():
+            left_val = node.get_left()
+            if left_val:
+                self.insert_to_node(left_val, val)
+            else:
+                node.set_left(NODE(val))
+        else:
+            right_val = node.get_right()
+            if right_val:
+                self.insert_to_node(right_val, val)
+            else:
+                node.set_right(NODE(val))
+
+    def find(self, val):
+        self.find_in_node(self.m_root, val)
+
+    def find_in_node(self, node, val):
+        if val < node.get_val():
+            left_val = node.get_left()
+            if left_val:
+                self.find_in_node(node.m_left, val)
+            else:
+                print(f"Value {val} doesn't exist!")
+        elif val > node.get_val():
+            right_val = node.get_right()
+            if right_val:
+                self.find_in_node(node.m_right, val)
+            else:
+                print(f"Value {val} doesn't exist!")
+        else:
+            print(f"Value {val} found!")
+
+    def in_order(self):
+        pass
+    
+    def pre_order(self):
+        pass
+    
+    def post_order(self):
+        pass
+
+
+bst = BST(10)
+bst.insert(15)
+bst.insert(8)
+bst.insert(9)
+bst.insert(5)
+bst.insert(13)
+bst.insert(20)
+
+bst.find(10)
+bst.find(8)
+bst.find(6)
 
 ```
 
