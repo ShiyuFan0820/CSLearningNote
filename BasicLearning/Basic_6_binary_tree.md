@@ -353,10 +353,22 @@ Reconstruciton of a binary tree is given two integer arrays preorder and inorder
 
 **Example:**
 
-The given preorder and inorder arrays:
+1. The given preorder and inorder arrays:
 ```py
 preorder = [3, 9, 20, 15, 7]
 inorder = [9, 3, 15, 20, 7]
 ```
+2. According to the preorder array we can get the root node is `3`, and we can also know that numbers on the left side of the root is the elements of left subtree and numbers on the right side of the root is the elements of right subtree, so we can reconstruce the binary tree for the first step:
+
+<div align=center>
+<img width="411" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/5a262fa7-2f14-4b85-b418-e661d3f9454f">
+</div>
+
+3. According to the preorder array we can get the root of the right subtree is `20`, and according to the inorder array we can get the left subtree under root `20` is `15`, and right subtree under root `20` is `7`, we can complete the reconstruction of this binary tree:
+
+<div align=center>
+<img width="387" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/abc62bbd-a975-4aae-817a-ca4e0aea0e50">
+</div>
+
 
 ## Rebalance Bianry Search Tree
