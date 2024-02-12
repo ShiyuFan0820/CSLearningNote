@@ -347,7 +347,16 @@ bst.inorder_visit()
 
 ```
 
-## Reconstruciton Binary Tree
+## Reconstruciton of a Binary Tree
 
+Reconstruciton of a binary tree is given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the bianry tree.
+
+**For Example:**
+
+```py
+# The given preorder and inorder arrays
+preorder = [9, 3, 7, 20, 15]
+inorder = [3, 7, 9, 15, 20]
+```
 
 ## Rebalance Bianry Search Tree
