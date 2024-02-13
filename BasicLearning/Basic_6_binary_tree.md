@@ -484,4 +484,6 @@ inorder = [9, 3, 15, 20, 7]
 </div>
 
 
-## Rebalance Bianry Search Tree
+## Self-balancing Bianry Search Tree and Rotation
+
+
