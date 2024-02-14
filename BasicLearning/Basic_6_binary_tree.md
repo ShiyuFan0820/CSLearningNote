@@ -486,11 +486,12 @@ inorder = [9, 3, 15, 20, 7]
 
 ## Self-balancing Bianry Search Tree and Rotations
 
-**A Balanced Tree**
+**A Balanced Binary Search Tree**
 
-A balanced tree is in which the heights of subtrees of any node differ by at most 1, this property ensures that the tree remains symmetric and can perform efficient searching and other operations. There are two main types of self-balancing tree -- AVL tree and Red Black tree.
+A balanced binary search tree is in which the heights of subtrees of any node differ by at most 1, this property ensures that the tree remains symmetric and can perform efficient searching and other operations. There are two main types of self-balancing binary search tree -- AVL tree and Red Black tree.
 
-**AVL Tree**
+**AVL Tree and Rotations**
+
 
 
 
