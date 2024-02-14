@@ -484,6 +484,13 @@ inorder = [9, 3, 15, 20, 7]
 </div>
 
 
-## Self-balancing Bianry Search Tree and Rotation
+## Self-balancing Bianry Search Tree and Rotations
+
+**A Balanced Tree**
+
+A balanced tree is in which the heights of subtrees of any node differ by at most 1, this property ensures that the tree remains symmetric and can perform efficient searching and other operations. There are two main types of self-balancing tree -- AVL tree and Red Black tree.
+
+**AVL Tree**
+
 
 
