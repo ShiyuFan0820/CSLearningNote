@@ -526,6 +526,10 @@ Balance step 2: Rotate the right node `5` to the left subtree of node `7`, then 
 <img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/39aa4bfd-a8d3-4b31-848d-361653ae922d">
 </div>
 
+Balance step 1: Same with the instruction above.
+
+Balance step 2: Rotate node `25` as the right child of the root `10`, rotate node `15` as the left child of the node `25`.
+
 5. RL (right-left) imbalance. This is the right subtree of the node is taller than left subtree of the nodem and the right child's left subtree is taller than its right subtree.
 
 
