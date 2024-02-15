@@ -513,7 +513,7 @@ Blance step 2: From node `7` down, find the two connected nodes, all rotation ha
 3. LR (left-right) imbalance. This the left subtree of the node is taller than the right subtree of the node, and the left child's right subtree is taller than its left subtree.
 
 <div align=center>
-<img width="900" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/1b6c947e-4d56-4ff6-af14-cfe3099d5bf7">
+<img width="900" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/cda53c37-cfa7-44ce-b1e3-e1bc59c4aafd">
 </div>
 
 Balance step 1: Same with the instructon above.
