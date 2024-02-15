@@ -510,7 +510,7 @@ Balance step 1: Find the first node which is not balanced. Both node `7` and nod
 
 Blance step 2: From node `7` down, find the two connected nodes, all rotation happens within 3 nodes. Rotate node `3` as the left child of the root `10`, node `7` as the right child of node `3`.
 
-3. LR (left-right) imbalance. This the left subtree of the node is taller than the right subtree of the node, and the left child's right subtree is taller than its left subtree.
+2. LR (left-right) imbalance. This the left subtree of the node is taller than the right subtree of the node, and the left child's right subtree is taller than its left subtree.
 
 <div align=center>
 <img width="900" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/d7c4d3ac-b133-49fd-9360-84abdd03bef8">
@@ -520,7 +520,7 @@ Balance step 1: Same with the instructon above.
 
 Balance step 2: Rotate the right node `5` to the left subtree of node `7`, then the imbalanced tree became a LL imbalance, then follow the instruction as the LL imbalance to let the tree to be balanced.
 
-4. RR (right-right) imbalance. This is the right subtree of the node is taller than left subtree of the node, and the right child's right subtree is taller than its left subtree.
+3. RR (right-right) imbalance. This is the right subtree of the node is taller than left subtree of the node, and the right child's right subtree is taller than its left subtree.
 
 <div align=center>
 <img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/39aa4bfd-a8d3-4b31-848d-361653ae922d">
@@ -530,11 +530,14 @@ Balance step 1: Same with the instruction above.
 
 Balance step 2: Rotate node `25` as the right child of the root `10`, rotate node `15` as the left child of the node `25`.
 
-5. RL (right-left) imbalance. This is the right subtree of the node is taller than left subtree of the nodem and the right child's left subtree is taller than its right subtree.
+4. RL (right-left) imbalance. This is the right subtree of the node is taller than left subtree of the nodem and the right child's left subtree is taller than its right subtree.
 
 <div align=center>
 <img width="900" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/8d6e279a-6262-40d2-abaf-ccb6c678f0df">
 </div>
 
+Balance step 1: Same with the instructon above.
+
+Balance step 2: Rotate the left node `20` to the right subtree of node `15`, then the imbalanced tree became a RR imbalance, then follow the instruction as the RR imbalance to let the tree to be balanced.
 
 
