@@ -506,13 +506,19 @@ Examples:
 <img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/26d311f3-e032-4860-a7bd-3b60764b0b03">
 </div>
 
-Both node `7` and node `10` violate the rule of balance, we need to find the first imbalanced node from the bottom up, so node `7` is the first node, and then From node `7` down, find the two connected nodes, all rotation happens within 3 nodes. Rotate node `3` as the left child of the root `10`, node `7` as the right child of node `3`.
+Balance step 1: Find the first node which is not balanced. Both node `7` and node `10` violate the rule of balance, we need to find the first imbalanced node from the bottom up, so node `7` is the first node.
+
+Blance step 2: From node `7` down, find the two connected nodes, all rotation happens within 3 nodes. Rotate node `3` as the left child of the root `10`, node `7` as the right child of node `3`.
 
 3. LR (left-right) imbalance. This the left subtree of the node is taller than the right subtree of the node, and the left child's right subtree is taller than its left subtree.
 
 <div align=center>
 <img width="900" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/1b6c947e-4d56-4ff6-af14-cfe3099d5bf7">
 </div>
+
+Balance step 1: Same with the instructon above.
+
+Balance step 2: Rotate the right node `5` to the left subtree of node `7`, then the imbalanced tree became a LL imbalance, then follow the instruction as the LL imbalance to let the tree to be balanced.
 
 4. RR (right-right) imbalance. This is the right subtree of the node is taller than left subtree of the node, and the right child's right subtree is taller than its left subtree.
 
