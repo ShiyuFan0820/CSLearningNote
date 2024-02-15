@@ -522,6 +522,9 @@ Balance step 2: Rotate the right node `5` to the left subtree of node `7`, then 
 
 4. RR (right-right) imbalance. This is the right subtree of the node is taller than left subtree of the node, and the right child's right subtree is taller than its left subtree.
 
+<div align=center>
+<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/39aa4bfd-a8d3-4b31-848d-361653ae922d">
+</div>
 
 5. RL (right-left) imbalance. This is the right subtree of the node is taller than left subtree of the nodem and the right child's left subtree is taller than its right subtree.
 
