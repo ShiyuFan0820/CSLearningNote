@@ -495,14 +495,16 @@ A balanced binary search tree is in which the heights of subtrees of any node di
 An AVL tree is a self-balancing tree, it will rotate to remain balance everytime after inserton or deletion opertions. There are four types of imbalance in the AVL tree need to be rotated, they are LL (left-left) imbalance, LR (left-right) imbalance, RR (right-right) imbalance and RL (right-left) imbalance.
 
 <div align=center>
-<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/c71295a2-87db-42ed-964b-7cdcdc01ce0f">
+<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/d252a8a3-4407-4afe-825f-787c017d8165">
 </div>
 
 Examples:
 
 1. LL (left-left) imbalance. This is the left subtree of the node is taller than the right subtree of the node, and the left child's left subtree is taller than its right subtree. In this situation we need to do right rotation.
 
-
+<div align=center>
+<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/26d311f3-e032-4860-a7bd-3b60764b0b03">
+</div>
 
 
 3. LR (left-right) imbalance. This the left subtree of the node is taller than the right subtree of the node, and the left child's right subtree is taller than its left subtree.
