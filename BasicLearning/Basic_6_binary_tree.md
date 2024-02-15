@@ -540,4 +540,6 @@ Balance step 1: Same with the instructon above.
 
 Balance step 2: Rotate the left node `20` to the right subtree of node `15`, then the imbalanced tree became a RR imbalance, then follow the instruction as the RR imbalance to let the tree to be balanced.
 
+**Red-Black Tree**
+
 
