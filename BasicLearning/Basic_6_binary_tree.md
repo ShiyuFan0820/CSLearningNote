@@ -498,7 +498,7 @@ An AVL tree is a self-balancing tree, it will rotate to remain balance everytime
 <img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/d252a8a3-4407-4afe-825f-787c017d8165">
 </div>
 
-Examples:
+_How to balance an AVL tree:_
 
 1. LL (left-left) imbalance. This is the left subtree of the node is taller than the right subtree of the node, and the left child's left subtree is taller than its right subtree. In this situation we need to do right rotation.
 
