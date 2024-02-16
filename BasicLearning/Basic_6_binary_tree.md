@@ -547,6 +547,6 @@ Red-black tree is a self-balancing tree, it contains properties like these below
 1. All nodes in the tree is either red or black, there will be an extra bit to store the color.
 2. The root of the tree must be black.
 3. The children of a red node must be black, this also means two red nodes can not be connected.
-4. The node which doesn't have child will have the nil(=none) node as its child, and nil nodes are all black.
+4. The node which doesn't have child will have the nil(=none) node as its child, and nil nodes are all black, nil nodes only serve the purpose for counting.
 5. All paths from a node to its descendant nil node or leaf node contains the same number of black nodes(not counting the node itself), also called black height.
 
