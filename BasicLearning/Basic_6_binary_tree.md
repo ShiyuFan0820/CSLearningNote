@@ -553,7 +553,7 @@ Red-Black tree is a self-balancing tree, it contains properties like these below
 
 A valid Red-Black tree:
 
-<div aligh=center>
+<div align=center>
 <img width="655" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/cd846d21-ba52-4118-a8f9-2b8f8fb9d841">
 </div>
 
