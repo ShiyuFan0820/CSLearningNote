@@ -542,11 +542,19 @@ Balance step 2: Rotate the left node `20` to the right subtree of node `15`, the
 
 **Red-Black Tree**
 
-Red-black tree is a self-balancing tree, it contains properties like these below:
+Red-Black tree is a self-balancing tree, it contains properties like these below:
 
 1. All nodes in the tree is either red or black, there will be an extra bit to store the color.
 2. The root of the tree must be black.
 3. The children of a red node must be black, this also means two red nodes can not be connected.
 4. The node which doesn't have child will have the nil(=none) node as its child, and nil nodes are all black, nil nodes only serve the purpose for counting.
-5. All paths from a node to its descendant nil node or leaf node contains the same number of black nodes(not counting the node itself), also called black height.
+5. All paths from any node to its descendant nil node or leaf node contains the same number of black nodes(not counting the node itself), knowing as the black height.
+6. The longest black height is at most twice the shortest black height.
+
+A valid Red-Black tree:
+
+<div aligh=center>
+<img width="655" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/cd846d21-ba52-4118-a8f9-2b8f8fb9d841">
+</div>
+
 
