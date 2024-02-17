@@ -557,4 +557,19 @@ A valid Red-Black tree:
 <img width="655" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/cd846d21-ba52-4118-a8f9-2b8f8fb9d841">
 </div>
 
+_How to balance a Red-Black tree:_
+
+1. When insert a node in a Red-Black tree we follow the rules of inserting a node in a binary search tree. When insert a node, if the root is empty, the inserted node will be the root and the color will be black, if the root is not empty, the inserted node's color will be red.
+2. Check if the parent of the inserted node is red, if the parent of the inserted node is red, this violates the rule of a Red-Black tree, then we need to check if the sibling of this parent (the node at the same depth of this parent node) is existing and check if it's red.
+3. If the sibling note is red, see the sibling node, this parent node and their parent node as a triangle, if their parent node is not the root node, change the colors of all three nodes in the triangle to opposite colors, if their parent node is root node, just change the colors of the two nodes.
+4. If the sibling node is black, we see the inserted node, the parent node and the parent of the parent node as a group, and regroup them into a triangle. Take the node with the median value among the three node as the root of this new triangle, change its color to black, change the left two nodes' color to red. The original left child of the node that becomes the root of the new triangle is moved to the left subtree and the right child is moved to the right subtree.
+5. Repeat the step above till it follows the rules of a Red-Black tree.
+
+_Example:_
+
+When insert a new node `30` in a Red-Black tree:
+
+<div align=center>
+<img width="556" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/4d5f7706-4ae7-40d0-8773-a57cd9bdefd1">
+</div>
 
