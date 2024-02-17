@@ -565,24 +565,36 @@ _How to balance a Red-Black tree:_
 4. If the sibling node is black, we see the inserted node, the parent node and the parent of the parent node as a group, and regroup them into a triangle. Take the node with the median value among the three node as the root of this new triangle, change its color to black, change the left two nodes' color to red. The original left child of the node that becomes the root of the new triangle is moved to the left subtree and the right child is moved to the right subtree.
 5. Repeat the step above till it follows the rules of a Red-Black tree.
 
-_Example 1:_
+_Example:_
 
-When insert a new node `30` in a Red-Black tree:
+When insert a node `28` in a Red-Black tree:
 
 <div align=center>
-<img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/4d5f7706-4ae7-40d0-8773-a57cd9bdefd1">
+<img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/99bc233a-2777-4e2b-b357-28ce73b2c571">
 </div>
 
 Check if the sibling of the parent node of the inserted node is existing and check if it's red. In this situation the sibling is existing and it's red. Find the little triangle.
 
 <div align=center>
-<img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/a6ce6b6a-9c28-4692-9592-3280ba270ecf">
+<img width="580" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/85470b0b-c2cb-4376-a162-506c8630d013">
 </div>
 
-Opposite the colors of the nodes in this triangle to make the tree balance.
+Opposite the colors of the nodes in this triangle.
 
 <div align=center>
-<img width="450" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/80ed9e61-1cf0-4d40-b542-5c2c715d87ff">
+<img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/47fe951e-5ba0-499c-bf5f-33ab7f657ac5">
+</div>
+
+It still violates the rule of a Red-Black tree. Now node `10` is the sibling node of node `30`, and it's black. See node `26`, node `30` and node `20` as a group.
+
+<div align=center>
+<img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/954aaa30-ed90-41d8-adf6-9e46682fb683">
+</div>
+
+Take the node with the median value among the three node as the root of this new triangle, in this case it's node `26`, change the color of node `26` into black and change the color of node `20` and node `30` into red, the original left child of the node `26` which is node `25` is moved to the left subtree and the right child which is the node `27` is moved to the right subtree. This way the tree became balance.
+
+<div align=center>
+<img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/eb62f203-9e02-42c8-9055-b7dcbe9fe594">
 </div>
 
 
