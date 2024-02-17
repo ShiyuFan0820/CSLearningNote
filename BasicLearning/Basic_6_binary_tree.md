@@ -579,7 +579,7 @@ Check if the sibling of the parent node of the inserted node is existing and che
 <img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/a6ce6b6a-9c28-4692-9592-3280ba270ecf">
 </div>
 
-Opposite the colors of the nodes in this triangle.
+Opposite the colors of the nodes in this triangle to make the tree balance.
 
 <div align=center>
 <img width="450" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/80ed9e61-1cf0-4d40-b542-5c2c715d87ff">
