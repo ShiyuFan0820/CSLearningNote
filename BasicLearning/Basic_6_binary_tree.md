@@ -99,14 +99,14 @@ To create a bianry search tree we can use iteration and recursion. The code belo
 _The code is:_
 ```py
 # Using iteration:
-class NODES:
+class Nodes:
     def __init__(self, val):
         self.m_value = val
         self.m_lchild = None
         self.m_rchild = None
 
 
-class BST:
+class Bst:
     def __init__(self):
         self.m_root = None
 
@@ -114,7 +114,7 @@ class BST:
             return self.m_root is None
 
     def insert(self, val):
-        new_node = NODES(val)
+        new_node = Nodes(val)
         if self.is_empty():
             self.m_root = new_node
         else:
@@ -229,7 +229,7 @@ class BST:
                 last_visited = top_node
 
 
-bst = BST()
+bst = Bst()
 bst.insert(10)
 bst.insert(8)
 bst.insert(9)
@@ -247,7 +247,7 @@ bst.inorder_visit()
 
 ```py
 # Using recursion 1:
-class BST:
+class Bst:
     def __init__(self, root):
         self.m_root = root
         self.m_lchild = None
@@ -261,12 +261,12 @@ class BST:
             if self.m_lchild:
                 self.m_lchild.insert(val)
             else:
-                self.m_lchild = BST(val)
+                self.m_lchild = Bst(val)
         else:
             if self.m_rchild:
                 self.m_rchild.insert(val)
             else:
-                self.m_rchild = BST(val)
+                self.m_rchild = Bst(val)
 
     def delete(self, val):
         if self.m_root is None:
@@ -332,7 +332,7 @@ class BST:
             self.m_rchild.postorder_visit()
         print(f"Post-order visit: {self.m_root}")
 
-bst = BST(10)
+bst = Bst(10)
 bst.insert(8)
 bst.insert(9)
 bst.insert(15)
@@ -349,7 +349,7 @@ bst.inorder_visit()
 
 ```py
 # Using recursion 2:
-class NODE:
+class Node:
     def __init__(self, val):
         self.m_val = val
         self.m_left = None
@@ -371,9 +371,9 @@ class NODE:
         self.m_left = left_val
 
 
-class BST:
+class Bst:
     def __init__(self, root_val):
-        self.m_root = NODE(root_val)
+        self.m_root = Node(root_val)
 
     def insert(self, val):
         self.insert_to_node(self.m_root, val)
@@ -384,13 +384,13 @@ class BST:
             if left_val:
                 self.insert_to_node(left_val, val)
             else:
-                node.set_left(NODE(val))
+                node.set_left(Node(val))
         else:
             right_val = node.get_right()
             if right_val:
                 self.insert_to_node(right_val, val)
             else:
-                node.set_right(NODE(val))
+                node.set_right(Node(val))
 
     def find(self, val):
         self.find_in_node(self.m_root, val)
@@ -443,7 +443,7 @@ class BST:
         self.post_order(self.m_root)
 
 
-bst = BST(10)
+bst = Bst(10)
 bst.insert(15)
 bst.insert(8)
 bst.insert(9)
