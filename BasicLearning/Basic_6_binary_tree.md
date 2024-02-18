@@ -46,6 +46,12 @@ _Invalid binary search tree:_
 
 ## Time Complexity of Binary Tree
 
+The time complexity in a binary search tree can vary depending on whether the tree is balanced or not. 
+
+A balanced tree ensures that operations such as search has a faster time complexity. 
+
+The balance of a tree is determined by the height difference between the left and right subtrees of each node.
+
 **Height of a Binary Tree:**
 
 Height of a node is the longest distance from the node to a leaf, and hight of a tree is the longest distance from the root to a leaf.
