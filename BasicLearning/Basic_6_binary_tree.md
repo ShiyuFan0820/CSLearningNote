@@ -460,7 +460,7 @@ bst.print_postorder()
 
 ```
 
-## Reconstruciton of a Binary Tree
+## Reconstruction of a Binary Tree
 
 Reconstruciton of a binary tree is given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the bianry tree.
 
