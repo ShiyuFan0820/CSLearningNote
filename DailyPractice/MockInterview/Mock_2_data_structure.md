@@ -10,6 +10,6 @@
 
 **Still Need to Learn:**
 
-1. Reference counting and garbage collection.
-2. What is pass by value and pass by reference and what is the difference between them.
-3. Learn about rebalance in binary search tree, and AVL, Red Black tree.
+1. - [x] Reference counting and garbage collection.
+2. - [x] What is pass by value and pass by reference and what is the difference between them.
+3. - [x] Learn about rebalance in binary search tree, and AVL, Red Black tree.
