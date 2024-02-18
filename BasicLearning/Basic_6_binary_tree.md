@@ -471,7 +471,7 @@ Reconstruciton of a binary tree is given two integer arrays preorder and inorder
 preorder = [3, 9, 20, 15, 7]
 inorder = [9, 3, 15, 20, 7]
 ```
-2. According to the preorder array we can get the root node is `3`, and we can also know that numbers on the left side of the root is the elements of left subtree and numbers on the right side of the root is the elements of right subtree, so we can reconstruce the binary tree for the first step:
+2. According to the preorder array we can get the root node is `3`, and we can also know that numbers on the left side of the root is the elements of left subtree and numbers on the right side of the root is the elements of right subtree, so we can reconstruct the binary tree for the first step:
 
 <div align=center>
 <img width="411" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/5a262fa7-2f14-4b85-b418-e661d3f9454f">
