@@ -10,7 +10,7 @@ The final sorted array should not be returned by the function, but instead be st
 
 
 
-**The code is:**
+**The code is: passed**
 ```py
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
