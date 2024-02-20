@@ -25,6 +25,6 @@ _A brief version:_
 class Solution():
     def merge(self, nums1, m, nums2, n):
     for i in range(n):
-        nums1[m + i] = nums2[i]
+        nums1[m + i] = nums2[i] # i also adds 1 each loop, so we can use m adds i directly.
     nums1.sort()
 ```
