@@ -29,7 +29,7 @@ nums2 = [1]
 n = 1
 ```
 
-_The solution code 1: (failed)_
+_The solution code 1: (passed)_
 ```py
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
@@ -40,8 +40,8 @@ class Solution(object):
             else:
                 nums1[m + n -1] = nums1[m - 1]
                 m -= 1
-        if m == 0:
-            nums1 = nums2 # This code run well in pycharm
+        if n > 0:
+            nums1[:n] = nums2[:n]
 
 ```
 
