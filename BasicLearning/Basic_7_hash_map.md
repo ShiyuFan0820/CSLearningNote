@@ -45,4 +45,13 @@ As we use a hash function to calculate the index of a key, there may be cases wh
 
 **How to Solve Hash Collision**
 
+1. Open address.
+
+Resolving a collision by placing an item somewhere other than it's calculated address is called open address, cause every bucket/location is open to any item. We can simply add a value to the calculated index, or we can square the calculated index, or other algorithm. 
+
+<div align=center>
+<img width="750" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/79ab7e81-b5d5-4d4e-891f-2981d04389a9">
+</div>
+
+2. Chaining
 
