@@ -6,7 +6,7 @@ We know that McDonald's hash browns, which are made with a lot of shredded potat
 
 ## How Hash Map Operates
 
-We already know that retrieval elements in an array is by indexing and it's constant time complexity, the principle of how Hash Map operates is also by indexing, it's a key-value loop up. Hash Map uses a certain hash function to compute the key to an index into an array of buckets or slots, the value of the key will be stored in one of the buckets associated with the calculated index, when we want to retrieval the value, Hash Map will use hash function to convert the key into the index and return the desired value by indexing.
+We already know that retrieval elements in an array is by indexing and it's constant time complexity, the principle of how Hash Map operates is also by indexing, it's a key-value loop up. Hash Map uses a certain hash function to compute the key to an index into an array of buckets or slots, the value of the key will be stored in one of the buckets associated with the calculated index, when we want to retrieval the value, Hash Map will use hash function to convert the key into the index and return the desired value by indexing. This also maps large data to relatively small data for storage. If the hash map is implemented efficiently, the time complexity for both insertion and retrieval operations can be nearly constant on average, making hash maps a widely used data structure for fast key-value lookups.
 
 ## Hashing Algorithm
 
