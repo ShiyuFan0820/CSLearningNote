@@ -11,19 +11,19 @@ The final sorted array should not be returned by the function, but instead be st
 _The test input:_
 ```py
 # case 1
-num1 = [1, 2, 3, 0, 0, 0]
+nums1 = [1, 2, 3, 0, 0, 0]
 m = 3
 nums2 = [2, 5, 6]
 n = 3
 
 # case 2
-num1 = [1]
+nums1 = [1]
 m = 1
 nums2 = [0]
 n = 0
 
 # case 3
-num1 = [0]
+nums1 = [0]
 m = 0
 nums2 = [1]
 n = 1
@@ -34,14 +34,14 @@ _The solution code 1: (passed)_
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
         while m > 0 and n > 0:
-            if nums1[m - 1] < nums2[n - 1]:
+            if nums1[m - 1] < nums2[n - 1]: # As nums1 and nums2 are both sorted in non-decrease order, we can compare the last element in both list to see which element is bigger, the biggest one will be placed in the last position in nums1, and continue compare the last element of the both lists.
                 nums1[m + n - 1] = nums2[n - 1]
                 n -= 1
             else:
                 nums1[m + n -1] = nums1[m - 1]
                 m -= 1
-        if n > 0:
-            nums1[:n] = nums2[:n]
+        if n > 0: # After comparison if there are still elements in nums2, means these elements are less than the same position's elements in nums1, replace the elements in nums1 at the same position to the elements in nums2
+            nums1[:n] = nums2[:n] 
 
 ```
 
