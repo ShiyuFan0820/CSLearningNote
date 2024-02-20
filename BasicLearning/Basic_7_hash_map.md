@@ -2,14 +2,24 @@
 
 ## Definition of Hash Map
 
-We know that McDonald's hash browns, which are made with a lot of shredded potatoes, eventually become a evenly distributed pie shape. The principle of Hash Table also known as Hash Map is similar to this one. 
+We know that McDonald's hash browns, which are made with a lot of shredded potatoes, eventually become a evenly distributed pie shape. Hash Map is similar to this one. Hash Map is a data structure that uses a certain hash function to distribute large data evenly across the available storage space, optimizes the access efficiency. 
 
-Hash Map or Hash Table, it's a data structure that allows very fast retrieval of data. It uses a hash function to compute the key to an index into an array of buckets or slots, from which the desired value can be found based on the calculated index, allowing for efficient retrieval, insertion and deletion of values based on their calculated index, the hash function helps distribute data evenly across the available storage space, optimize the access efficiency.
+## How Hash Map Operates
+
+We already know that retrieval elements in an array is by indexing and it's constant time complexity, the principle of how Hash Map operates is also by indexing, it's a key-value loop up. Hash Map uses a certain hash function to compute the key to an index into an array of buckets or slots, the value of the key will be stored in one of the buckets associated with the calculated index, when we want to retrieval the value, Hash Map will use hash function to convert the key into the index and return the desired value by indexing.
 
 ## Hashing Algorithm
 
+**Definition of Hashing Algorithm**
+
+Hashing algorithm also known as hash function, it's a calculation applied to a key which may be a very large number or a very long string to transform it into a relatively small index number that corresponds to a position in the Hash Map, this index number is effectively a memory address.
+
+**Types of Hashing Algorithm**
+
+There are many hash functions, like division method, multiplication method, mid-square method, folding method, universal hashing and cryptographic hash functions. Some are more appropriate than others depending on the nature of the data we want to store. 
 
 ## Hash Collision
 
+As we use a hash function to calculate the index of a key, there could be a situation where the index of two keys are calculated the same, this situation is known as a collision.
 
 ## How to Solve Hash Collision
