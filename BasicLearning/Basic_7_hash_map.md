@@ -20,6 +20,6 @@ There are many hash functions, like division method, multiplication method, mid-
 
 ## Hash Collision
 
-As we use a hash function to calculate the index of a key, there may be cases where the index of two keys calculates to be the same, but both this situation is known as a collision.
+As we use a hash function to calculate the index of a key, there may be cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a collision.
 
 ## How to Solve Hash Collision
