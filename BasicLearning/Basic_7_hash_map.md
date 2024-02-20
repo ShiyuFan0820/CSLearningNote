@@ -18,6 +18,25 @@ There are many hash functions, like division method, multiplication method, mid-
 
 **Example**
 
+If we want to store keys `3, 4, 5, 21, 18, 45, 20, 6, 96, 11, 24` and their value in a Hash Map whose size is 11, the process is like this:
+
+<div align=center>
+<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/0ddd4b7a-f371-4ce4-ba59-2b5a85227443">
+</div>
+
+Repeat this operation to all keys, we can get a Hash Map with key value pairs:
+
+<div align=center>
+<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/f2874225-c43b-475c-aec9-9046ae323fb1">
+</div>
+
+If we want to retrieval key `24` and its value:
+
+<div align=center>
+<img width="800" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/be196ed8-c899-483f-8669-3c288fffe02a">
+</div>
+
+
 ## Hash Collision
 
 As we use a hash function to calculate the index of a key, there may be cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a collision.
