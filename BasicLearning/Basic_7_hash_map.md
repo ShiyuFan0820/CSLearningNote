@@ -16,6 +16,8 @@ Hashing algorithm also known as hash function, it's a calculation applied to a k
 
 There are many hash functions, like division method, multiplication method, mid-square method, folding method, universal hashing and cryptographic hash functions. Some are more appropriate than others depending on the nature of the data we want to store. 
 
+**Example**
+
 ## Hash Collision
 
 As we use a hash function to calculate the index of a key, there may be cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a collision.
