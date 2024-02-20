@@ -8,7 +8,28 @@ Merge nums1 and nums2 into a single array sorted in non-decreasing order.
 
 The final sorted array should not be returned by the function, but instead be stored inside the array nums1. To accommodate this, nums1 has a length of m + n, where the first m elements denote the elements that should be merged, and the last n elements are set to 0 and should be ignored. nums2 has a length of n.
 
-_The code is: (failed)_
+_The test input:_
+```py
+# case 1
+num1 = [1, 2, 3, 0, 0, 0]
+m = 3
+nums2 = [2, 5, 6]
+n = 3
+
+# case 2
+num1 = [1]
+m = 1
+nums2 = [0]
+n = 0
+
+# case 3
+num1 = [0]
+m = 0
+nums2 = [1]
+n = 1
+```
+
+_The solution code 1: (failed)_
 ```py
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
@@ -20,11 +41,11 @@ class Solution(object):
                 nums1[m + n -1] = nums1[m - 1]
                 m -= 1
         if m == 0:
-            nums1 = nums2
+            nums1 = nums2 # This code run well in pycharm
 
 ```
 
-_The code is: (passed)_
+_The solution code 2: (passed)_
 ```py
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
