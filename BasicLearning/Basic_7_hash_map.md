@@ -41,7 +41,7 @@ If we want to retrieval key `24` and its value:
 
 **What is Hash Collision**
 
-As we use a hash function to calculate the index of a key, there may be cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a collision.
+As we use a hash function to calculate the index of a key, there may be cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a hash collision.
 
 **How to Solve Hash Collision**
 
