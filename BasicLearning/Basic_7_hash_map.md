@@ -47,17 +47,28 @@ As we use a hash function to calculate the index of a key, there may be cases wh
 
 1. Open address.
 
-Resolving a collision by placing an item somewhere other than it's calculated address is called open address, cause every bucket/location is open to any item. We can simply add a value to the calculated index, or we can square the calculated index, or other algorithm. 
+Resolving a collision by placing an item somewhere other than it's calculated address is called open address, cause every bucket/location is open to any item. We can simply add a value to the calculated index, or we can square the calculated index, or other algorithm. When we want to do searching we also retrieve by the algorithm. 
 
 <div align=center>
 <img width="750" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/79ab7e81-b5d5-4d4e-891f-2981d04389a9">
 </div>
 
+Advantage: Open address is simple to implement and requires less memory overhead as it does not involve storing additional pointers for linked list.
+
+Disadvantage: Result in clustering, because keys might bunch together inside the array while large proportions of it remains unoccupied, and resizing an open-addressed Hash Map can be complex, once the size is run out, the Hash Map would crash.
+
 2. Chaining
 
-Instead of storing elements directly in the buckets, chaining involves maintaining a linked list at each bucket.
+Instead of storing elements directly in the buckets, chaining involves maintaining a linked list at each bucket. When we want to do searching we just traverse the linked to find the desired element.
 
 <div align=center>
 <img width="705" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/dd9c9f64-cfa7-48bb-a947-05726491dc8d">
 </div>
+
+Advantage: Chaining is also simple to implement, and can be extended, it can efficiently handle a large datasets with collisions.
+
+Diadvantage: Chaining requires additional memory to store the linked lists, which can lead to increased memory useage, especially if many collisions occur, and this would also degrade the efficiency of search elements to O(n) complexity.
+
+Overall, the main goal of a Hash Map is to choose a suitable hash function to maximize randomness of index and produce the least amount of collisions.
+
 
