@@ -55,3 +55,9 @@ Resolving a collision by placing an item somewhere other than it's calculated ad
 
 2. Chaining
 
+Instead of storing elements directly in the buckets, chaining involves maintaining a linked list at each bucket.
+
+<div align=center>
+<img width="705" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/dd9c9f64-cfa7-48bb-a947-05726491dc8d">
+</div>
+
