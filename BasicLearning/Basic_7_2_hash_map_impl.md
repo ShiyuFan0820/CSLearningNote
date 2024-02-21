@@ -125,4 +125,16 @@ hash_map.search(9)
    
 ```
 
-
+_The output is:_
+```py
+Insert key-value pair (20: twenty) is successful.
+Insert key-value pair (9: nine) is successful.
+Insert key-value pair (1: one) is successful.
+20: twenty.
+9: nine.
+key 31 not exist.
+key 2 not exist.
+Key-value pair (9: nine) deleted.
+Key 10 not exist.
+key 9 not exist.
+```
