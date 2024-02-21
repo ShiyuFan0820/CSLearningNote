@@ -1,6 +1,6 @@
 **Python**
 
-_Code 1 (Without solution for collision):_
+_Code 1 without solution for collision:_
 ```py
 class HashMap:
     def __init__(self, size, hash_seed):
@@ -32,18 +32,25 @@ hash_map.insert(57, "Fifty seven")
 hash_map.insert(66, "Sixty six")
 hash_map.insert(49, "Forty nine")
 
-hash_map.search(2)
+search_list = [2, 3, 9, 20, 11, 57, 66, 49]
+for element in search_list:
+    hash_map.search(element)
       
 ```
 
 _The output is:_
 ```py
-line 17, in search
-    searched_value = self.m_buckets(hashed_key)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: 'list' object is not callable
+2: Two
+3: Three
+9: Nine
+20: Two
+11: Two
+57: Three
+66: Three
+49: Forty nine
 ```
 
+_Code 2 with solution for collision (Chaining):_
 
 
 
