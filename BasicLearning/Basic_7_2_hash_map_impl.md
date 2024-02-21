@@ -51,6 +51,53 @@ _The output is:_
 ```
 
 _Code 2 with solution for collision (Chaining):_
+```py
+class BucketNode:
+    def __init__(self, key, value):
+        self.m_key = key
+        self.m_value = value
+        self.m_next = None
 
+
+class HashMap:
+    def __init__(self, size):
+        self.m_size = size
+        self.m_buckets = [None] * size
+
+    def hash_key(self, key):
+        return key % self.m_size
+
+    def insert(self, key, value):
+        hashed_key = self.hash_key(key)
+        current_node = self.m_buckets[hashed_key]
+        if current_node is None:
+            self.m_buckets[hashed_key] = BucketNode(key, value)
+            return
+        while current_node.m_next:
+            current_node = current.m_next
+        current_node.m_next = BucketNode(key, value)
+
+    def search(self, key):
+        hashed_key = self.hash_key(key)
+        current_node = self.m_buckets[hashed_key]
+        while current_node:
+            if current_node.m_key == key:
+                print(f"{current_node.m_key}: {current_node.m_value}.")
+                return
+            current_node = current_node.m_next
+        print(f"key {key} not exist.")
+
+
+hash_map = HashMap(11)
+hash_map.insert(20, "twenty")
+hash_map.insert(9, "Nine")
+hash_map.insert(1, "one")
+
+hash_map.search(20)
+hash_map.search(9)
+hash_map.search(31)
+hash_map.search(2)
+   
+```
 
 
