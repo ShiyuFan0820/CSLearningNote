@@ -72,10 +72,30 @@ class HashMap:
         current_node = self.m_buckets[hashed_key]
         if current_node is None:
             self.m_buckets[hashed_key] = BucketNode(key, value)
+            print(f"Insert key-value pair ({key}: {value}) is successful.")
             return
         while current_node.m_next:
             current_node = current.m_next
         current_node.m_next = BucketNode(key, value)
+        print(f"Insert key-value pair ({key}: {value}) is successful.")
+
+    def delete(self, key):
+        hashed_key = self.hash_key(key)
+        current_node = self.m_buckets[hashed_key]
+        prev_node = None
+        while current_node:
+            if current_node.m_key == key:
+                if prev_node:
+                    prev_node.m_next = current_node.m_next
+                    print(f"Key-value pair ({current_node.m_key}: {current_node.m_value}) deleted.")
+                    return
+                else:
+                    self.m_buckets[hashed_key] = current_node.m_next
+                    print(f"Key-value pair ({current_node.m_key}: {current_node.m_value}) deleted.")
+                    return
+            prev_node = current_node
+            current_node = current_node.m_next
+        print(f"Key {key} not exist.")
 
     def search(self, key):
         hashed_key = self.hash_key(key)
@@ -90,13 +110,18 @@ class HashMap:
 
 hash_map = HashMap(11)
 hash_map.insert(20, "twenty")
-hash_map.insert(9, "Nine")
+hash_map.insert(9, "nine")
 hash_map.insert(1, "one")
 
 hash_map.search(20)
 hash_map.search(9)
 hash_map.search(31)
 hash_map.search(2)
+
+hash_map.delete(9)
+hash_map.delete(10)
+
+hash_map.search(9)
    
 ```
 
