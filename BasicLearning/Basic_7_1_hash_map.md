@@ -55,7 +55,7 @@ Resolving a collision by placing an item somewhere other than it's calculated ad
 
 Advantage: Open address is simple to implement and requires less memory overhead as it does not involve storing additional pointers for linked list.
 
-Disadvantage: Result in clustering, because keys might bunch together inside the array while large proportions of it remains unoccupied, and resizing an open-addressed Hash Map can be complex, once the size is run out, the Hash Map would crash.
+Disadvantage: Result in clustering, because keys might bunch together inside the array while large proportions of it remains unoccupied, and open addressing may encounter difficulties when the Hash Map becomes densely populated, as finding an empty slot to resolve a collision can become increasingly challenging and resizing an open-addressed Hash Map can be complex, once the size is run out, the Hash Map would crash.
 
 2. Chaining
 
@@ -65,7 +65,7 @@ Instead of storing elements directly in the buckets, chaining involves maintaini
 <img width="705" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/dd9c9f64-cfa7-48bb-a947-05726491dc8d">
 </div>
 
-Advantage: Chaining is also simple to implement, and can be extended, it can efficiently handle a large datasets with collisions.
+Advantage: Chaining provide a flexible approach to handle collisions, ensuring that the Hash Map remains stability even when the number of collisions increases. By using linked list to store colliding key-value pairs, chaining allows for dynamic resizing of the Hash Map without risking a crash due to excessive collisions
 
 Diadvantage: Chaining requires additional memory to store the linked lists, which can lead to increased memory useage, especially if many collisions occur, and this would also degrade the efficiency of search elements to O(n) complexity.
 
