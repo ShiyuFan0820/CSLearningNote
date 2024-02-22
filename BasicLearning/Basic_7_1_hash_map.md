@@ -47,7 +47,7 @@ As we use a hash function to calculate the index of a key, there may be cases wh
 
 1. Open address.
 
-Resolving a collision by placing an item somewhere other than it's calculated address is called open address, cause every bucket/location is open to any item. We can simply add a value to the calculated index, or we can square the calculated index, or other algorithm. When we want to do searching we also retrieve by the algorithm. 
+Resolving a collision by placing an item somewhere other than it's calculated address is called open address, cause every bucket/location is open to any item. We can simply add a value to the calculated index, or we can square the calculated index, or by other algorithm, when we want to do searching we also retrieve by the algorithm. 
 
 <div align=center>
 <img width="750" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/79ab7e81-b5d5-4d4e-891f-2981d04389a9">
@@ -55,11 +55,11 @@ Resolving a collision by placing an item somewhere other than it's calculated ad
 
 Advantage: Open address is simple to implement and requires less memory overhead as it does not involve storing additional pointers for linked list.
 
-Disadvantage: Result in clustering, because keys might bunch together inside the array while large proportions of it remains unoccupied, and open addressing may encounter difficulties when the Hash Map becomes densely populated, as finding an empty slot to resolve a collision can become increasingly challenging and resizing an open-addressed Hash Map can be complex, once the size is run out, the Hash Map would crash.
+Disadvantage: Result in clustering, because keys might bunch together inside the array while large proportions of it remains unoccupied, and open addressing may encounter difficulties when the Hash Map becomes densely populated, as finding an empty bucket to resolve a collision can become increasingly challenging and resizing an open-addressed Hash Map can be complex, once the size is ran out, the Hash Map would crash.
 
 2. Chaining
 
-Instead of storing elements directly in the buckets, chaining involves maintaining a linked list at each bucket. When we want to do searching we just traverse the linked to find the desired element.
+Instead of storing elements directly in an alternative buckets, chaining involves storing multiple key-value pairs by using a linked list or other data structures at each bucket. When we want to do searching we just traverse the linked structures to find the desired element.
 
 <div align=center>
 <img width="705" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/dd9c9f64-cfa7-48bb-a947-05726491dc8d">
@@ -68,6 +68,10 @@ Instead of storing elements directly in the buckets, chaining involves maintaini
 Advantage: Chaining provide a flexible approach to handle collisions, ensuring that the Hash Map remains stability even when the number of collisions increases. By using linked list to store colliding key-value pairs, chaining allows for dynamic resizing of the Hash Map without risking a crash due to excessive collisions
 
 Diadvantage: Chaining requires additional memory to store the linked lists, which can lead to increased memory useage, especially if many collisions occur, and this would also degrade the efficiency of search elements to O(n) complexity.
+
+3. Control load factor within a range.
+
+Load factor in a Hash Map is the ratio of the number of elements stored in the Hash Map to the total number of buckets, it indicates how full the Hash Map is and can affect its performance, the load factor best under 70%.
 
 Overall, the main goal of a Hash Map is to choose a suitable hash function to maximize randomness of index and produce the least amount of collisions.
 
