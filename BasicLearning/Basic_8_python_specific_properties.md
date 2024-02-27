@@ -12,13 +12,13 @@ Examples of lists:
 empty_list = []
 
 # A list of numbers:
-num = [1, 2, 3, 4]
+num_list = [1, 2, 3, 4]
 
 # A list of strings:
-str = ["one", "two", "three", "four"]
+str_list = ["one", "two", "three", "four"]
 
 # A list of mixture of numbers and strings:
-mix = [1, 2, "one", "two"]
+mix_list = [1, 2, "one", "two"]
 
 # A list of nested list:
 nested_list = [1, 2, 3, 4, ["one", "two", "three", "four"]]
@@ -26,7 +26,25 @@ nested_list = [1, 2, 3, 4, ["one", "two", "three", "four"]]
 
 **Tuple**
 
+Tuple's operations are similar to list, but tuple is immutable, and is enclosed in parentheses instead of square brackets.
 
+Examples of tuples:
+```py
+# An empty tuple:
+empty_tule = ()
+
+# A tuple of numbers:
+num_tuple = (1, 2, 3, 4)
+
+# A tuple of strings:
+str_tuple = ("one", "two", "three", "four")
+
+# A tuple of mixture of numbers and strings:
+mix_tuple = (1, 2, "one", "two")
+
+# A tuple of nested tuple:
+nested_tuple = (1, 2, 3, 4, ("one", "two", "three", "four"))
+```
 
 **Python List vs Tuple**
 
