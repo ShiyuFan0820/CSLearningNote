@@ -6,7 +6,7 @@
 
 List in python is like array in other programming language like C, C++ and Java, but more flexible. It's an ordered collection of objects enclosed be square brackets and separated by commas, objects in a list can be arbitrary mixture of elements like numbers, strings or a nested list and so on. All elements in a list can be access by indexing, a list can be shrunk or grow, it's mutable.
 
-Example of list:
+Examples of lists:
 ```py
 # An empty list:
 empty_list = []
