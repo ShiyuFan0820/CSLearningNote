@@ -60,4 +60,51 @@ Shallow copy and deep copy are two ways to create copies of objects, such as lis
 
 **Shallow Copy**
 
+1. Shallow copy can be performed using the `copy()` method or the `copy` module's `copy()` function.
+2. A shallow copy creates a new object, but it doesn't create copies of nested objects within the orginal object, instead, it copies references to the nested objects. As a result, changes made to the nested objects in the copied object will also affect the original object, and vice versa.
 
+**Deep Copy**
+
+1. Deep copy can be performed using the `copy` module's `deepcopy()` function.
+2. A deep copy creates a new object and recursively copies all nested objects within the original object. This means that changes made to the nested objects in the copied object will not affect the original object and vice versa.
+
+**Attention**
+
+Assignment is not a copying operation, instead it creates a new reference to the same object, this object just has two different variable names. To create a copy of an object that can be modified independently of the original, we should use like shallow copy ot deep copy mentioned above.
+
+**Example**
+```py
+from copy import deepcopy
+
+list_1 = [1, 2, 3, 4, [5, 6, 7]]
+assignment = list_1
+print(f"Assignment of list 1: {assignment}")
+shallow_copy = list_1.copy()
+print(f"A shallow copy of list 1: {shallow_copy}")
+deep_copy = deepcopy(list_1)
+print(f"A deep copy of list 1: {deep_copy}")
+
+list_1[0] = "modified"
+list_1[4][2] = "modified"
+
+print("\n------Modify List 1------")
+
+print(f"\nList 1 after modification: {list_1}")
+print(f"Assignment after modification: {assignment}")
+print(f"Shallow copy after modification: {shallow_copy}")
+print(f"Deep copy after modification: {deep_copy}")
+```
+
+The output is:
+```py
+Assignment of list 1: [1, 2, 3, 4, [5, 6, 7]]
+A shallow copy of list 1: [1, 2, 3, 4, [5, 6, 7]]
+A deep copy of list 1: [1, 2, 3, 4, [5, 6, 7]]
+
+------Modify List 1------
+
+List 1 after modification: ['modified', 2, 3, 4, [5, 6, 'modified']]
+Assignment after modification: ['modified', 2, 3, 4, [5, 6, 'modified']]
+Shallow copy after modification: [1, 2, 3, 4, [5, 6, 'modified']]
+Deep copy after modification: [1, 2, 3, 4, [5, 6, 7]]
+```
