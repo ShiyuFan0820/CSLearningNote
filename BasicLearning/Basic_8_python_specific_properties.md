@@ -55,3 +55,9 @@ nested_tuple = (1, 2, 3, 4, ("one", "two", "three", "four"))
 5. Tuple can be used as dictionary keys as its immutable property.
 
 ## Shallow and Deep Copy
+
+Shallow copy and deep copy are two ways to create copies of objects, such as lists, dictionaries, or custom objects. The difference lies in how nested objects are handled during the copying process.
+
+**Shallow Copy**
+
+
