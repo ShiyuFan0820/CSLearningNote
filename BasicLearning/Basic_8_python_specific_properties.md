@@ -111,11 +111,15 @@ Deep copy after modification: [1, 2, 3, 4, [5, 6, 7]]
 
 ## Set
 
-A set is a collection of unique elements of any immutable data type, this means an element in a set can not be a list or other mutable data types. Here are some key properties of sets in Python:
-1. Sets don't allow duplicate elements, the operation of adding a duplicate element to a set will be ignored.
+A set is a collection of unique elements of any immutable data type(this means an element in a set can not be a list or other mutable data types) enclosed witnin curly brackets. They are like dictionaries without values. Here are some key properties of sets in Python:
+1. Sets can't contain mutable objects.
 2. Sets are mutable, this means we can add or remove elements in a set.
-3. Sets are unordered collections, therefore, sets don't support indexing or slicing.
+3. Sets don't allow duplicate elements, the operation of adding a duplicate element to a set will be ignored.
+4. Sets are unordered collections, therefore, sets don't support indexing or slicing.
 
+**Set operations**
+
+[Check set operations in this website.](https://python-course.eu/python-tutorial/sets-and-frozen-sets.php)
 
 
 
