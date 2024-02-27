@@ -4,7 +4,7 @@
 
 **Python List**
 
-List in python is like array in other programming language like C, C++ and Java, but more flexible. It's an ordered collection of objects enclosed be square brackets and separated by commas, objects in a list can be arbitrary mixture of elements like numbers, strings or a nested list and so on. All elements in a list can be access by indexing, a list can be shrunk or grow, it's mutable.
+Lists in python are like arrays in other programming language like C, C++ and Java, but more flexible. Lists are ordered collections of objects enclosed be square brackets and separated by commas, objects in lists can be arbitrary mixture of elements like numbers, strings or a nested list and so on. All elements in lists can be access by indexing, lists can be shrunk or grow, they are mutable.
 
 Examples of lists:
 ```py
@@ -26,7 +26,7 @@ nested_list = [1, 2, 3, 4, ["one", "two", "three", "four"]]
 
 **Tuple**
 
-Tuple's operations are similar to list, but tuple is immutable, appending or removing elements in a tuple is not allowed, and elements in a tuple are enclosed in parentheses instead of square brackets.
+Tuples' operations are similar to lists, but tuples are immutable, appending or removing elements in tuples are not allowed, and elements in tuples are enclosed in parentheses instead of square brackets.
 
 Examples of tuples:
 ```py
@@ -48,11 +48,11 @@ nested_tuple = (1, 2, 3, 4, ("one", "two", "three", "four"))
 
 **Python List vs Tuple**
 
-1. List is mutable and more versatile and suitable for scenarios where you need dynamic, mutable sequences of elements that can be modified or extended over time.
-2. Tuple is immutable, since tuple is immutable, Python can optimize memory usage and execution speed.
-3. Tuple is generally faster than list, especially for operations like iteration and indexing.
-4. Tuple can be used to return multiple values from a function.
-5. Tuple can be used as dictionary keys as its immutable property.
+1. Lists are mutable and more versatile and suitable for scenarios where you need dynamic, mutable sequences of elements that can be modified or extended over time.
+2. Tuples are immutable, since tuples are immutable, Python can optimize memory usage and execution speed.
+3. Tuples are generally faster than lists, especially for operations like iteration and indexing.
+4. Tuples can be used to return multiple values from a function.
+5. Tuples can be used as dictionary keys as its immutable property.
 
 ## Shallow and Deep Copy
 
@@ -109,4 +109,14 @@ Shallow copy after modification: [1, 2, 3, 4, [5, 6, 'modified']]
 Deep copy after modification: [1, 2, 3, 4, [5, 6, 7]]
 ```
 
-# Set
+## Set
+
+A set is a collection of unique elements of any immutable data type, this means an element in a set can not be a list or other mutable data types. Here are some key properties of sets in Python:
+1. Sets don't allow duplicate elements, the operation of adding a duplicate element to a set will be ignored.
+2. Sets are mutable, this means we can add or remove elements in a set.
+3. Sets are unordered collections, therefore, sets don't support indexing or slicing.
+
+
+
+
+
