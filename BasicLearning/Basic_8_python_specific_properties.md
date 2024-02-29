@@ -128,7 +128,7 @@ The print function in python is like this:
 print(value1, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
 ```
 
-**sep in print Function**
+**"sep" in print Function**
 
 We already know that when we want to print two elements by calling the print function, we write like this:
 ```py
@@ -158,4 +158,18 @@ ab
 a:-)b
 ```
 
+**"end" in print Function**
+
+If we assign nothing to the "end" parameter, the print call will be ended by a newline by defualt, we can assign an arbitrary string to the keyword parameter "end" to change the end behaviour:
+```py
+for i in range(4):
+     print(i, end=" :-) ") 
+```
+
+The output is:
+```py
+0 :-) 1 :-) 2 :-) 3 :-)
+```
+
+**"file" in print Function**
 
