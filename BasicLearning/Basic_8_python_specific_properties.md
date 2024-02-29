@@ -160,7 +160,7 @@ a:-)b
 
 **"end" in print Function**
 
-If we assign nothing to the "end" parameter, the print call will be ended by a newline by defualt, we can assign an arbitrary string to the keyword parameter "end" to change the end behaviour:
+If we don't call the "end" parameter, the print call will be ended by a newline by defualt, we can assign an arbitrary string to the keyword parameter "end" to change the end behaviour:
 ```py
 for i in range(4):
      print(i, end=" :-) ") 
@@ -172,4 +172,14 @@ The output is:
 ```
 
 **"file" in print Function**
+
+If we don't call the "file" parameter, the output of the print function is send to the standard output stream (sys.stdout) by default, we can send the output into a different stream by redefining the keyword parameter "file":
+```py
+fh = open("data.txt","w")
+print("42 is the answer, but what is the question?", file=fh)
+fh.close()
+```
+
+The output will not be printed in the interactive shell, the output is sent to the file "data.txt".
+
 
