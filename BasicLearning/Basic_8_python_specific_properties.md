@@ -121,6 +121,41 @@ A set is a collection of unique elements of any immutable data type(this means a
 
 [Check set operations in this website.](https://python-course.eu/python-tutorial/sets-and-frozen-sets.php)
 
+## print Function
 
+The print function in python is like this:
+```py
+print(value1, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
+```
+
+**sep in print Function**
+
+We already know that when we want to print two elements by calling the print function, we write like this:
+```py
+print("a", "b")
+```
+
+The output would be:
+```py
+a b
+```
+
+The two elements are separated by comma in the print function and are separated by a space in the output, it's possible to redefine the seperator between elements by assigning an arbitrary string to the keyword parameter "sep":
+```py
+print("a","b",sep="")
+
+print(192,168,178,42,sep=".")
+
+print("a","b",sep=":-)")
+```
+
+The output is:
+```py
+ab
+
+192.168.178.42
+
+a:-)b
+```
 
 
