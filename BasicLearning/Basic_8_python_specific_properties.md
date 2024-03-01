@@ -184,10 +184,33 @@ The output will not be printed in the interactive shell, the output is sent to t
 
 ## Pickle
 
-Pickle is a module in Python which can serialize and de-serialize Python object structures, this means convert a Python object hierarychy into a byte stream, unpickle is the inverse operation. To achive this, we use the `pickle.dump(o)` method of the pickle mudule to convert the object into byte stream, and reread into a program by using the method `pickle.load(file)`.
+Pickle is a module in Python which can serialize and de-serialize Python object structures, this means convert a Python object hierarychy into a byte stream, unpickle is the inverse operation. 
+
+To achive this, we use the `pickle.dump()` method of the pickle mudule to convert the object into byte stream, and reread into a program by using the method `pickle.load(file)`.
 
 **Example of How to Use Pickle Module in Python**
 
+Convert an object into byte stream to a file:
+```py
+import pickle
+cities = ["Paris", "Dijon", "Lyon", "Strasbourg"]
+fh = open("data.pkl", "bw")
+pickle.dump(cities, fh)
+fh.close()
+```
+
+Reread the file data:
+```py
+import pickle
+f = open("data.pkl", "rb")
+villes = pickle.load(f)
+print(villes)
+```
+
+_The output:_
+```py
+['Paris', 'Dijon', 'Lyon', 'Strasbourg']
+```
 
 
 
