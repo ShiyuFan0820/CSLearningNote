@@ -182,7 +182,7 @@ fh.close()
 
 The output will not be printed in the interactive shell, the output is sent to the file "data.txt".
 
-## Pickle
+## Pickle Module
 
 Pickle is a module in Python which can serialize and de-serialize Python object structures, this means convert a Python object hierarychy into a byte stream, unpickle is the inverse operation. 
 
@@ -212,6 +212,9 @@ _The output:_
 ['Paris', 'Dijon', 'Lyon', 'Strasbourg']
 ```
 
+## Shelve Module
+
+The `pickle` module can only pickle one object at the time, while `shelve` module can deal with data object like dictionary. The values in a shelf can be arbitrary Python objects, the keys have to be strings.
 
 
 
