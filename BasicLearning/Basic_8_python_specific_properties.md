@@ -192,10 +192,10 @@ To achive this, we use the `pickle.dump()` method of the pickle mudule to conver
 
 Convert an object into byte stream to a file:
 ```py
-import pickle
+import pickle # Firstly, import the pickle module
 cities = ["Paris", "Dijon", "Lyon", "Strasbourg"]
-fh = open("data.pkl", "bw")
-pickle.dump(cities, fh)
+fh = open("data.pkl", "bw") # Open a file as binary write
+pickle.dump(cities, fh) # Pickle the data using dump method
 fh.close()
 ```
 
@@ -215,6 +215,8 @@ _The output:_
 ## Shelve Module
 
 The `pickle` module can only pickle one object at the time, while `shelve` module can deal with data object like dictionary. The values in a shelf can be arbitrary Python objects, the keys have to be strings.
+
+
 
 
 
