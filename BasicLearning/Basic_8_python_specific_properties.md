@@ -216,6 +216,31 @@ _The output:_
 
 The `pickle` module can only pickle one object at the time, while `shelve` module can deal with data object like dictionary. The values in a shelf can be arbitrary Python objects, the keys have to be strings.
 
+**Example of How to Use Shelve Module**
+
+Write objects into a shelf:
+```py
+import shelve # Firstly, import the shelve module.
+s = shelve.open("MyShelve") # Open a shelve object with the shelve method open, if the file "MyShelve" already exists, the open method will try to open it. If it isn't a shelf file, we will get an error message. If the file doesn't exist, it will be created.
+
+s["street"] = "Fleet Str" # Write object in the shelf, the operation is like those in a dictionary.
+s["city"] = "London"
+s.close() 
+```
+
+Read the objects in a shelf:
+```py
+import shelve
+s = shelve.open("MyShelve")
+print(s["street"])
+print(s["city"])
+```
+
+_The output is:_
+```py
+Fleet Str
+London
+```
 
 
 
