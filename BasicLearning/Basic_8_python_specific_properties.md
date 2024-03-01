@@ -184,3 +184,9 @@ The output will not be printed in the interactive shell, the output is sent to t
 
 ## Pickle
 
+Pickle is a module in Python which can serialize and de-serialize Python object structures, this means convert a Python object hierarychy into a byte stream, unpickle is the inverse operation. To achive this, we use the `dump` method of the pickle mudule. 
+
+
+
+
+
