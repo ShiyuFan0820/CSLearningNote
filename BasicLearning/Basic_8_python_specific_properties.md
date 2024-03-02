@@ -307,6 +307,36 @@ Combine two functions making the syntax simpler.
 
 ## zip
 
+Like the zipper of pants, when we zip the pants, the corresponding gear pairs snap together.
 
+The `zip()` function in Python takes iterables(such as list, tuples, or strings) as input and returns an iterator that generates tuples containing elements from each iterable at the same index. If the input iterables are of different lengths, the iterator stops when the shortest iterable is exhausted.
 
+_Example of How to Use zip() Function in Python:_
+```py
+# When two iterables have the same length
+list1 = [1, 2, 3]
+list2 = ['a', 'b', 'c']
+
+zipped_same_length = zip(list1, list2)
+for item in zipped_same_length:
+     print(item)
+
+# When two iterables have different length
+list1 = [1, 2, 3]
+list2 = ['a', 'b']
+
+zipped_differ_length = zip(list1, list2)
+for item in zipped_differ_length:
+     print(item)
+```
+
+_The output is:_
+```py
+(1, 'a')
+(2, 'b')
+(3, 'c')
+
+(1, 'a')
+(2, 'b')
+```
 
