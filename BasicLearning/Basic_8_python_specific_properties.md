@@ -242,11 +242,11 @@ Fleet Str
 London
 ```
 
-## lambda and map() Function
+## lambda Function and map() Function
 
-**lambda**
+**lambda Function**
 
-The lambda function is a way to create functions without a name.
+The lambda function or lambda operator is a way to create functions without a name.
 
 The syntax of a lambda function: `lambda argument_list: expression`.
 
@@ -286,3 +286,5 @@ _The output is:_
 ```py
 [1, 4, 9, 16, 25]
 ```
+
+**Use map() Function with lambda Function**
