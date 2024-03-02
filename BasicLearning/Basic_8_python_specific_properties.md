@@ -305,6 +305,7 @@ _The output is:_
 
 Combine two functions making the syntax simpler.
 
+## zip
 
 
 
