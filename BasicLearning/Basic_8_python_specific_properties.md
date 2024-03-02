@@ -250,7 +250,7 @@ The lambda function is a way to create functions without a name.
 
 The syntax of a lambda function: `lambda argument_list: expression`.
 
-_Example of How to Use lambda_
+_Example of How to Use lambda:_
 ```py
 # If we want to define a lambda function to return the sum of two arguments:
 sum = lambda x, y : x + y
@@ -264,6 +264,25 @@ _The output is:_
 3
 ```
 
-**map Function**
+**map() Function**
 
+The `map()` function is a built-in function used to apply a specified function to each item in an iterable(such as a list, tuple, or string) and returns a new iterable containing the results. It takes two arguments: the function to apply and the iterable to apply it to.
 
+_Example of How to Use map() function:_
+```py
+# A square function
+def square(x):
+     return x ** 2
+
+# A list of numbers
+numbers = [1, 2, 3, 4, 5]
+
+# Usage of map() function
+squared_nums_list = list(map(square, numbers))
+print(squared_nums_list)
+```
+
+_The output is:_
+```py
+[1, 4, 9, 16, 25]
+```
