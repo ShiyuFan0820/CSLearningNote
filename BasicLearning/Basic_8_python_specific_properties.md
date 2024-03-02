@@ -317,16 +317,14 @@ _Example of How to Use zip() Function in Python:_
 list1 = [1, 2, 3]
 list2 = ['a', 'b', 'c']
 
-zipped_same_length = zip(list1, list2)
-for item in zipped_same_length:
+for item in zip(list1, list2):
      print(item)
 
 # When two iterables have different length
 list1 = [1, 2, 3]
 list2 = ['a', 'b']
 
-zipped_differ_length = zip(list1, list2)
-for item in zipped_differ_length:
+for item in zip(list1, list2):
      print(item)
 ```
 
