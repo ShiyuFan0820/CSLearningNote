@@ -244,7 +244,26 @@ London
 
 ## lambda and map() Function
 
+**lambda**
 
+The lambda function is a way to create functions without a name.
 
+The syntax of a lambda function: `lambda argument_list: expression`.
+
+_Example of How to Use lambda_
+```py
+# If we want to define a lambda function to return the sum of two arguments:
+sum = lambda x, y : x + y
+
+# Example test:
+sum(1, 2)
+```
+
+_The output is:_
+```py
+3
+```
+
+**map Function**
 
 
