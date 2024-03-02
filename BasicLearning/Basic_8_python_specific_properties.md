@@ -242,7 +242,7 @@ Fleet Str
 London
 ```
 
-## lambda
+## lambda and map() Function
 
 
 
