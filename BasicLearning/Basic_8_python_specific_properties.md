@@ -288,3 +288,24 @@ _The output is:_
 ```
 
 **Use map() Function with lambda Function**
+
+We can define a funciton using lambda and apply it in a map function.
+
+_Example of How to Use the Two Functions:_
+```py
+nums = [1, 2, 3, 4, 5]
+squared_nums_list = list(map(lambda x: x ** 2, nums))
+print(squared_nums_list)
+```
+
+_The output is:_
+```py
+[1, 4, 9, 16, 25]
+```
+
+Combine two functions making the syntax simpler.
+
+
+
+
+
