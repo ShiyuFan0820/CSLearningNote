@@ -338,3 +338,10 @@ _The output is:_
 (2, 'b')
 ```
 
+## generator
+
+
+## decorator
+
+
+## List Comprehension
