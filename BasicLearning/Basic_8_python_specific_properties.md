@@ -338,7 +338,7 @@ _The output is:_
 (2, 'b')
 ```
 
-## generator
+## Generator
 
 The generator in Python is a special type of iterator which generates values as needed, rather than generating and storing all values at once (also called lazily evaluation), it essentially turns an iterable (An iterable is any object that can be iterated over, meaning it can be used in a loop, like lists, strings, tuples and dictionaries) into an iterator (An iterator is an object that represents a stream of data. It implements the iterator protocol, which requires methods like `__iter__()` and `__next__()`).
 
@@ -353,7 +353,7 @@ Defining a generator function is like defining a normal function, but it uses `y
 
 
 
-## decorator
+## Decorator
 
 
 ## List Comprehension
