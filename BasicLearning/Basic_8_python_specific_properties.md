@@ -348,10 +348,16 @@ Generator can be defined by using generator function or generator expression.
 
 Defining a generator function is like defining a normal function, but it uses `yield` to get one value at one time rather than `return`, when we call a generator function, it returns a generator object without actually excuting the body of the function, we can call the generator function succssively, it resumes excution from where it last yielded a value, this allows to continue generating values from where if previously left off.
 
+_Example of How a Generator Function Works:_
+
 
 **Generator Expression**
 
 
+_Example of How a Generator Expression Works:_
+
+
+**What's the Benefit of Using Generators?**
 
 ## Decorator
 
