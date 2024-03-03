@@ -346,7 +346,7 @@ Generator can be defined by using generator function or generator expression.
 
 **Generator Function**
 
-Defining a generator function is like defining a normal function, but it uses `yield` to get one value at one time rather than `return`, .
+Defining a generator function is like defining a normal function, but it uses `yield` to get one value at one time rather than `return`, when we call a generator function, it returns a generator object without actually excuting the body of the function.
 
 
 **Generator Expression**
