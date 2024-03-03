@@ -340,6 +340,7 @@ _The output is:_
 
 ## generator
 
+The generator in Python is a special type of iterator,
 
 ## decorator
 
