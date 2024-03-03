@@ -340,7 +340,7 @@ _The output is:_
 
 ## generator
 
-The generator in Python is a special type of iterator which generates values when needed, rather than generating and storing all values at once.
+The generator in Python is a special type of iterator which generates values when needed, rather than generating and storing all values at once. We can use keyword `yield` in Python to use generator.
 
 
 
