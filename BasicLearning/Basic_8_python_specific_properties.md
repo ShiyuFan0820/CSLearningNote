@@ -340,7 +340,7 @@ _The output is:_
 
 ## generator
 
-The generator in Python is a special type of iterator,
+The generator in Python is a special type of iterator which generates values when needed, rather than generates and stores all values at once.
 
 ## decorator
 
