@@ -352,13 +352,31 @@ Defining a generator function is like defining a normal function, but it uses `y
 3. As soon as we call `next()` again, it resume execution right after the `yield` statement where the last call was made, it will stop executing when the `yield` statement is reached again.
 4. There can be more than one `yield` statement in a generator function, but when all values are already iterated through or there is a `return` statement in the code, it will raise `StopIteration` error. 
 
-_Example of How a Generator Function Works:_
+_Example of How a Generator Function Works: Let's illustrate how a generator works by writing a fibonacci generator function._
+
+```py
+def fib(n):
+    counter = 0
+    n1 = 0
+    n2 = 1
+    while counter < n:
+        print("Before yielding:")
+        yield n1
+        n = n1 + n2
+        n1 = n2
+        n2 = n
+        counter += 1
+        print("After yielding:")
+```
+
 
 
 **Generator Expression**
 
 
 _Example of How a Generator Expression Works:_
+
+
 
 
 **What's the Benefit of Using Generators?**
