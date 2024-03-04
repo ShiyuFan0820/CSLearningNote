@@ -370,6 +370,13 @@ def fib(n):
         counter += 1
 ```
 
+When we want to create the generator we call the generator function, and we print the object we can see in the console it returns a generator object:
+```py
+fib_gen = fib(3)
+print(fib_gen)
+
+# The output is: <generator object fib at 0x100db0e40>
+```
 
 
 **Generator Expression**
