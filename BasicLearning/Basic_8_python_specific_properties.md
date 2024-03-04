@@ -514,6 +514,29 @@ The output is:
 Hi
 ```
 
+Now we pass a function `message` as an argument to the `decorator_func`, and define a inner function call `wrapper_func` in it. Without modifying the `message` function, we can add any code in the `wrapper_func` to add some functionalities to the `message` function, here we add a print. Then when we call `decorator_func` and assign the returned value to the `decorated_message`, the `wrapper_func` is assigned to the `decorated_message`, and when we call `decorated_message` we get the printed output:
+```py
+def decorator_func(original_func):
+    def wrapper_func():
+        print(f"Function wrapper executed before function {original_func.__name__}.")
+        return original_func()
+    return wrapper_func
+
+
+def message():
+    print("Function message called.")
+
+
+decorated_message = decorator_func(message)
+decorated_message()
+
+"""
+The output is:
+Function wrapper executed before function message.
+Function message called.
+"""
+```
+
 
 
 
