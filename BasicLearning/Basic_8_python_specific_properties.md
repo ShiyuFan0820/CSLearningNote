@@ -349,7 +349,7 @@ Generator can be defined by using generator function or generator expression.
 Defining a generator function is like defining a normal function, but it uses `yield` rather than `return`, a generator function works like this:
 1. When we call a generator function, it returns a generator object without actually executing the body of the function.
 2. We need to call `next()` keyword to start iterating the values of the genertor, the generator starts executing till the `yield` statement is reached, and return the value next to the `yield`. The execution will stop here.
-3. As soon as we call `next()` again, it resume execution right after the `yield` statement where the last call was made, it will stop executing when the `yield` statement is reached again.
+3. As soon as we call `next()` again, it resume execution right after the `yield` statement where the last call was made, it will stop executing when the `yield` statement is reached again, the values of all variables remain the same with the previous call and ready for the following operations.
 4. There can be more than one `yield` statement in a generator function, but when all values are already iterated through or there is a `return` statement in the code, it will raise `StopIteration` error. 
 
 _Example of How a Generator Function Works: Let's illustrate how a generator works by writing a fibonacci generator function._
@@ -393,7 +393,7 @@ Before yielding:
 """
 ```
 
-Then we call `next()` again, it starts executing right after the `yield` statement and stops till it reaches `yield` again:
+Then we call `next()` again, it starts executing right after the `yield` statement and stops till it reaches `yield` again, the values of all variables maintain the same with the previous call:
 ```py
 num2 = next(fib_gen)
 print(num2)
@@ -425,11 +425,10 @@ Yielding passed
            ^^^^^^^^^^^^^
 StopIteration
 """
-
 ```
 
-
 **Generator Expression**
+
 
 
 _Example of How a Generator Expression Works:_
