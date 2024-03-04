@@ -466,7 +466,7 @@ The output is:
 
 ## Decorator
 
-A decorator in Python is a function that takes an other function as an argument, adds some functionalities to the function and returns the modified function.
+A decorator in Python is a function that takes an other function as an argument, adds some functionalities to the function and returns the modified/decorated function.
 
 To demonstrate how a decorator actually works, we first look at an outer function with a inner function in it:
 ```py
@@ -513,6 +513,8 @@ call_func()
 The output is:
 Hi
 ```
+
+
 
 
 
