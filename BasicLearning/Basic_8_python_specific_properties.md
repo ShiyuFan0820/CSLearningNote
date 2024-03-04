@@ -543,7 +543,28 @@ Function message called.
 
 **How to Write a Decorator**
 
-The decorator function in last example above is how a decorator work in Python, but Python has its own rules about how to write a decorator.
+The decorator function in last example above is how a decorator work in Python, but Python has its own rules about how to write a decorator. 
+
+In Python, decorators are typically written using a special syntax using the `@` symbol followed by the decorator function name, placed above the function definition, when we call the function, it will be passed in the decorator automatically. We can rewrite the example above like thie:
+```py
+def decorator_func(original_func):
+    def wrapper_func():
+        print(f"Function wrapper executed before function {original_func.__name__}.")
+        return original_func()
+    return wrapper_func
+
+@decorator_func
+def message():
+    print("Function message called.")
+
+message()
+
+"""
+The output is:
+Function wrapper executed before function message.
+Function message called.
+"""
+```
 
 
 
