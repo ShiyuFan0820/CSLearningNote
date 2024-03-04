@@ -518,7 +518,7 @@ The output is:
 Hi
 ```
 
-Now we pass a function `message` as an argument to the `decorator_func`, and define a inner function call `wrapper_func` in it. Without modifying the `message` function, we can add any code in the `wrapper_func` to add some functionalities to the `message` function, here we add a print. Then when we call `decorator_func` and assign the returned value to the `decorated_message`, the `wrapper_func` is assigned to the `decorated_message`, and when we call `decorated_message` we get the printed output, and we can change the name of `decorated_message` to `message` because of the variable name just a reference to the function, the output is the same:
+Now we pass a function `message` as an argument to the `decorator_func`, and define a inner function call `wrapper_func` in it. Without modifying the `message` function, we can add any code in the `wrapper_func` to add some functionalities to the `message` function, here we add a print. Then when we call `decorator_func` and assign the returned value to the `decorated_message`, the `wrapper_func` is assigned to the `decorated_message`, and when we call `decorated_message` we get the printed output, and we can change the name of `decorated_message` to `message` because of the variable name just a reference to the function, the output is the same, this operation is like we decorate the `message` function and get a new `message` function:
 ```py
 def decorator_func(original_func):
     def wrapper_func():
