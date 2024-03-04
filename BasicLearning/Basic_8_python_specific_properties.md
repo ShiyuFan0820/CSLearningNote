@@ -340,7 +340,7 @@ _The output is:_
 
 ## Generator
 
-The generator in Python looks like a function which returns a generator object, e.g. object can be iterated on, the difference is that generator object can generate values as needed(also called lazily evaluation), rather than generating and storing all values at once like what for loop and while loop do, it essentially turns an iterable (An iterable is any object that can be iterated over, meaning it can be used in a loop, like lists, strings, tuples and dictionaries) into an iterator (An iterator is an object that represents a stream of data. It implements the iterator protocol, which requires methods like `__iter__()` and `__next__()`).
+The generator in Python looks like a function which returns a generator object, e.g. object can be iterated on, the difference is that generator object can generate one value at a time (also called lazily evaluation), rather than generating and storing all values at once like what for loop and while loop do, it essentially turns an iterable (An iterable is any object that can be iterated over, meaning it can be used in a loop, like lists, strings, tuples and dictionaries) into an iterator (An iterator is an object that represents a stream of data. It implements the iterator protocol, which requires methods like `__iter__()` and `__next__()`).
 
 Generator can be defined by using generator function or generator expression. 
 
