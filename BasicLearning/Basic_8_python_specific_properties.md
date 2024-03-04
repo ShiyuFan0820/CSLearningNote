@@ -457,7 +457,11 @@ The output is:
 """
 ```
 
-**What's the Benefit of Using Generators?**
+**What are the Benefits of Using Generators?**
+
+1. More readable: Generator is more readable rather than defining an empty list, appending and returning the result.
+2. Memory efficiency: Generator generates one value at a time instead of generating and storing them all at once.
+3. Lazy evaluation: Generator generate values as needed, reducing unnecessary computing.
 
 ## Decorator
 
