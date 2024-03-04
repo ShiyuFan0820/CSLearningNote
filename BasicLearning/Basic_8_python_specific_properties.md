@@ -375,7 +375,10 @@ When we want to create the generator we call the generator function, and we prin
 fib_gen = fib(3)
 print(fib_gen)
 
-# The output is: <generator object fib at 0x100db0e40>
+"""
+The output is:
+<generator object fib at 0x100db0e40>
+"""
 ```
 
 Then we use one `next()` to start iterating the values, the generator will only return one value at one time, and stop at the `yield` statement:
@@ -383,10 +386,11 @@ Then we use one `next()` to start iterating the values, the generator will only 
 num1 = next(fib_gen)
 print(num1)
 
-```
-The output is: Before yielding:
+"""
+The output is:
+Before yielding:
 0
-```
+"""
 ```
 
 
