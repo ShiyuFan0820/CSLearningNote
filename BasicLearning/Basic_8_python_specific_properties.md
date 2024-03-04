@@ -470,7 +470,32 @@ A decorator in Python is a function that takes an other function as an argument,
 
 To demonstrate how a decorator works, we first look at an outer function with a inner function in it:
 ```py
+def out_func(msg):
+    message = msg
+    def inner_func():
+        print(message)
+    return inner_func()
 
+out_func("Hi")
+
+"""
+The output is:
+Hi
+"""
+
+# When we use argument of out_func directly in inner_func:
+
+def out_func(msg):
+    def inner_func():
+        print(msg)
+    return inner_func()
+
+out_func("Hi")
+
+"""
+The output is:
+Hi
+"""
 ```
 
 
