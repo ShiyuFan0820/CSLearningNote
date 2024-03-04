@@ -568,6 +568,9 @@ Function message called.
 
 **Why a Decorator is Needed?**
 
+Think about the Fibonacci function we defined before. When we want to query the n<sup>th</sup> number, we have to call the function every time to deduce from 1 to n. If we record the number everytime we call the function, we can get the n<sup>th</sup> number faster next time. 
+
+We already know that a decorator can add some functionalities to a function, we can write a memoization decorator and apply it to the Fibonacci function to record the number every time we call it, this will aviod unnecessary calculation in the Fibonacci function if we call the function with the same argument.
 
 
 
