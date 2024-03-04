@@ -363,7 +363,7 @@ def fib(n):
     while counter < n:
         print("Before yielding:") # We use two print lines to show how yield statement in a generator function works.
         yield n1
-        print("After yielding.")
+        print("Yielding passed.")
         n = n1 + n2
         n1 = n2
         n2 = n
@@ -381,7 +381,7 @@ The output is:
 """
 ```
 
-Then we use one `next()` to start iterating the values, the generator will only return one value at one time, and stop at the `yield` statement:
+Then we use one `next()` to start iterating the values, the generator will only return one value next to the `yield` at one time, and stop at the `yield` statement:
 ```py
 num1 = next(fib_gen)
 print(num1)
@@ -391,6 +391,41 @@ The output is:
 Before yielding:
 0
 """
+```
+
+Then we call `next()` again, it starts executing right after the `yield` statement and stops till it reaches `yield` again:
+```py
+num2 = next(fib_gen)
+print(num2)
+
+"""
+The output is:
+Yielding passed
+Before yielding:
+1
+"""
+```
+
+Then we call `next()` twice, as it already iterated through all elements, the `StopIteration` error will be raised if `yield` statement is reached at forth time:
+```py
+num3 = next(fib_gen)
+print(num3)
+
+num4 = next(fib_gen)
+print(num4)
+
+"""
+The output is:
+Yielding passed
+Before yielding:
+1
+Yielding passed
+
+    num4 = next(fib_gen)
+           ^^^^^^^^^^^^^
+StopIteration
+"""
+
 ```
 
 
