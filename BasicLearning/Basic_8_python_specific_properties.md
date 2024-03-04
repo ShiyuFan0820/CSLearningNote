@@ -470,7 +470,7 @@ The output is:
 
 A decorator in Python is a function that takes an other function as an argument, adds some functionalities to the function and returns the modified/decorated function.
 
-**Before Getting to Know Decorator**
+**Before Starting to Write the First Decorator Code**
 
 To demonstrate how a decorator actually works, we first look at an outer function with a inner function in it:
 ```py
