@@ -429,12 +429,33 @@ StopIteration
 
 **Generator Expression**
 
+A generator expression is a concise way to create generator in Python, it's similar to list comprehension, but it uses parentheses `()` rather than square brackets `[]`.
 
+_Example of How to A Generator Expression Works:_
+```py
+# Generator expression to generate squares of numbers from 1 to 5
+squares_generator = (x ** 2 for x in range(1, 6))
 
-_Example of How a Generator Expression Works:_
+# Call next() to get the iterate the values
+print(next(squares_generator))
+print(next(squares_generator))
+print(next(squares_generator))
+print(next(squares_generator))
+print(next(squares_generator))
 
+# Or we can use for loop to iterate over the squares
+for square in squares_generator:
+    print(square)
 
-
+"""
+The output is:
+1
+4
+9
+16
+25
+"""
+```
 
 **What's the Benefit of Using Generators?**
 
