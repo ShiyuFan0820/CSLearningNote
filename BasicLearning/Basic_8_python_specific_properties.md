@@ -340,13 +340,13 @@ _The output is:_
 
 ## Generator
 
-The generator in Python looks like a function which returns a generator object, e.g. object can be iterated on, the difference is that generator object can generate one value at a time (also called lazily evaluation), rather than generating and storing all values at once like what for loop and while loop do, it essentially turns an iterable (An iterable is any object that can be iterated over, meaning it can be used in a loop, like lists, strings, tuples and dictionaries) into an iterator (An iterator is an object that represents a stream of data. It implements the iterator protocol, which requires methods like `__iter__()` and `__next__()`).
+The generator in Python looks like a function which returns a generator object, e.g. object can be iterated on, the difference is that generator object can generate one value at one time (also called lazily evaluation), rather than generating and storing all values at once like what for loop and while loop do, it essentially turns an iterable (An iterable is any object that can be iterated over, meaning it can be used in a loop, like lists, strings, tuples and dictionaries) into an iterator (An iterator is an object that represents a stream of data. It implements the iterator protocol, which requires methods like `__iter__()` and `__next__()`).
 
 Generator can be defined by using generator function or generator expression. 
 
 **Generator Function**
 
-Defining a generator function is like defining a normal function, but it uses `yield` to get one value at one time rather than `return`, when we call a generator function, it returns a generator object without actually excuting the body of the function, we can call the generator function succssively, it resumes excution from where it last yielded a value, this allows to continue generating values from where if previously left off.
+Defining a generator function is like defining a normal function, but it uses `yield` rather than `return`, when we call a generator function, it returns a generator object without actually executing the body of the function, if we want to iterate the generator object we need to call `next()` keyword, the generator starts executing till the `yield` statement is reached, and return the value next to the `yield`. The execution will stop here, as soon as we call `next()` again, it resume execution right after the `yield` statement where the last call was made, it will stop executing when the `yield` statement is reached again, there can be more than one `yield` statement in a generator function, but when the iterable is already iterated through or there is a `return` in the code, it will raise `StopIteration` error. 
 
 _Example of How a Generator Function Works:_
 
