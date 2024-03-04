@@ -354,19 +354,20 @@ Defining a generator function is like defining a normal function, but it uses `y
 
 _Example of How a Generator Function Works: Let's illustrate how a generator works by writing a fibonacci generator function._
 
+The code is:
 ```py
 def fib(n):
     counter = 0
     n1 = 0
     n2 = 1
     while counter < n:
-        print("Before yielding:")
+        print("Before yielding:") # We use two print lines to show how yield statement in a generator function works.
         yield n1
+        print("After yielding.")
         n = n1 + n2
         n1 = n2
         n2 = n
         counter += 1
-        print("After yielding:")
 ```
 
 
