@@ -567,6 +567,6 @@ Function message called.
 ```
 
 
-
-
 ## List Comprehension
+
+List comprehension provides a concise way to create lists.
