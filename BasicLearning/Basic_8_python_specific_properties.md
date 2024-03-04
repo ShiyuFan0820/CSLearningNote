@@ -612,7 +612,7 @@ end_time2 = time.time()
 print(f"Execution time without memorize: {end_time1 - star_time1}.")
 ```
 
-When we pass the `n = 50` to the two Fibonacci functions, it only returns the time of the function with memorize, the time fo the `fib_without_memo` is still executing and I haven't received the time of it:( :
+When pass the `n = 50` to the two Fibonacci functions, it only returns the time of the function with memorize, the time fo the `fib_without_memo` is still executing and I haven't received the time of it:( :
 ```py
 Execution time with memorize: 0.0001990795135498047.
 ```
