@@ -570,8 +570,62 @@ Function message called.
 
 Think about the Fibonacci function we defined before. When we want to query the n<sup>th</sup> number, we have to call the function every time to deduce from 1 to n. If we record the number everytime we call the function, we can get the n<sup>th</sup> number faster next time. 
 
-We already know that a decorator can add some functionalities to a function, we can write a memoization decorator and apply it to the Fibonacci function to record the number every time we call it, this will aviod unnecessary calculation in the Fibonacci function if we call the function with the same argument.
+We already know that a decorator can add some functionalities to a function, we can write a memoization decorator and apply it to the Fibonacci function to record the number every time we call it, this will aviod unnecessary calculation in the Fibonacci function if we call the function with the same argument, we can check the time efficiency of the function with and without a decorator, the code is:
+```py
+import time
+def memorize_fib(fib):
+    cache = {}
+    def wrapper(n):
+        if n not in cache:
+            cache[n] = fib(n)
+        return cache[n]
+    return wrapper
 
+
+@memorize_fib
+def fib_with_memo(n):
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fib_with_memo(n - 1) + fib_with_memo(n - 2)
+
+
+def fib_without_memo(n):
+    if n == 1:
+        return 0
+    elif n == 2:
+        return 1
+    else:
+        return fib_without_memo(n - 1) + fib_without_memo(n - 2)
+
+
+star_time1 = time.time()
+fib_with_memo(10)
+end_time1 = time.time()
+print(f"Execution time with memorize: {end_time1 - star_time1}.")
+
+star_time2 = time.time()
+fib_without_memo(10)
+end_time2 = time.time()
+print(f"Execution time without memorize: {end_time1 - star_time1}.")
+```
+
+When we pass the `n = 50` to the two Fibonacci functions, the times are:
+```py
+Execution time with memorize: 0.0001990795135498047.
+```
+
+The time fo the `fib_without_memo` is still executing and I haven't received the time of it:(.
+
+<div align=center>
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/7f1303ee-45ff-4982-b428-558f0295c64c">
+</div>
+
+In summary, decorators in Python serve several important purposes:
+1. Decorators allow to encapsulate functionality that can be applied to multiple functions or methods. Instead of duplicating code across different parts of your program, we can define the common functionality once and apply it using decorators.
+2. Decorators provide a way to enhance or modify the behavior of functions or methods without changing their code directly. This is especially useful for extending the functionality of third-party libraries or built-in functions.
 
 
 ## List Comprehension
@@ -595,8 +649,7 @@ The output is:
 ['4', '5']
 ```
 
-In the example above, we want to create a new list based on the orginal list `nums`, so we need to loop through all elements in the `nums`, the expression is `str(num)`, it applies to each element in the new list, it's written before the for loop, the condition is `num > 3` and is written behind the for loop. 
-
+In the example above, we want to create a new list based on the orginal list `nums`, so we need to loop through all elements in the `nums`, the expression is `str(num)`, it applies to each element in the new list, it's written before the for loop, the condition is `num > 3` and is written behind the for loop.
 
 ## With Statement
 
