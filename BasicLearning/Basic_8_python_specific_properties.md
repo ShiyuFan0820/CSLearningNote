@@ -569,4 +569,29 @@ Function message called.
 
 ## List Comprehension
 
-List comprehension provides a concise way to create lists.
+List comprehensions provide a concise way to create lists. They generate lists by applying an expression to each item an iterable(lists, tuples or strings) and filtering the items based on the condition. The syntax is:
+```py
+# List comprehension
+new_list = [expression for item in iterable if condition]
+```
+
+**Example**
+
+Assuming there is a list `nums = [1, 2, 3, 4, 5]`, using list comprehension to create a new list in which all elements are greater than `3`, and convert all integers to strings. The code is:
+```py
+nums = [1, 2, 3, 4, 5]
+string_list = [str(num) for num in nums if num > 3]
+print(string_list)
+
+"""
+The output is:
+['4', '5']
+```
+
+In the example above, we want to create a new list based on the orginal list `nums`, so we need to loop through all elements in the `nums`, the expression is `str(num)`, it applies to each element in the new list, it's written before the for loop, the condition is `num > 3` and is written behind the for loop. 
+
+
+## With Statement
+
+
+## dunder
