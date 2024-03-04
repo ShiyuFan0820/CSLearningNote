@@ -566,6 +566,10 @@ Function message called.
 """
 ```
 
+**Why a Decorator is Needed?**
+
+
+
 
 ## List Comprehension
 
