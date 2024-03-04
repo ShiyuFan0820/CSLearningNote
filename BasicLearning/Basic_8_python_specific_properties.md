@@ -499,7 +499,7 @@ Hi
 """
 ```
 
-If we delete the parentheses when returning the `inner_func`, the `inner_func` will be returned and assigned to the `call_func` variable that we defined, and when we can call the `call_func` to get the message printed:
+If we delete the parentheses when returning the `inner_func`, the `inner_func` will be returned and assigned to the `call_func` variable which we defined, and then we can call the `call_func` to get the message printed:
 ```py
 def out_func(msg):
     def inner_func():
