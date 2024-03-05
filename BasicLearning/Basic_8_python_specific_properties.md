@@ -649,7 +649,7 @@ The output is:
 
 In the example above, we want to create a new list based on the orginal list `nums`, so we need to loop through all elements in the `nums`, the expression is `str(num)`, it applies to each element in the new list, it's written before the for loop, the condition is `num > 3` and is written behind the for loop.
 
-## With Statement
+## open() Function and With Statement
 
 
 ## Dunder/Magic Method
