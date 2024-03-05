@@ -721,10 +721,61 @@ When we use "a+" and "r+" mode to add some new data to the file, and print the d
 
 ## Magic/Dunder Methods
 
-The magic methods in Python are methods surrounded by double underscore `__` like `__init__`, they are also called dunder methods. These methods are buid-in methods of classes in Python which can be invoked automatically in response to certain operations performed, we can overload these methods in our own classes to customize more functionalities to define how objects of the classes behave. 
+The magic methods in Python are methods surrounded by double underscore `__` like `__init__`, they are also called dunder methods. These methods are buid-in methods of classes in Python, we can overload these methods in our own class to customize more functionalities to define how object of the classes behave, they can be invoked automatically when certain operations are performed to the obejcts of the class, make our code cleaner and more readable. 
 
 There are many dunder methods in python, we can google them to choose which one we want to use in our classes. For example, if we want objects of our class to support addition (+ operator), we can define the `__add__` method in the class. Similarly, if we want objects to support subtraction (- operator), we can define the `__sub__` method, and so on.
 
 When mentioned that dunder methods are invoked automatically by Python, it means that we don't need to explicitly call these methods in our code, some dunder methods are closely tied with operators, e.g., when we use the `+` operator between two objects of a custom class, Python automatically looks for the `__add__` method in our class definition and calls it to perform the addition operation, similarly, when we use the `==` operator to compare two objects, Python looks for the `__eq__ `method to determine if the objects are equal, while others are invoked in response to other actions, e.g., object creation `__init__` or object representation `__repr__`, `__str__`. 
 
 **Example**
+
+Define a `MyName` class and create two name objects, when we try to print the objects or add the two objects, the first operation only prints the address of the object, and the second operation raises an error:
+```py
+class MyName:
+    def __init__(self, name):
+        self.m_name = name
+
+name1 = MyName("Fanfan")
+name2 = MyName("Xixi")
+print(name1)
+print(name2)
+print(name1 + name2)
+
+"""
+The output is:
+<__main__.MyName object at 0x102ec9310>
+<__main__.MyName object at 0x102ec92b0>
+    print(name1 + name2)
+          ~~~~~~^~~~~~~
+TypeError: unsupported operand type(s) for +: 'MyName' and 'MyName'
+"""
+```
+
+Now we add two functionalities to the class, one can print the names we passed to the objects by using dunder method `__str__`, one can add the two names together using dunder method `__add__`. We don't need to call the method like `name.__str__()` like what we do to the normal methods in a class, what we do is like below:
+```py
+class MyName:
+    def __init__(self, name):
+        self.m_name = name
+
+    def __str__(self):
+        return f"My name is {self.m_name}."
+
+    def __add__(self, other):
+        return f"{self.m_name} and {other.m_name} are good friends."
+
+
+name1 = MyName("Fanfan")
+name2 = MyName("Xixi")
+print(name1)
+print(name2)
+print(name1 + name2)
+
+"""
+The output is:
+My name is Fanfan.
+My name is Xixi.
+Fanfan and Xixi are good friends.
+"""
+```
+
+This is just a simple example of how we can utilize dunder methods in our own class to customize the methods according to specific requirements, by using the dunder methods we can make our code more readable and flexible.
