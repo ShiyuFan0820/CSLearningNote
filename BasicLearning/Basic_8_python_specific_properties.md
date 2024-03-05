@@ -721,8 +721,16 @@ When we use "a+" and "r+" mode to add some new data to the file, and print the d
 
 ## Magic/Dunder Methods
 
-The magic methods in Python are methods surrounded by double underscore `__`, they are also called dunder methods. These methods are buid-in methods of classes in Python, they are commonly used for operator overloading, we can overload these methods in our own classes to customize more functionalities to define how objects of the classes behave.
+The magic methods in Python are methods surrounded by double underscore `__` like `__init__`, they are also called dunder methods. These methods are buid-in methods of classes in Python which can be invoked automatically in response to certain operations performed, we can overload these methods in our own classes to customize more functionalities to define how objects of the classes behave. 
 
 There are many dunder methods in python, we can google them to choose which one we want to use in our classes. For example, if we want objects of our class to support addition (+ operator), we can define the `__add__` method in the class. Similarly, if we want objects to support subtraction (- operator), we can define the `__sub__` method, and so on.
+
+When mentioned that dunder methods are invoked automatically by Python, it means that we don't need to explicitly call these methods in our code, that is when we use the `+` operator between two objects of a custom class, Python automatically looks for the `__add__` method in our class definition and calls it to perform the addition operation. Similarly, when we use the `==` operator to compare two objects, Python looks for the `__eq__ `method to determine if the objects are equal.
+
+
+
+hey are commonly used for operator overloading, 
+
+
 
 **Example**
