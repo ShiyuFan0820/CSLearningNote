@@ -682,11 +682,22 @@ with open("filename", "mode") as file_object:
 ```
 
 **Example**
-```py
-# Use open() function to read and  a data in file "my_data.txt"
 
+Use open() function to create a file named "my_data.txt" and write some content in it:
+```py
+my_data = open("my_data.txt", "w")
+my_data.write("This is my data.")
+my_data.close()
 ```
 
+Use with statement to make the same operations:
+```py
+with open("my_data.txt", "w") as my_data:
+    my_data.write("This is my data.")
+```
 
+**Some read() bugs**
+
+When we use "a+" and "r+" mode to add some new data to the file, and print the data immediately by reading it, the console will not print the data we expect, this is because when the adding data operations complete executing, the file pointer moves to the end of the file, it can not reach the file from the beginning, if we want to make sure it always read the file from the beginning, we can use the `.seek()` function to do that.
 
 ## Dunder/Magic Method
