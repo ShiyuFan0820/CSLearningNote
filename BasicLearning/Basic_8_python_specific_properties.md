@@ -671,7 +671,7 @@ file_object.close() # The close() is important!
  - "r+"(Read and Write Mode): Open the file for both reading and writing, it raises an error if the file doesn't exist, the write mode in this case will not empty the existing data.
  - "a+"(Append and Read Mode): Open the file for both appending and reading, if the file doesn't exist, it creates a new file, if the file exists, it will append the new data at the end of the existing data.
 
-**With Statemen**
+**With Statement**
 
 With statement provides a cleaner and more concise way to deal with the resouces, it makes sure the resouces are properly closed after the block of code inside the `with` statemen is executed, regardless of whether an exception occurs. With statement is commonly used with file operations and also network connections and database connections.
 
@@ -696,8 +696,28 @@ with open("my_data.txt", "w") as my_data:
     my_data.write("This is my data.")
 ```
 
+We can define a class to implement the function of with statement:
+```py
+class FileManage:
+    def __init__(self, file_name, operation):
+        self.m_name = file_name
+        self.m_ope = operation
+
+    def __enter__(self):
+        self.file = open(self.m_name, self.m_ope)
+        return self.file
+
+    def __exit__(self, exc_type, exc_value, traceback): # These three arguments are needed to check exceptions even if we don't use them.
+        if self.file:
+            self.file.close()
+
+with FileManage("new_data.txt", "w") as file:
+    file.write("hello")
+```
+
 **Some read() bugs**
 
 When we use "a+" and "r+" mode to add some new data to the file, and print the data immediately by reading it, the console will not print the data we expect, we will find it will only print a few lines of the file or nothing, this is because when the adding data operations complete executing, the file pointer moves to the end of the file, it can not reach the file from the beginning, if we want to make sure it always read the file from the beginning, we can use the `.seek()` function before we read it to do that.
 
 ## Dunder/Magic Method
+
