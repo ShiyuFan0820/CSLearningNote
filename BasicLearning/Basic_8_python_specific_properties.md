@@ -651,5 +651,44 @@ In the example above, we want to create a new list based on the orginal list `nu
 
 ## open() Function and With Statement
 
+In python, when working with resouces like files, we usually use `open()` function or with statement.
+
+**open() Function**
+
+`open()` function can open a file and perform operations on it, and it's essential to close the file after completing implementation, if the file is not closed properly, the further execution may lead to resouce leaks and cause issues.
+
+The format of using open() function is:
+```py
+file_object = open("filename", "mode")
+```
+
+"filename" is the name or path of the file, "mode" is the name of operation that we want to perform to the file, there are 5 modes usually used:
+ - "r"(Read Mode): Open the file for reading, it raises an error if the file doesn't exist.
+ - "w"(Write Mode): Open the file for writing, if the file doesn't exist, it creates a new file, if the file exists, it will emtpy the file for the new data.
+ - "a"(Append Mode): Open the file for appending, if the file doesn't exist, it creates a new file, if the file exists, it will append the new data at the end of the existing data.
+ - "r+"(Read and Write Mode): Open the file for both reading and writing, it raises an error if the file doesn't exist.
+ - "a+"(Append and Read Mode): Open the file for both appending and reading, if the file doesn't exist, it creates a new file, if the file exists, it will append the new data at the end of the existing data.
+
+**With Statemen**
+
+With statement provides a cleaner and more concise way to deal with the resouces, it makes sure the resouces are properly closed after the block of code inside the `with` statemen is executed, regardless of whether an exception occurs.
+
+**Example**
+```py
+"""
+The format of using open() function is:
+file_object = open("filename", "mode")
+
+"filename" is the name or path of the resouce.
+
+"mode" is what operation we want to perform to the resouce, there are 5 modes usually used:
+1. "r" -- Read mode: To read data from a resource.
+2. "w" -- Write mode:
+
+"""
+
+```
+
+
 
 ## Dunder/Magic Method
