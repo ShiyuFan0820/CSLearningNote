@@ -660,6 +660,8 @@ In python, when working with resouces like files, we usually use `open()` functi
 The format of using open() function is:
 ```py
 file_object = open("filename", "mode")
+file_object.mode("If it's write or append mode we need to provide the content we want to add to the file")
+file_object.close()
 ```
 
 "filename" is the name or path of the file, "mode" is the name of operation that we want to perform to the file, there are 5 modes usually used:
@@ -675,17 +677,6 @@ With statement provides a cleaner and more concise way to deal with the resouces
 
 **Example**
 ```py
-"""
-The format of using open() function is:
-file_object = open("filename", "mode")
-
-"filename" is the name or path of the resouce.
-
-"mode" is what operation we want to perform to the resouce, there are 5 modes usually used:
-1. "r" -- Read mode: To read data from a resource.
-2. "w" -- Write mode:
-
-"""
 
 ```
 
