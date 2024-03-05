@@ -725,12 +725,6 @@ The magic methods in Python are methods surrounded by double underscore `__` lik
 
 There are many dunder methods in python, we can google them to choose which one we want to use in our classes. For example, if we want objects of our class to support addition (+ operator), we can define the `__add__` method in the class. Similarly, if we want objects to support subtraction (- operator), we can define the `__sub__` method, and so on.
 
-When mentioned that dunder methods are invoked automatically by Python, it means that we don't need to explicitly call these methods in our code, that is when we use the `+` operator between two objects of a custom class, Python automatically looks for the `__add__` method in our class definition and calls it to perform the addition operation. Similarly, when we use the `==` operator to compare two objects, Python looks for the `__eq__ `method to determine if the objects are equal.
-
-
-
-hey are commonly used for operator overloading, 
-
-
+When mentioned that dunder methods are invoked automatically by Python, it means that we don't need to explicitly call these methods in our code, some dunder methods are closely tied with operators, e.g., when we use the `+` operator between two objects of a custom class, Python automatically looks for the `__add__` method in our class definition and calls it to perform the addition operation, similarly, when we use the `==` operator to compare two objects, Python looks for the `__eq__ `method to determine if the objects are equal, while others are invoked in response to other actions, e.g., object creation `__init__` or object representation `__repr__`, `__str__`. 
 
 **Example**
