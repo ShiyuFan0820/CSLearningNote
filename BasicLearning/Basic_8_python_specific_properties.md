@@ -665,10 +665,10 @@ file_object.close() # The close() is important!
 ```
 
 "filename" is the name or path of the file, "mode" is the name of operation that we want to perform to the file, there are 5 modes usually used:
- - "r"(Read Mode): Open the file for reading, it raises an error if the file doesn't exist.
- - "w"(Write Mode): Open the file for writing, if the file doesn't exist, it creates a new file, if the file exists, it will emtpy the file for the new data.
- - "a"(Append Mode): Open the file for appending, if the file doesn't exist, it creates a new file, if the file exists, it will append the new data at the end of the existing data.
- - "r+"(Read and Write Mode): Open the file for both reading and writing, it raises an error if the file doesn't exist.
+ - "r"(Read Mode): Open the file for reading, it raises an error if the file doesn't exist, the syntax is `.read()`.
+ - "w"(Write Mode): Open the file for writing, if the file doesn't exist, it creates a new file, if the file exists, it will emtpy the file for the new data, the syntax is `.write()`.
+ - "a"(Append Mode): Open the file for appending, if the file doesn't exist, it creates a new file, if the file exists, it will append the new data at the end of the existing data, notice that when we use "a" mode to append new data the syntax is also `.write()`.
+ - "r+"(Read and Write Mode): Open the file for both reading and writing, it raises an error if the file doesn't exist, the write mode in this case will not empty the existing data.
  - "a+"(Append and Read Mode): Open the file for both appending and reading, if the file doesn't exist, it creates a new file, if the file exists, it will append the new data at the end of the existing data.
 
 **With Statemen**
@@ -678,12 +678,13 @@ With statement provides a cleaner and more concise way to deal with the resouces
 The format of with statement is:
 ```py
 with open("filename", "mode") as file_object:
-    file_object.mode()
+    file_object.mode("If it's write or append mode we need to provide the content we want to add to the file")
 ```
 
 **Example**
 ```py
-with open("filename", "mode")
+# Use open() function to read and  a data in file "my_data.txt"
+
 ```
 
 
