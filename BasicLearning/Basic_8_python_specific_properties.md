@@ -698,6 +698,6 @@ with open("my_data.txt", "w") as my_data:
 
 **Some read() bugs**
 
-When we use "a+" and "r+" mode to add some new data to the file, and print the data immediately by reading it, the console will not print the data we expect, this is because when the adding data operations complete executing, the file pointer moves to the end of the file, it can not reach the file from the beginning, if we want to make sure it always read the file from the beginning, we can use the `.seek()` function to do that.
+When we use "a+" and "r+" mode to add some new data to the file, and print the data immediately by reading it, the console will not print the data we expect, we will find it will only print a few lines of the file or nothing, this is because when the adding data operations complete executing, the file pointer moves to the end of the file, it can not reach the file from the beginning, if we want to make sure it always read the file from the beginning, we can use the `.seek()` function before we read it to do that.
 
 ## Dunder/Magic Method
