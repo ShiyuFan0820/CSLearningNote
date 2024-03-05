@@ -677,7 +677,8 @@ With statement provides a cleaner and more concise way to deal with the resouces
 
 The format of with statement is:
 ```py
-
+with open("filename", "mode") as file_object:
+    file_object.mode()
 ```
 
 **Example**
