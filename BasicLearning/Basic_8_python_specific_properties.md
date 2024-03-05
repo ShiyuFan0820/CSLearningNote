@@ -721,4 +721,4 @@ When we use "a+" and "r+" mode to add some new data to the file, and print the d
 
 ## Magic/Dunder Methods
 
-The magic methods in Python are always surrounded by double underscore `__`, they are also called dunder methods.
+The magic methods in Python are methods surrounded by double underscore `__`, they are also called dunder methods. These methods are buid-in methods of classes in python, we can overload these methods in our own classes to customize more functionalities of our classes.
