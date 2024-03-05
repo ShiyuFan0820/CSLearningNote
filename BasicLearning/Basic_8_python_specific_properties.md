@@ -681,7 +681,7 @@ with open("filename", "mode") as file_object:
     file_object.mode("If it's write or append mode we need to provide the content we want to add to the file")
 ```
 
-**Example**
+**Example Code**
 
 Use open() function to create a file named "my_data.txt" and write some content in it:
 ```py
