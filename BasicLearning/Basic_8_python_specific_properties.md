@@ -651,17 +651,17 @@ In the example above, we want to create a new list based on the orginal list `nu
 
 ## open() Function and With Statement
 
-In python, when working with resouces like files, we usually use `open()` function or with statement.
+In python, `open` function and with statemen is often used to work with resources like files or resources that need to be managed properly, such as network connections or database connections. 
 
 **open() Function**
 
-`open()` function can open a file and perform operations on it, and it's essential to close the file after completing implementation, if the file is not closed properly, the further execution may lead to resouce leaks and cause issues.
+`open()` function is primarily used to open files and returns a file object that can be used to read from or write to the file, and it's essential to close the file after completing implementation, if the file is not closed properly, the further execution may lead to resouce leaks and cause issues.
 
 The format of using open() function is:
 ```py
 file_object = open("filename", "mode")
 file_object.mode("If it's write or append mode we need to provide the content we want to add to the file")
-file_object.close()
+file_object.close() # The close() is important!
 ```
 
 "filename" is the name or path of the file, "mode" is the name of operation that we want to perform to the file, there are 5 modes usually used:
@@ -673,11 +673,16 @@ file_object.close()
 
 **With Statemen**
 
-With statement provides a cleaner and more concise way to deal with the resouces, it makes sure the resouces are properly closed after the block of code inside the `with` statemen is executed, regardless of whether an exception occurs.
+With statement provides a cleaner and more concise way to deal with the resouces, it makes sure the resouces are properly closed after the block of code inside the `with` statemen is executed, regardless of whether an exception occurs. With statement is commonly used with file operations and also network connections and database connections.
+
+The format of with statement is:
+```py
+
+```
 
 **Example**
 ```py
-
+with open("filename", "mode")
 ```
 
 
