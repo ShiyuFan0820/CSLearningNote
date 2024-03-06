@@ -12,6 +12,8 @@ Stack data structure is an abstract data type (ADT), it's a linear data structur
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/6648b081-1417-434b-acc5-11546122c4a1">
 </div>
 
+Stack data structure is widly used for expression evaluation, undo functionality, browser history, backtracking algorithms.
+
 ## Operations of Stack
 
 The commonly used operations of stack are push and pop.
@@ -26,7 +28,8 @@ Additionally, peak operation returns the top most element from the stack without
 
 ## Introduction of Queue
 
-Queue is also a linear data structure, but it follows the rule of FIFO (First in first out), there are 3 main types of queues, they are cicular queues, double-ended queues, and priority queues.
+Queue is also a linear data structure, but it follows the rule of FIFO (First in first out).
+
 
 ## Operations of Queue
 
@@ -37,3 +40,26 @@ Enqueue operation adds a new element at the end of a queue, it's like a person j
 Dequeue operation removes the first element in a queue, it's like the first person in the queue get the snack and leave the queue.
 
 Queue data structure can also be implemented by using arrays or linked lists.
+
+## Different Types of Queue
+
+There are 3 main types of queues, they are circular queue, double-ended queus, and priority queue.
+
+**Circular Queue**
+
+Circular queue also known as a ring buffer, is a variation of the queue data structure with a fixed-size capacity, meaning it can hold only a limited number of elements determined at the time of its creation. 
+
+In a circular queue maintains two pointers: a front pointer (or head) and a rear pointer (or tail), The front pointer points to the first element in the queue, while the rear pointer points to the next available position for enqueuing new elements, the alst element is connected to the first element.
+
+Enqueue operation add a new element at the position pointed to by the rear pointer, if the rear pointer reaches the end of the arry, it wraps around to the beginning, allowing elements to be enqueued in a circular manner.
+
+Dequeue operation removes an element from the position pointed to by the front pointer, if the front pointer reaches the end of the array, it wraps around to the beginning.
+
+When the front pointer and the rear pointer coincide, this indicates that the circular queue is empty.
+
+**Double-ended Queue**
+
+
+
+
+
