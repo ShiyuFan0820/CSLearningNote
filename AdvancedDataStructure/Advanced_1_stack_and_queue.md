@@ -26,7 +26,7 @@ Additionally, peak operation returns the top most element from the stack without
 
 ## Introduction of Queue
 
-Queue is also a linear data structure, but it follows the rule of FIFO (First in first out).
+Queue is also a linear data structure, but it follows the rule of FIFO (First in first out), there are 3 main types of queues, they are cicular queues, double-ended queues, and priority queues.
 
 ## Operations of Queue
 
@@ -36,4 +36,4 @@ Enqueue operation adds a new element at the end of a queue, it's like a person j
 
 Dequeue operation removes the first element in a queue, it's like the first person in the queue get the snack and leave the queue.
 
-# Stack vs Queue
+Queue data structure can also be implemented by using arrays or linked lists.
