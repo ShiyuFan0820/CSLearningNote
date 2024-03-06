@@ -72,6 +72,7 @@ Similar to standard queue, a deque maintains two pointers, Elements can be inser
 
 **Priority Queue**
 
+Priority queue is a type of queue where elements are processed based on their priority rather than the order in which they were added. Elements in a priority queue are associated with a priority value, which determines their relative importance. Elements with higher priority values are more urgent and are placed in the front of the queue, and are dequeued before elements with lower priority values.
 
 
 
