@@ -61,7 +61,7 @@ When the front pointer and the rear pointer coincide, this indicates that the ci
 _Example of circular queue: The rear pointer is already at the end of the queue, if we want to enqueue another element `9` to the queue, just wrapping the rear pointer to the beginning of the queue like a ring_
 
 <div align=center>
-<img width="697" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/e4057b2a-8a12-4370-88a3-e35b95a562ca">
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/e4057b2a-8a12-4370-88a3-e35b95a562ca">
 </div>
 
 **Double-ended Queue/Deque**
