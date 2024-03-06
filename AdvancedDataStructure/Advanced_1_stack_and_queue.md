@@ -30,14 +30,15 @@ Additionally, peak operation returns the top most element from the stack without
 
 Queue is also a linear data structure, but it follows the rule of FIFO (First in first out).
 
-
 ## Operations of Queue
+
+Queue typically maintains two pointers -- a froint pointer(head) and a rear pointer(tail), these pointers keep track of where new elements should be added and removed.
 
 There are two operations commonly used in queue -- enqueue and dequeue.
 
-Enqueue operation adds a new element at the end of a queue, it's like a person join the end of a line or queue at a snack bar.
+Enqueue operation adds a new element to the rear of a queue, it's like a person join the end of a line or queue at a snack bar.
 
-Dequeue operation removes the first element in a queue, it's like the first person in the queue get the snack and leave the queue.
+Dequeue operation removes the element from the front of the queue, it's like the first person in the queue get the snack and leave the queue.
 
 Queue data structure can also be implemented by using arrays or linked lists.
 
@@ -47,17 +48,32 @@ There are 3 main types of queues, they are circular queue, double-ended queus, a
 
 **Circular Queue**
 
-Circular queue also known as a ring buffer, is a variation of the queue data structure with a fixed-size capacity, meaning it can hold only a limited number of elements determined at the time of its creation. 
+Circular queue also known as a ring buffer because the last elementis connect to the first element, is a variation of the queue data structure with a fixed-size capacity, meaning it can hold only a limited number of elements determined at the time of its creation. 
 
-In a circular queue maintains two pointers: a front pointer (or head) and a rear pointer (or tail), The front pointer points to the first element in the queue, while the rear pointer points to the next available position for enqueuing new elements, the alst element is connected to the first element.
+In a circular queue also maintains two pointers.
 
-Enqueue operation add a new element at the position pointed to by the rear pointer, if the rear pointer reaches the end of the arry, it wraps around to the beginning, allowing elements to be enqueued in a circular manner.
+Enqueue operation add a new element at the position pointed to by the rear pointer, if the rear pointer reaches the end of the cicular queue, it wraps around to the beginning, allowing elements to be enqueued in a circular manner.
 
-Dequeue operation removes an element from the position pointed to by the front pointer, if the front pointer reaches the end of the array, it wraps around to the beginning.
+Dequeue operation removes an element from the position pointed to by the front pointer, if the front pointer reaches the end of the queue, it wraps around to the beginning.
 
 When the front pointer and the rear pointer coincide, this indicates that the circular queue is empty.
 
-**Double-ended Queue**
+_Example of circular queue: The rear pointer is already at the end of the queue, if we want to enqueue another element `9` to the queue, just wrapping the rear pointer to the beginning of the queue like a ring_
+
+<div align=center>
+<img width="697" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/e4057b2a-8a12-4370-88a3-e35b95a562ca">
+</div>
+
+**Double-ended Queue/Deque**
+
+Double-ended queue is commonly abbreviated as deque, it supports insertion and deletion of elements from both ends.
+
+Similar to standard queue, a deque maintains two pointers, Elements can be inserted or removed from both ends of the deque using operations such as `append` (to add an element to the rear), `appendleft` (to add an element to the front), `pop` (to remove an element from the rear), and `popleft` (to remove an element from the front).
+
+**Priority Queue**
+
+
+
 
 
 
