@@ -8,7 +8,12 @@ Memory stack is a memory area used for storing function call frames and local va
 
 Stack data structure is a linear data structure with the primary operations of push and pop, it also follow the rule of LIFO (Last in first out), insertion and deletion can only be performed at the end, also called at the top of the stack. Just like we have a stack of plates, we always put new plates on top, and when we take plates, we also start at the top.
 
+<div align=center>
+<img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/6648b081-1417-434b-acc5-11546122c4a1">
+</div>
+
 ## Operations of Stack
+
 
 
 # Queue
