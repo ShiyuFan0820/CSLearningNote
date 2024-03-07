@@ -78,7 +78,7 @@ Priority queue is a type of queue where elements are processed based on their pr
 
 **Implementation of Priority Queue**
 
-Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(log<sup>n</sup>), compared to O(n) by using an array-based implementation.
+Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(log<sup>n</sup>), compared to O(n) by only using an array-based implementation.
 
 
 
