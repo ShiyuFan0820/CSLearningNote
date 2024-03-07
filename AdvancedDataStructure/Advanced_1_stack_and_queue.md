@@ -74,6 +74,8 @@ Similar to standard queue, a deque maintains two pointers, Elements can be inser
 
 Priority queue is a type of queue where elements are processed based on their priority rather than the order in which they were added. Elements in a priority queue must be comparable or associated with a comparable value which determines their relative importance, e.g. elements of small numbers have a higher priority or large numbers have a higher priority. Elements with higher priority are more urgent and are placed in the front of the queue, and are dequeued before elements with lower priority.
 
+Priority queue is commonly implemented using a heap data structure.
+
 
 
 
