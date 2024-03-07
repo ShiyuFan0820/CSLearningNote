@@ -8,7 +8,14 @@ Breadth first and depth first search are graph traversal methods used to travers
 
 ## Depth First Search
 
-Depth first search (DFS) is a traversal algorithm that explores as far as possible along each branch before backtracking.
+Depth first search (DFS) is a traversal algorithm that explores as far as possible along each branch before backtracking. Depth first search can be implemented by using stack data structure, this is how DFS works by using the stack:
+
+1. Start with an empty stack and push the selected starting vertex into the stack.
+2. While the stack is not empty, continue the folloing steps:
+ - Pop a vertex from the stack.
+ - Visit the popped vertex.
+ - Push all unvisited neighbors of the popped vertex onto the stack.
+Repeat until there are no unvisited neighbors left.
 
 ## Breadth First Search
 
