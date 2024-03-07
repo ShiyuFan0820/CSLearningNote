@@ -80,7 +80,17 @@ Priority queue is a type of queue where elements are processed based on their pr
 
 Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(log<sup>n</sup>), compared to O(n) by only using an array-based implementation. 
 
-The reason why heap data strucutre is more efficient is that it maintains a complete binary tree, there are min heap and max heap of heap data structure, min heap always places the elements with smallest values at the root, and max heap always places the largest values at the root, so the priority queue can get the desired element through their priority efficiently.
+The reason why heap data strucutre is more efficient is that it's a tree-based data structure,  the highest (or lowest) priority element is always at the root, so the priority queue can get the desired element by retrieving the root directly.  
+
+**Heap Data Strucutre**
+
+Heap data structure is a different concept compared to the memory heap. How a heap data structure actually works is that it maintains a complete binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible. There are two main types of heaps: min heap and max heap. In a min heap, the value of each node is less than or equal to the values of its children. The minimum value is always at the root. In a max heap, the value of each node is greater than or equal to the values of its children. The maximum value is always at the root.
+
+When add a new element in the heap, it is added at the bottom level next to the leftmost node, maintaining the complete binary tree property, then comparing it with its parent node and swapping if necessary to satisfy the min heap or max heap property. 
+
+When delete an element in the heap (usually the root node), the last element of the tree is moved to the root position, then comparing it with its children nodes and swapping if necessary to satisfy the heap property. Swapping elements after insertion and deletion in a heap typically only involves traversing the height of the heap, and the height of the heap is proportional to the logarithm of the number of elements in the heap, so the time complexity is O(log<sup>n</sup>).
+
+
 
 
 
