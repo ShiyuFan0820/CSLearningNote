@@ -46,7 +46,7 @@ Queue data structure can also be implemented by using arrays or linked lists.
 
 There are 3 main types of queues, they are circular queue, double-ended queus, and priority queue.
 
-**Circular Queue**
+### Circular Queue
 
 Circular queue also known as a ring buffer because the last elementis connect to the first element, is a variation of the queue data structure with a fixed-size capacity, meaning it can hold only a limited number of elements determined at the time of its creation. 
 
@@ -58,21 +58,25 @@ Dequeue operation removes an element from the position pointed to by the front p
 
 When the front pointer and the rear pointer coincide, this indicates that the circular queue is empty.
 
-_Example of circular queue: The rear pointer is already at the end of the queue, if we want to enqueue another element `9` to the queue, just wrapping the rear pointer to the beginning of the queue like a ring_
+**Example of circular queue** 
+
+The rear pointer is already at the end of the queue in the circular queue above, if we want to enqueue another element `9` to the queue, just wrapping the rear pointer to the beginning of the queue like a ring_
 
 <div align=center>
 <img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/e4057b2a-8a12-4370-88a3-e35b95a562ca">
 </div>
 
-**Double-ended Queue/Deque**
+### Double-ended Queue/Deque
 
 Double-ended queue is commonly abbreviated as deque, it supports insertion and deletion of elements from both ends.
 
 Similar to standard queue, a deque maintains two pointers, Elements can be inserted or removed from both ends of the deque using operations such as `append` (to add an element to the rear), `appendleft` (to add an element to the front), `pop` (to remove an element from the rear), and `popleft` (to remove an element from the front).
 
-**Priority Queue**
+### Priority Queue
 
 Priority queue is a type of queue where elements are processed based on their priority rather than the order in which they were added. Elements in a priority queue must be comparable or associated with a comparable value which determines their relative importance, e.g. elements of small numbers have a higher priority or large numbers have a higher priority. Elements with higher priority are more urgent and are placed in the front of the queue, and are dequeued before elements with lower priority.
+
+**Implementation of Priority Queue**
 
 Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(n), compared to O(n) by using an array-based implementation.
 
