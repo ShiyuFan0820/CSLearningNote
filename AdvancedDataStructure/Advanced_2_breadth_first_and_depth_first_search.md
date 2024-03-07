@@ -19,4 +19,12 @@ Repeat until there are no unvisited neighbors left.
 
 ## Breadth First Search
 
-Breadth first search (BFS) is a traversal algorithm that explores all nodes at the current depth before moving on to nodes at the next depth level. 
+Breadth first search (BFS) is a traversal algorithm that explores all nodes at the current depth before moving on to nodes at the next depth level. BFS can be implemented by queue:
+1. Start at a selected starting vertex of the graph.
+2. Use a queue to keep track of vertices to visit, enqueue the selected vertex.
+3. While the queue is not empty, continue the following steps:
+ - Dequeue a vertex from the queue.
+ - Visit the dequeued vertex.
+ - Enqueue all unvisited neighbors of the dequeued vertex.
+
+
