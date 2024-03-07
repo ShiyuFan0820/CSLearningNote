@@ -17,6 +17,8 @@ Depth first search (DFS) is a traversal algorithm that explores as far as possib
  - Push all unvisited neighbors of the popped vertex onto the stack.
 Repeat until there are no unvisited neighbors left.
 
+**Code Implementation**
+
 ## Breadth First Search
 
 Breadth first search (BFS) is a traversal algorithm that explores all nodes at the current depth before moving on to nodes at the next depth level. BFS can be implemented by queue:
@@ -27,4 +29,5 @@ Breadth first search (BFS) is a traversal algorithm that explores all nodes at t
  - Visit the dequeued vertex.
  - Enqueue all unvisited neighbors of the dequeued vertex.
 
+**Code Implementation**
 
