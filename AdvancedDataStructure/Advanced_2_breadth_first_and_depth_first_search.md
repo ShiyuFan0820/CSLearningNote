@@ -56,5 +56,22 @@ Breadth first search (BFS) is a traversal algorithm that explores all nodes at t
 4. Dequeue a node from the queue to visit, repeat step 3.
 5. While the queue is not empty, repeat the step 3 and 4.
 
+**Example**
+
+Let's try to use a queue to implement BFS traverse to the tree above:
+
+1. Start visiting at node `20`, node `20` has children, enqueue its children node `10` and `30` to the queue:
+
+<div align=center>
+<img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/c534757d-cdf5-4267-8aad-3b59726a8f3f">
+</div>
+
+2. Dequeue a node from the queue to visit, the node is `10`, check if it has children, enqueue its children to the queue, repeat the dequeue and enqueue operations till the queue is empty, then we get the visited nodes in the order according to their level:
+
+<div align=center>
+<img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/3add90dd-6583-4379-8c80-e40f8a72281a">
+</div>
+
+
 **Code Implementation**
 
