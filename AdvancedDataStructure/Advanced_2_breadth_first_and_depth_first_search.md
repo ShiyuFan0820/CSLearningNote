@@ -19,11 +19,10 @@ Depth first search (DFS) is a traversal algorithm that explores as far as possib
 
 Breadth first search (BFS) is a traversal algorithm that explores all nodes at the current depth before moving on to nodes at the next depth level. BFS can be implemented by queue:
 1. Start at visiting the starting node of the tree.
-2. Use a queue to keep track of nodes to visit, enqueue the selected nodes.
-3. While the queue is not empty, continue the following steps:
- - Dequeue a vertex from the queue.
- - Visit the dequeued vertex.
- - Enqueue all unvisited neighbors of the dequeued vertex.
+2. Use a queue to keep track of nodes need to be visited.
+3. If the visited node has children, enqueque all children into the queue.
+4. Dequeue a node from the queue to visit, repeat step 3.
+5. While the queue is not empty, repeat the step 3 and 4.
 
 **Code Implementation**
 
