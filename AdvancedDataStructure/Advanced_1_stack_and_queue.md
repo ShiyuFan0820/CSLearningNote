@@ -14,7 +14,7 @@ Stack in data structure is an abstract data type (ADT, which defines a set of op
 
 Stack is widly used for expression evaluation, undo functionality, browser history, backtracking algorithms.
 
-## Operations of Stack
+## How Stack Works?
 
 The commonly used operations of stack are push and pop.
 
@@ -30,7 +30,7 @@ Additionally, peak operation returns the top most element from the stack without
 
 Queue is also an abstract data type, it's a linear data structure, but it follows the rule of FIFO (First in first out).
 
-## Operations of Queue
+## How Queue Words?
 
 Queue typically maintains two pointers -- a froint pointer(head) and a rear pointer(tail), these pointers keep track of where new elements should be added and removed.
 
@@ -78,7 +78,7 @@ Priority queue is a type of queue where elements are processed based on their pr
 
 **Implementation of Priority Queue**
 
-Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(log<sup>n</sup>), compared to O(n) by only using an array-based implementation. 
+Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(logn), compared to O(n) by only using an array-based implementation. 
 
 The reason why heap data strucutre is more efficient is that it's a tree-based data structure,  the highest (or lowest) priority element is always at the root, so the priority queue can get the desired element by retrieving the root directly.  
 
@@ -88,7 +88,7 @@ Heap data structure is a different concept compared to the memory heap. How a he
 
 When add a new element in the heap, it is added at the bottom level next to the leftmost node, maintaining the complete binary tree property, then comparing it with its parent node and swapping if necessary to satisfy the min heap or max heap property. 
 
-When delete an element in the heap (usually the root node), the last element of the tree is moved to the root position, then comparing it with its children nodes and swapping if necessary to satisfy the heap property. Swapping elements after insertion and deletion in a heap typically only involves traversing the height of the heap, and the height of the heap is proportional to the logarithm of the number of elements in the heap, so the time complexity is O(log<sup>n</sup>).
+When delete an element in the heap (usually the root node), the last element of the tree is moved to the root position, then comparing it with its children nodes and swapping if necessary to satisfy the heap property. Swapping elements after insertion and deletion in a heap typically only involves traversing the height of the heap, and the height of the heap is proportional to the logarithm of the number of elements in the heap, so the time complexity is O(logn).
 
 
 
