@@ -12,7 +12,7 @@ Stack in data structure is an abstract data type (ADT, which defines a set of op
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/6648b081-1417-434b-acc5-11546122c4a1">
 </div>
 
-Stack is widly used for expression evaluation, undo functionality, browser history, backtracking algorithms.
+Stack is widely used for expression evaluation, undo functionality, browser history, backtracking algorithms.
 
 ## How Stack Works?
 
@@ -30,9 +30,9 @@ Additionally, peak operation returns the top most element from the stack without
 
 Queue is also an abstract data type, it's a linear data structure, but it follows the rule of FIFO (First in first out).
 
-## How Queue Words?
+## How Queue Works?
 
-Queue typically maintains two pointers -- a froint pointer(head) and a rear pointer(tail), these pointers keep track of where new elements should be added and removed.
+Queue typically maintains two pointers -- a front pointer(head) and a rear pointer(tail), these pointers keep track of where new elements should be added and removed.
 
 There are two operations commonly used in queue -- enqueue and dequeue.
 
@@ -44,15 +44,15 @@ Queue data structure can also be implemented by using arrays or linked lists.
 
 ## Different Types of Queue
 
-There are 3 main types of queues, they are circular queue, double-ended queus, and priority queue.
+There are 3 main types of queues, they are circular queue, double-ended queue, and priority queue.
 
 ### Circular Queue
 
-Circular queue also known as a ring buffer because the last elementis connect to the first element, is a variation of the queue data structure with a fixed-size capacity, meaning it can hold only a limited number of elements determined at the time of its creation. 
+Circular queue also known as a ring buffer because the last elements connect to the first element, is a variation of the queue data structure with a fixed-size capacity, meaning it can hold only a limited number of elements determined at the time of its creation. 
 
 In a circular queue also maintains two pointers.
 
-Enqueue operation add a new element at the position pointed to by the rear pointer, if the rear pointer reaches the end of the cicular queue, it wraps around to the beginning, allowing elements to be enqueued in a circular manner.
+Enqueue operation add a new element at the position pointed to by the rear pointer, if the rear pointer reaches the end of the circular queue, it wraps around to the beginning, allowing elements to be enqueued in a circular manner.
 
 Dequeue operation removes an element from the position pointed to by the front pointer, if the front pointer reaches the end of the queue, it wraps around to the beginning.
 
@@ -80,9 +80,9 @@ Priority queue is a type of queue where elements are processed based on their pr
 
 Priority queue is commonly implemented by using a heap data structure because this is a faster way to retrieve the desired element where the time complexity is O(logn), compared to O(n) by only using an array-based implementation. 
 
-The reason why heap data strucutre is more efficient is that it's a tree-based data structure,  the highest (or lowest) priority element is always at the root, so the priority queue can get the desired element by retrieving the root directly.  
+The reason why heap data structure is more efficient is that it's a tree-based data structure,  the highest (or lowest) priority element is always at the root, so the priority queue can get the desired element by retrieving the root directly.  
 
-**Heap Data Strucutre**
+**Heap Data Structure**
 
 Heap data structure is a different concept compared to the memory heap. How a heap data structure actually works is that it maintains a complete binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible. There are two main types of heaps: min heap and max heap. In a min heap, the value of each node is less than or equal to the values of its children. The minimum value is always at the root. In a max heap, the value of each node is greater than or equal to the values of its children. The maximum value is always at the root.
 
