@@ -4,11 +4,9 @@
 
 We know that McDonald's hash browns, which are made with a lot of shredded potatoes, eventually become a evenly distributed pie shape. Hash Map is similar to this one. Hash Map is a data structure that uses a certain hash function to distribute large data evenly across the available storage space, optimizes the access efficiency. 
 
-## How Hash Map Operates
+## How Hash Map Works?
 
-**Operations in Hash Map**
-
-We already know that retrieval elements in an array is by indexing and it's constant time complexity, the principle of how Hash Map operates is also by indexing, it's a key-value loop up. Hash Map uses a certain hash function to compute the key to an index into an array of buckets or slots, the key and value pairs will be stored in one of the buckets associated with the calculated index, when we want to retrieval the key and value, Hash Map will use hash function to convert the key into the index and return the desired key-value pair. If the Hash Map is implemented efficiently, the time complexity for both insertion and retrieval operations can be nearly constant on average, making it a widely used data structure for fast key-value lookups.
+We already know that retrieval elements in an array is by indexing and it's constant time complexity, the principle of how Hash Map works is also by indexing, it's a key-value look up. Hash Map uses a certain hash function to compute the key to an index into an array of buckets or slots, the key and value pairs will be stored in one of the buckets associated with the calculated index, when we want to retrieval the key and value, Hash Map will use hash function to convert the key into the index and return the desired key-value pair. If the Hash Map is implemented efficiently, the time complexity for both insertion and retrieval operations can be nearly constant on average, making it a widely used data structure for fast key-value lookups.
 
 **Hashing Algorithm**
 
@@ -41,9 +39,9 @@ If we want to retrieval key `24` and its value:
 
 **What is Hash Collision**
 
-As we use a hash function to calculate the index of a key, there may be cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a hash collision.
+As we use a hash function to calculate the index of a key, there maybe cases where the index of two items calculates to be the same, but both items can't be stored in the same bucket, this situation is known as a hash collision.
 
-**How to Solve Hash Collision**
+**How to Solve Hash Collision?**
 
 1. Open address.
 
