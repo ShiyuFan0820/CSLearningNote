@@ -119,3 +119,13 @@ Mac is a fish, he swam to new position (4, 5).
 ```
 
 ## Why Abstract Class is Needed?
+
+1. Better manage complex codebases: When collaborating on a project, senior engineers can define a common blueprint for a group of related classes, making it easier to understand the code.
+2. Enforce to complete specific abstract methods: Abstract classes define abstract methods that subclassed must contain, ensuring that subclasses provide consistent behavior and functionalities.
+3. Polymorphism: Abstract classes enable polymorphic behavior, subclasses can inherit this behavior and extend or modify it as needed, and instances of different subclasses can be implemented differently through the same method name.
+
+
+
+
+
+
