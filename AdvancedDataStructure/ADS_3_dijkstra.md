@@ -46,10 +46,39 @@ Step 5: Then visit `B` and `C`, repeat the step and update the information, then
 <img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/7adc0320-8e13-4ebf-b110-3b18a0caab52">
 </div>
 
+## Code Implementation (need to be modified)
 
-
-
-
-
-
-## Code Implementation
+The above example is shown in code:
+```py
+graph = {
+    "A": {"B": 7, "D": 1},
+    "B": {"A": 7, "D": 2, "E": 2, "C": 5},
+    "C": {"B": 5, "E": 5},
+    "D": {"A": 1, "B": 2, "E": 1},
+    "E": {"D": 1, "B": 2, "C": 5}
+}
+visited = {}
+dis_from_start = {}
+dis_from_start[0] = [{"vert": "A", "pre": "-"}]
+print(dis_from_start)
+while dis_from_start:
+    closest_dis = min(dis_from_start.keys())
+    closest_vert = dis_from_start[closest_dis].pop(0)
+    print(closest_vert)
+    if not dis_from_start[closest_dis]:
+        del dis_from_start[closest_dis]
+    visit_vert = closest_vert["vert"]
+    print(visit_vert)
+    if visit_vert not in visited:
+        visited[visit_vert] = {"dis": closest_dis, "pre": closest_vert["pre"]}
+        print(visited)
+        neighbour_verts = graph[visit_vert]
+        print(neighbour_verts)
+        for vert, dis in neighbour_verts.items():
+            if dis not in dis_from_start:
+                dis_from_start[dis] = []
+            dis_from_start[dis].append({"vert": vert, "pre": visit_vert})
+    elif visited[visit_vert]["dis"] > closest_dis:
+        visited[visit_vert] = {"dis": closest_dis, "pre": closest_vert["pre"]}
+print(visited)
+```
