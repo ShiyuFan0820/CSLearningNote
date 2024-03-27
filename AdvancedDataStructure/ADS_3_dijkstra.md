@@ -57,28 +57,53 @@ graph = {
     "D": {"A": 1, "B": 2, "E": 1},
     "E": {"D": 1, "B": 2, "C": 5}
 }
-visited = {}
+# Define a dictionary to record all shortest paths or distances from start vertex to all other vertices.
+shortest_paths = {}
+# Define another dictionary to record distances during the process and add the shortest path in the shortest path dictionary.
 dis_from_start = {}
+# Add starting vertex A to the dis_from_start dictionary first, make the distance from A be the key, and vertex name and its previous vertex as key value pair be the value of the distance key.
+## The reason why I make the distance from A be the key is that meybe there are more than one vertex whose distance from A is the same, so if there is another vertex whose distance from A is the same with another one, the new vertex name and its previous vertex as key value pair can be append to the distance key's value list.
 dis_from_start[0] = [{"vert": "A", "pre": "-"}]
-print(dis_from_start)
+
 while dis_from_start:
+    # Always visit the vertex which has the shortest distance from A, so the distance key with the minimal value will be visited first.
     closest_dis = min(dis_from_start.keys())
-    closest_vert = dis_from_start[closest_dis].pop(0)
-    print(closest_vert)
+    # If there is more than one vertex of this distance, visit the first one first.
+    closest_pair = dis_from_start[closest_dis].pop(0)
+    # If all vertices of this distance has been visited, delete the distance key in the dictionary.
     if not dis_from_start[closest_dis]:
         del dis_from_start[closest_dis]
-    visit_vert = closest_vert["vert"]
-    print(visit_vert)
-    if visit_vert not in visited:
-        visited[visit_vert] = {"dis": closest_dis, "pre": closest_vert["pre"]}
-        print(visited)
+    visit_vert = closest_pair["vert"]
+    # When we visit a vertex if it's not in the shortest_paths, add it's current shortest distance from A and it's previous vertex.
+    if visit_vert not in shortest_paths:
+        shortest_paths[visit_vert] = {"dis": closest_dis, "pre": closest_pair["pre"]}
+        # Search for its neighbours.
         neighbour_verts = graph[visit_vert]
-        print(neighbour_verts)
         for vert, dis in neighbour_verts.items():
-            if dis not in dis_from_start:
-                dis_from_start[dis] = []
-            dis_from_start[dis].append({"vert": vert, "pre": visit_vert})
-    elif visited[visit_vert]["dis"] > closest_dis:
-        visited[visit_vert] = {"dis": closest_dis, "pre": closest_vert["pre"]}
-print(visited)
+            if vert not in shortest_paths:
+                new_dis = dis + closest_dis
+                if new_dis not in dis_from_start:
+                    dis_from_start[new_dis] = []
+                dis_from_start[new_dis].append({"vert": vert, "pre": visit_vert})
+    # If this vertex is alreay visited, but its new distance is shorter than the last one, the new distance and previous vertex would replace the old one.
+    elif shortest_paths[visit_vert]["dis"] > closest_dis:
+        shortest_paths[visit_vert] = {"dis": closest_dis, "pre": closest_pair["pre"]}
+print(shortest_paths)
+
+# If want to get the shortest path from A to C:
+from_vertex = "A"
+to_vertex = "C"
+path = [to_vertex]
+while shortest_paths[to_vertex]["pre"] != from_vertex:
+    path.append(shortest_paths[to_vertex]["pre"])
+    to_vertex = shortest_paths[to_vertex]["pre"]
+path.append(from_vertex)
+path.reverse()
+print(path)
+```
+
+The output is:
+```py
+{'A': {'dis': 0, 'pre': '-'}, 'D': {'dis': 1, 'pre': 'A'}, 'E': {'dis': 2, 'pre': 'D'}, 'B': {'dis': 3, 'pre': 'D'}, 'C': {'dis': 7, 'pre': 'E'}}
+['A', 'D', 'E', 'C']
 ```
