@@ -26,7 +26,16 @@ Step 1: Dijkstra algorithm will generate a information which includes all vertic
 <img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/77ba27a8-b9e0-4cb7-a1fb-d0f084aec2f3">
 </div>
 
-Step 2: Start
+Step 2: Start from `A`, check vertices which connect with `A`, in this graph, they are `B` and `D`, compare their distance from `A` with their current distance from `A` which is `+∞`, replace with smaller values, and record their previous vertex.
+<div align=center>
+<img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/c6d7da73-96d7-43bb-be73-809182b42ecb">
+</div>
+
+Step 3: Always visit the vertex which is closer to `A`, so visit `D` first, `D` is connected with `A`, `B`, and `E`, path `A` and `E` is already visited, so look at `B`. The distance between `D` and `B` is `2`, so the distance `B` through `D` to `A` is 3, compare with the original distance `7`, new distance is closer, so modify `B`'s information. Repeat the same step with `E`.
+<div align=center>
+<img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/c8e37e96-2ca4-40f2-8f61-161a0fc3cb3b">
+</div>
+
 
 
 
