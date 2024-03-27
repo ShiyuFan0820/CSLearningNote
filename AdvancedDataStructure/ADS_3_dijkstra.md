@@ -20,7 +20,13 @@ Take this graph as a simple example of how dijkstra works to find the shortest p
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/b72686a6-fb5b-459c-b389-cd85a539173d">
 </div>
 
-Step 1: From the graph picture, the connections between these vertices can be represented by a dictionary.
+Step 1: Dijkstra algorithm will generate a information which includes all vertex and their shortest distance from the starting vertex, its `A` in this graph, and their previous vertex. When a vertex has not been visited yet, its distance from `A` is positive infinity.
+
+<div align=center>
+<img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/77ba27a8-b9e0-4cb7-a1fb-d0f084aec2f3">
+</div>
+
+
 
 
 
