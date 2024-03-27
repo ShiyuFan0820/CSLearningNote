@@ -1,6 +1,8 @@
 # Dijkstra
 
-Dijkstra is an algorithm which commonly used to find the shortest path in a graph, it is particularly useful in scenarios where the graph has weighted edges.
+Dijkstra is an algorithm which commonly used to find the shortest path in a graph, it is a single source shortest path algorithm for graphs with non-negative edge weights. 
+
+Single source means at the beginning of the algorithm, a single starting node in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting node and all other nodes in the graph.
 
 ## Graph
 
