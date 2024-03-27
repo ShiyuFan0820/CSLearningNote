@@ -2,7 +2,7 @@
 
 Dijkstra is an algorithm which commonly used to find the shortest path in a graph, it is a single source shortest path algorithm for graphs with non-negative edge weights. 
 
-Single source means at the beginning of the algorithm, a single starting node in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting node and all other nodes in the graph.
+Single source means at the beginning of the algorithm, a single starting node in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting vertex and all other vertices in the graph.
 
 ## Graph
 
@@ -20,12 +20,13 @@ Take this graph as a simple example of how dijkstra works to find the shortest p
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/b72686a6-fb5b-459c-b389-cd85a539173d">
 </div>
 
-Step 1: Dijkstra algorithm will generate a information which includes all vertex and their shortest distance from the starting vertex, its `A` in this graph, and their previous vertex. When a vertex has not been visited yet, its distance from `A` is positive infinity.
+Step 1: Dijkstra algorithm will generate a information which includes all vertices and their shortest distance from the starting vertex, its `A` in this graph, and their previous vertices. When a vertex has not been visited yet, its distance from `A` is positive infinity.
 
 <div align=center>
 <img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/77ba27a8-b9e0-4cb7-a1fb-d0f084aec2f3">
 </div>
 
+Step 2: Start
 
 
 
