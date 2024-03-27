@@ -10,7 +10,7 @@ A graph is a data structure that consists of a set of vertices (also called node
 <img width="350" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/736eec7c-77d7-4942-8872-c7cc11bd16c7">
 </div>
 
-## Dijkstra in Graph
+## How Dijkstra Work in a Graph?
 
 
 ## Code Implementation
