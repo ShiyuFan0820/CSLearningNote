@@ -14,5 +14,14 @@ A graph is a data structure that consists of a set of vertices (also called node
 
 ## How Dijkstra Work in a Graph
 
+Take this graph as a simple example of how dijkstra works to find the shortest path, in this graph vertex `A` is the starting node:
+
+<div align=center>
+<img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/b72686a6-fb5b-459c-b389-cd85a539173d">
+</div>
+
+Step 1: From the graph picture, the connections between these vertices can be represented by a dictionary.
+
+
 
 ## Code Implementation
