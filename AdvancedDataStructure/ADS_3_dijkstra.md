@@ -36,6 +36,18 @@ Step 3: Always visit the vertex which is closer to `A`, so visit `D` first, `D` 
 <img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/c8e37e96-2ca4-40f2-8f61-161a0fc3cb3b">
 </div>
 
+Step 4: Now `E` has the closest distance from `A`, so visit `E` first, repeat the same step as visit `D`, the updated information is as below.
+<div align=center>
+<img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/c2c2f5e0-525b-4888-9895-261a3dc37a89">
+</div>
+
+Step 5: Then visit `B` and `C`, repeat the step and update the information, then the shortest path between starting vertex `A` and all other vertices in the graph is found. For example, if we want to know from `A` to `C`, which path is the shortest, we can check vertex `C`, the shortest distance from `A` is `7`, and its previous vertex is `E`, the previous vertex of `E` is `D`, and `A` is the previous vertex of `D`, so the shortest path and distance from `A` to `C` is found.
+<div align=center>
+<img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/7adc0320-8e13-4ebf-b110-3b18a0caab52">
+</div>
+
+
+
 
 
 
