@@ -82,7 +82,7 @@ while dis_from_start:
     # When we visit a vertex if it's not in the shortest_paths, add it's current shortest distance from A and it's previous vertex.
     if visit_vert not in shortest_paths:
         shortest_paths[visit_vert] = {"dis": closest_dis, "pre": closest_pair["pre"]}
-        # Check if the visit_vert is equal to the to_vert, if not continue to search the neighbours.
+        # Check if the visit_vert is equal to the to_vert, if not, continue searching the neighbours.
         if visit_vert == to_vert:
             break
         # Search for its neighbours.
@@ -98,7 +98,8 @@ while dis_from_start:
         shortest_paths[visit_vert] = {"dis": closest_dis, "pre": closest_pair["pre"]}
     visited.append(visit_vert)
 print(shortest_paths)
-print(f"Shortest path found from {from_vert} to {to_vert}.")
+
+print(f"Shortest path found from {from_vert} to {to_vert}:")
 # Back tracking the path.
 path = [to_vert]
 while shortest_paths[to_vert]["pre"] != from_vert:
@@ -113,7 +114,10 @@ print("-->".join(path))
 The output is:
 ```py
 {'A': {'dis': 0, 'pre': '-'}, 'D': {'dis': 1, 'pre': 'A'}, 'E': {'dis': 2, 'pre': 'D'}, 'B': {'dis': 3, 'pre': 'D'}, 'C': {'dis': 7, 'pre': 'E'}}
-['A', 'D', 'E', 'C']
+Shortest path found from A to C:
+A-->D-->E-->C
 ```
+
+I also tested the situation when I changed the `to_vert` to other vertex, this code still works.
 
 ## Time Complexity of Dijkstra's Algorithm
