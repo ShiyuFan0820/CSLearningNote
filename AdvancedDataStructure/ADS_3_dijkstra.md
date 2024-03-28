@@ -107,3 +107,5 @@ The output is:
 {'A': {'dis': 0, 'pre': '-'}, 'D': {'dis': 1, 'pre': 'A'}, 'E': {'dis': 2, 'pre': 'D'}, 'B': {'dis': 3, 'pre': 'D'}, 'C': {'dis': 7, 'pre': 'E'}}
 ['A', 'D', 'E', 'C']
 ```
+
+## Time Complexity of Dijkstra's Algorithm
