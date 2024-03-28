@@ -71,7 +71,7 @@ dis_from_start = {}
 dis_from_start[0] = [{"vert": from_vert, "pre": "-"}]
 
 while dis_from_start:
-    # Always visit the vertex which has the shortest distance from A, so the distance key with the minimal value will be visited first.
+    # Always visit the vertex which has the shortest distance from A, so the distance key with the minimal value will be visited first, here actually use the concept of priority queue.
     closest_dis = min(dis_from_start.keys())
     # If there is more than one vertex of this distance, visit the first one first.
     closest_pair = dis_from_start[closest_dis].pop(0)
