@@ -122,9 +122,9 @@ I also tested the situation when I changed the `to_vert` to other vertex, this c
 
 ## Time Complexity of Dijkstra's Algorithm
 
-The time complexity of Dijkstra's algorithm is `O((V + E) log V)`, `V` is the number of vertex in the graph, `E` is the number of edges in the graph. 
+The time complexity of Dijkstra's algorithm is `O((V + E)logV)`, `V` is the number of vertex in the graph, `E` is the number of edges in the graph. 
 
-In Dijkstra's algorithm, the priority queue is used to select the vertex with the minimum distance to the source/start vertex. This operation is performed for each vertex in the graph, in the worst case, each edge and vertex may be visited once during the execution, so the time complexity is `O(V)`, and priority queue operates insertions and extractions, the relaxing edges is `O(E)`, so its typically `O(V + E)`, As there is a priority queue to extract the minimal distance from the starting vertex, the time complexity of the priority queue is `O(logV)` (This is because priority queues are commonly implemented by binary heaps like binary tree), so the time complexity of Dijkstra's algorithm is `O((V + E) log V)`.
+In Dijkstra's algorithm, the priority queue is used to select the vertex with the minimum distance to the source/start vertex. This operation is performed for each vertex in the graph, in the worst case, each edge and vertex may be visited once during the execution, so the time complexity is `O(V)`, and priority queue operates insertions and extractions, the relaxing edges is `O(E)`, so its typically `O(V + E)`, As there is a priority queue to extract the minimal distance from the starting vertex, the time complexity of the priority queue is `O(logV)` (This is because priority queues are commonly implemented by binary heaps like binary tree), so the time complexity of Dijkstra's algorithm is `O((V + E)logV)`.
 
 
 
