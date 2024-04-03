@@ -1,8 +1,4 @@
-# Dijkstra
-
-Dijkstra is an algorithm which commonly used to find the shortest path in a graph, it is a single source shortest path algorithm for graphs with non-negative edge weights. 
-
-Single source means at the beginning of the algorithm, a single starting node in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting vertex and all other vertices in the graph.
+# Dijkstra's Algorithm and A<sup>*</sup> Algorithm
 
 ## Graph
 
@@ -12,7 +8,13 @@ A graph is a data structure that consists of a set of vertices (also called node
 <img width="350" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/736eec7c-77d7-4942-8872-c7cc11bd16c7">
 </div>
 
-## How Dijkstra Works in a Graph
+## Dijkstra's Algorithm 
+
+Dijkstra is an algorithm which commonly used to find the shortest path in a graph, it is a single source shortest path algorithm for graphs with non-negative edge weights. 
+
+Single source means at the beginning of the algorithm, a single starting node in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting vertex and all other vertices in the graph.
+
+**How Dijkstra Works in a Graph**
 
 Take this graph as a simple example of how dijkstra works to find the shortest path, in this graph vertex `A` is the starting node (This graph construction doesn't conform to the triangle formation principle, but never mind, it just as an example to show how Dijkstra works):
 
@@ -46,7 +48,7 @@ Step 5: Then visit `B` and `C`, repeat the step and update the information, then
 <img width="400" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/7adc0320-8e13-4ebf-b110-3b18a0caab52">
 </div>
 
-## Code Implementation
+**Code Implementation**
 
 The above example is shown in code:
 ```py
@@ -120,12 +122,13 @@ A-->D-->E-->C
 
 I also tested the situation when I changed the `to_vert` to other vertex, this code still works.
 
-## Time Complexity of Dijkstra's Algorithm
+**Time Complexity of Dijkstra's Algorithm**
 
 The time complexity of Dijkstra's algorithm is `O((V + E)logV)`, `V` is the number of vertex in the graph, `E` is the number of edges in the graph. 
 
 In Dijkstra's algorithm, the priority queue is used to select the vertex with the minimum distance to the source/start vertex. This operation is performed for each vertex in the graph, in the worst case, each edge and vertex may be visited once during the execution, so the time complexity is `O(V)`, and priority queue operates insertions and extractions, the relaxing edges is `O(E)`, so its typically `O(V + E)`, As there is a priority queue to extract the minimal distance from the starting vertex, the time complexity of the priority queue is `O(logV)` (This is because priority queues are commonly implemented by binary heaps like binary tree), so the time complexity of Dijkstra's algorithm is `O((V + E)logV)`.
 
+## A<sup>*</sup> Algorithm
 
 
 
