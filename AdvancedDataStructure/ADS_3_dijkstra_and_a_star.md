@@ -130,7 +130,7 @@ In Dijkstra's algorithm, the priority queue is used to select the vertex with th
 
 ## A<sup>*</sup> Algorithm
 
-Dijkstra's algorithm works well but it will explore shortest path from the starting vertex to all other vertices, if the requirement is just find the shortest path between 2 vertices, Dijkstra's algorithm will do additional works to achive that, in this situation, A<sup>*</sup> algorithm can be used.
+Dijkstra's algorithm works well but it will explore shortest path from the starting vertex to all other vertices, if the requirement is just find the shortest path between 2 vertices, Dijkstra's algorithm will do additional works to achive that, in this situation, A<sup>*</sup> algorithm is a better choice.
 
 
 
