@@ -130,6 +130,8 @@ In Dijkstra's algorithm, the priority queue is used to select the vertex with th
 
 ## A<sup>*</sup> Algorithm
 
+Dijkstra's algorithm works well but it will explore path with the shortest distance first even if this path is not leading to the destination, 
+
 
 
 
