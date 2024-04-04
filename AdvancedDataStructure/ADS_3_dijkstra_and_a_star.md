@@ -122,6 +122,56 @@ A-->D-->E-->C
 
 I also tested the situation when I changed the `to_vert` to other vertex, this code still works.
 
+_Use a priority queue module to simplify the code:_
+```py
+# import heapq to implement priority queue
+import heapq
+
+graph = {
+    "A": {"B": 7, "D": 1},
+    "B": {"A": 7, "D": 2, "E": 2, "C": 5},
+    "C": {"B": 5, "E": 5},
+    "D": {"A": 1, "B": 2, "E": 1},
+    "E": {"D": 1, "B": 2, "C": 5}
+}
+
+from_vert = "A"
+to_vert = "C"
+
+# Define frontier to record the vertex waiting to be visited.
+frontier = [(0, from_vert)]
+# Define came_from to record the previous vertex of the visited vertex, in order to backtracking.
+came_from = {}
+# Define cost_so_far to record the shortest distance from the start vertex.
+cost_so_far = {}
+
+came_from[from_vert] = None
+cost_so_far[from_vert] = 0
+
+while frontier:
+    current_cost, current_vertex = heapq.heappop(frontier)
+    if current_vertex == to_vert:
+        break
+    for neighbour in graph[current_vertex]:
+        new_cost = cost_so_far[current_vertex] + graph[current_vertex][neighbour]
+        if neighbour not in cost_so_far or new_cost < cost_so_far[neighbour]:
+            cost_so_far[neighbour] = new_cost
+            # In Dijkstra's algorithm the priority is the shortest distance from the starting vertex.
+            priority = new_cost
+            frontier.append((priority, neighbour))
+            came_from[neighbour] = current_vertex
+
+shortest_path = []
+while current_vertex != from_vert:
+    shortest_path.append(current_vertex)
+    current_vertex = came_from[current_vertex]
+shortest_path.append(from_vert)
+shortest_path.reverse()
+
+print(f"Shortest path from {from_vert} to {to_vert}: {"-->".join(shortest_path)}.")
+```
+
+
 **Time Complexity of Dijkstra's Algorithm**
 
 The time complexity of Dijkstra's algorithm is `O((V + E)logV)`, `V` is the number of vertex in the graph, `E` is the number of edges in the graph. 
@@ -140,7 +190,67 @@ There are many methods to estimate the heuristic value, the choice of heuristic 
 
 Also use the same example as Dijkstra's:
 ```py
+# import heapq to implement priority queue
+import heapq
 
+# In this example, simple use the absolute difference between the ASCII values of two characters as the heuristic value.
+# Every charaters have their own ASCII values.
+def heuristic(vertex, goal):
+    """
+
+    :param vertex: name of current vertex.
+    :param goal: name of the end vertex.
+    :return: estimated heuristic value.
+    """
+    return abs(ord(vertex) - ord(goal))
+
+graph = {
+    "A": {"B": 7, "D": 1},
+    "B": {"A": 7, "D": 2, "E": 2, "C": 5},
+    "C": {"B": 5, "E": 5},
+    "D": {"A": 1, "B": 2, "E": 1},
+    "E": {"D": 1, "B": 2, "C": 5}
+}
+
+from_vert = "A"
+to_vert = "C"
+
+# Define frontier to record the vertex waiting to be visited.
+frontier = [(0, from_vert)]
+# Define came_from to record the previous vertex of the visited vertex, in order to backtracking.
+came_from = {}
+# Define cost_so_far to record the shortest distance from the start vertex.
+cost_so_far = {}
+
+came_from[from_vert] = None
+cost_so_far[from_vert] = 0
+
+while frontier:
+    current_cost, current_vertex = heapq.heappop(frontier)
+    if current_vertex == to_vert:
+        break
+    for neighbour in graph[current_vertex]:
+        new_cost = cost_so_far[current_vertex] + graph[current_vertex][neighbour]
+        if neighbour not in cost_so_far or new_cost < cost_so_far[neighbour]:
+            cost_so_far[neighbour] = new_cost
+            # In A* algorithm the priority is the smallest sum of the distance from the starting vertex and the estimated distance from the destination.
+            priority = new_cost + heuristic(neighbour, to_vert)
+            frontier.append((priority, neighbour))
+            came_from[neighbour] = current_vertex
+
+shortest_path = []
+while current_vertex != from_vert:
+    shortest_path.append(current_vertex)
+    current_vertex = came_from[current_vertex]
+shortest_path.append(from_vert)
+shortest_path.reverse()
+
+print(f"Shortest path from {from_vert} to {to_vert}: {"-->".join(shortest_path)}.")
+```
+
+The output is:
+```py
+Shortest path from A to C: A-->D-->E-->C.
 ```
 
 
