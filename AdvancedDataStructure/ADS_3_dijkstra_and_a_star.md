@@ -132,13 +132,16 @@ In Dijkstra's algorithm, the priority queue is used to select the vertex with th
 
 Dijkstra's algorithm works well but it will explore shortest path from the starting vertex to all other vertices, if the requirement is just find the shortest path between 2 vertices, Dijkstra's algorithm will do additional works to achive that, in this situation, A<sup>*</sup> algorithm is a better choice.
 
-A<sup>*</sup> algorithm is similar to Dijkstra's algorithm, but each time when it will move forward, instead of moving towards the vertex which has the shortest distance from the starting vertex, it moves towards the vertex which has the smallest sum of the distance from the starting vertex and the distance from the ending vertex. The distance from the current vertex to the ending vertex is an educated guessed value, which is called heuristic value.
+A<sup>*</sup> algorithm is similar to Dijkstra's algorithm, but each time when it will visit next vertex, instead of visiting the vertex which has the shortest distance from the starting vertex, it visits the vertex which has the smallest sum of the distance from the starting vertex and the distance from the ending vertex. The distance from the current vertex to the ending vertex is an educated guessed value, which is called heuristic value.
 
 There are many methods to estimate the heuristic value, the choice of heuristic depends on the specific characteristics of the problem.
 
-**How A<sup>*</sup> Algorithm Works in a Graph**
+**Code Implementation**
 
+Also use the same example as Dijkstra's:
+```py
 
+```
 
 
 
