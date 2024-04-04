@@ -12,11 +12,11 @@ A graph is a data structure that consists of a set of vertices (also called node
 
 Dijkstra is an algorithm which commonly used to find the shortest path in a graph, it is a single source shortest path algorithm for graphs with non-negative edge weights. 
 
-Single source means at the beginning of the algorithm, a single starting node in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting vertex and all other vertices in the graph.
+Single source means at the beginning of the algorithm, a single starting vertex in a graph should be specified, when execute the algorithm, Dijkstra can find the shortest path between that starting vertex and all other vertices in the graph.
 
 **How Dijkstra Works in a Graph**
 
-Take this graph as a simple example of how dijkstra works to find the shortest path, in this graph vertex `A` is the starting node (This graph construction doesn't conform to the triangle formation principle, but never mind, it just as an example to show how Dijkstra works):
+Take this graph as a simple example of how dijkstra works to find the shortest path, in this graph vertex `A` is the starting vertex (This graph construction doesn't conform to the triangle formation principle, but never mind, it just as an example to show how Dijkstra works):
 
 <div align=center>
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/b72686a6-fb5b-459c-b389-cd85a539173d">
@@ -62,9 +62,9 @@ graph = {
 # Determine a starting vertex and a destination.
 from_vert = "A"
 to_vert = "C"
-# Define a visited list to store all the visited vertices
+# Define a visited list to store all the visited vertices.
 visited = []
-# Define a dictionary to record all shortest paths or distances from start vertex to all other vertices.
+# Define a dictionary to record all shortest paths or distances from starting vertex to all other vertices.
 shortest_paths = {}
 # Define another dictionary to record distances during the process and add the shortest path in the shortest path dictionary.
 dis_from_start = {}
