@@ -36,22 +36,19 @@ print(f"=======The students information dictionary=======\n{students_dict}\n")
 
 # Match students with coaches
 matched = {}
-
-for stu in students_dict:
-    for coach in coaches_dict:
-        if students_dict[stu]["Budget"] >= coaches_dict[coach]["Cost"]:
-            for date in students_dict[stu]["Date"]:
-                if date in coaches_dict[coach]["Date"]:
-                    for time in students_dict[stu]["Time"]:
-                        if time in coaches_dict[coach]["Time"]:
-                            if stu in matched:
-                                if coach in matched[stu]:
-                                    matched[stu][coach]["Matched Date and Time"].append((date, time))
-                                else:
-                                    matched[stu][coach] = {"Cost": coaches_dict[coach]["Cost"], "Matched Date and Time": [(date, time)]}
-                            else:
-                                matched[stu] = {coach: {"Cost": coaches_dict[coach]["Cost"], "Matched Date and Time": [(date, time)]}}
-print(f"The matched students with coaches is:\n{matched}")
+for student, student_info in students_dict.items():
+    for coach, coach_info in coaches_dict.items():
+        if (
+            student_info['Budget'] >= coach_info['Cost']
+            and any(date in coach_info['Date'] for date in student_info['Date'])
+            and any(time in coach_info['Time'] for time in student_info['Time'])
+        ):
+            matched_coach_data = {'Cost': coach_info['Cost'], "Matched Date and Time": []}
+            matched.setdefault(student, {}).setdefault(coach, matched_coach_data)["Matched Date and Time"].extend(
+                (date, time) for date in student_info['Date'] for time in student_info['Time'] if (date in coach_info['Date'] and time in coach_info['Time'])
+            )
+print("=======Matched Student with Coach=======")
+print(matched)
 flat_data = {
     'Name': {},
     'Coach': {},
