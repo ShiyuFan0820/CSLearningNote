@@ -6,7 +6,8 @@ Python offers several libraries, such as unittest, doctest and PyTest, to write 
 
 # How to Use Unit Test in Python
 
-Use Python build-in `unittest` to test simple class of mathematical operations as an example:
+Use Python build-in `unittest` to test a simple class of mathematical operations as an example:
+
 
 
 
