@@ -31,7 +31,7 @@ def if_pos(x):
     else:
         return False
 
-# Write the class to test the functions
+# Write the test class to test the functions
 ## The class should inherit from the TestCase of unittest
 class TestMath(unittest.TestCase):
     def test_add(self):
@@ -56,7 +56,7 @@ class TestMath(unittest.TestCase):
             if_pos('4')
 
 if __name__ == '__main__':
-    # This line is to run the test code, must have this line
+    # This line is the key to run the test code, so it must contain this line
     unittest.main()
 
 ```
@@ -67,7 +67,7 @@ Run the code the output is:
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/12955b04-9f79-4d0c-883d-b24ca0e1bbde">
 </div>
 
-`.` means one test is passed, and there are 5 `.`, means all tests are passed. If revise the `add` function to multiply the two elements, and run the code. Apparently the test will fail:
+`.` means one test is passed, and there are 5 `.`, means all tests are passed. If revise the `add` function to multiply the two elements, and run the code. Apparently the test will fail, this is how unit test work in Python:
 
 <div align=center>
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/33f8f68d-8d0a-4a2b-b96c-02775eb99e30">
