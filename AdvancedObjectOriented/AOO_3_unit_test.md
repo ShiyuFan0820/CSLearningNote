@@ -6,7 +6,7 @@ Python offers several libraries, such as unittest, doctest and PyTest, to write 
 
 # How to Use Unit Test in Python
 
-Use Python build-in `unittest` to test functions of mathematical operations as an example:
+Use Python build-in `unittest` to test functions of mathematical operations as an example to show how to use unit test in Python:
 
 ```py
 # Import unnittest
@@ -67,13 +67,15 @@ Run the code the output is:
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/12955b04-9f79-4d0c-883d-b24ca0e1bbde">
 </div>
 
-`.` means one test is passed, and there are 5 `.`, means all tests are passed. If revise the `add` function to multiply the two elements, and run the code. Apparently the test will fail, this is how unit test work in Python:
+`.` means one test is passed, and there are 5 `.`, means all tests are passed. If revise the `add` function to multiply the two elements, and run the code. Apparently, the test will fail:
 
 <div align=center>
 <img width="600" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/33f8f68d-8d0a-4a2b-b96c-02775eb99e30">
 </div>
 
+**Note**
 
+These tests are not executed sequentially in the order they are within the class. Therefore, each test method must be independent, and the result of each test method must not affect other test methods.
 
 
 
