@@ -61,6 +61,19 @@ if __name__ == '__main__':
 
 ```
 
+Run the code the output is:
+
+<div align=center>
+<img width="600" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/12955b04-9f79-4d0c-883d-b24ca0e1bbde">
+</div>
+
+`.` means one test is passed, and there are 5 `.`, means all tests are passed. If revise the `add` function to multiply the two elements, and run the code. Apparently the test will fail:
+
+<div align=center>
+<img width="600" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/33f8f68d-8d0a-4a2b-b96c-02775eb99e30">
+</div>
+
+
 
 
 
