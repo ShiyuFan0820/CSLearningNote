@@ -75,7 +75,7 @@ Run the code the output is:
 
 **Note**
 
-These tests are not executed sequentially in the order they are within the class. Therefore, each test method must be independent, and the result of each test method must not affect other test methods.
+These tests are not executed sequentially in the order they are listed within the class. Therefore, each test method must be independent, and the result of each test method must not affect other test methods.
 
 
 
