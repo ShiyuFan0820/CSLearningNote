@@ -6,9 +6,58 @@ Python offers several libraries, such as unittest, doctest and PyTest, to write 
 
 # How to Use Unit Test in Python
 
-Use Python build-in `unittest` to test methods of mathematical operations as an example:
+Use Python build-in `unittest` to test functions of mathematical operations as an example:
 
 ```py
+# Import unnittest
+import unittest
+
+# Functions need to be tested
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x - y
+
+def mul(x, y):
+    return x * y
+
+def div(x, y):
+    return x / y
+
+def if_pos(x):
+    if x > 0:
+        return True
+    else:
+        return False
+
+# Write the class to test the functions
+## The class should inherit from the TestCase of unittest
+class TestMath(unittest.TestCase):
+    def test_add(self):
+        ## assertEqual can test whether two elements are equal
+        ## Here it checks whether the result of add(1, 2) is equal to 3
+        self.assertEqual(add(4, -2), 2)
+
+    def test_sub(self):
+        self.assertEqual(sub(4, -2), 6)
+
+    def test_mul(self):
+        self.assertEqual(mul(4, -2), -8)
+
+    def test_div(self):
+        self.assertEqual(div(4, -2), -2)
+
+    def test_if_pos(self):
+        self.assertTrue(if_pos(4))
+        self.assertFalse(if_pos(-2))
+        ## assertRaises is used to raise a specific exception, here means TypeError will raise under the condition of if_pos('4') 
+        with self.assertRaises(TypeError):
+            if_pos('4')
+
+if __name__ == '__main__':
+    # This line is to run the test code, must have this line
+    unittest.main()
 
 ```
 
