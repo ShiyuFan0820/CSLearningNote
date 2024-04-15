@@ -84,7 +84,7 @@ Run the code the output is:
 These tests are not executed sequentially in the order they are listed within the class. Therefore, each test method must be independent, and the result of each test method must not affect other test methods.
 
 ## Integration Test
-
+Integration tests focus on testing the interactions between different components and modules of a system. Unlike unit tests, which isolate individual units of code, integration tests verify that these units work together correctly when integrated into larger parts of the system. Integration tests help ensure that the various components of a system can communicate and collaborate effectively and achieve the desired functionality.
 
 ## White Box Test
 
