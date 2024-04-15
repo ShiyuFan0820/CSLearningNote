@@ -1,12 +1,14 @@
-# Unit Test in Python
+# Tests
+
+## Unit Test
 
 Unit testing is a crucial step when coding, it aims to validate the functions or methods work as intended and produce the expected output.
 
 Python offers several libraries, such as unittest, doctest and PyTest, to write and execute unit tests.
 
-# How to Use Unit Test in Python
+## How to Use Unit Test
 
-Use Python build-in `unittest` to test functions of mathematical operations as an example to show how to use unit test in Python:
+In Python, use build-in `unittest` to test functions of mathematical operations as an example to show how to use unit test in Python:
 
 ```py
 # Import unnittest
@@ -76,6 +78,14 @@ Run the code the output is:
 **Note**
 
 These tests are not executed sequentially in the order they are listed within the class. Therefore, each test method must be independent, and the result of each test method must not affect other test methods.
+
+## Integrating Test
+
+
+## White Box Test
+
+
+## Black Box Test
 
 
 
