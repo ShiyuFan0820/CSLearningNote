@@ -1,8 +1,12 @@
 # Tests
 
+Testing is a process used to identify the correctness, completeness and quality of the code. It includes a set of activities conducted with intent of finding a set of errors in the code so that it could be corrected before the product is released to the users.
+
 ## Unit Test
 
 Unit testing is a crucial step when coding, it aims to validate the functions or methods work as intended and produce the expected output.
+
+Unit tests are designed to test the smallest units of code, typically individual functions or methods, in isolation from the rest of the code. This helps ensure that each unit of code behaves as expected.
 
 Python offers several libraries, such as unittest, doctest and PyTest, to write and execute unit tests.
 
