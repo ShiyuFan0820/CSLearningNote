@@ -83,7 +83,7 @@ Run the code the output is:
 
 These tests are not executed sequentially in the order they are listed within the class. Therefore, each test method must be independent, and the result of each test method must not affect other test methods.
 
-## Integrating Test
+## Integration Test
 
 
 ## White Box Test
