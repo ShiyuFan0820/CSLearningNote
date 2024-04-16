@@ -88,10 +88,13 @@ Integration tests focus on testing the interactions between different components
 
 ## White and Black Box Testing
 
+White box testing is a testing technique where the tester has access to the internal structure of the code being tested.
 
+In contrast, black box testing is a testing technique where the internal workings being tested are not known to the tester, tester only focuses on the inputs and outputs of the code without considering its internal implementation details. For example, the tester might be calling the API to do the test, the tester doesn't need to know the internals of the API, and just make requests to the data in it.
 
 ## Test-Driven Development (TDD)
 
+TDD is a software development approach in which tests are written before the actual implementation code. TDD can provide rapid feedback when code changes and ensure the code is tested and reliable.
 
 
 
