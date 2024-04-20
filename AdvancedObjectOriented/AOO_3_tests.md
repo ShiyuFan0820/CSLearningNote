@@ -61,8 +61,8 @@ class TestMath(unittest.TestCase):
         with self.assertRaises(TypeError):
             if_pos('4')
 
+# When writing test code in the same file as functions, the block below should be included. This block tells Python to run the tests if the script is executed directly. This block is not required if the test code is in a separate '.py' file.
 if __name__ == '__main__':
-    # This line is the key to run the test code, so it must contain this line
     unittest.main()
 
 ```
