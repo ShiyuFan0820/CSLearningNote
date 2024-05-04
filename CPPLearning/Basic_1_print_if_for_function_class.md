@@ -35,6 +35,11 @@ int main() {
 
 # For
 
+In C++, the for loop syntax is a bit different from that in Python.
+1. `int i = 0`, this initialises the loop variable `i` to 0.
+2. `i < 5`, this is the condition that the loop checks before each iteration, if it's true, the loop continues, if it's false, the loop terminates.
+3. `i++`, this is the update expression that increments `i` by `1` after each iteration.
+
 ```c
 #include <iostream>
 
