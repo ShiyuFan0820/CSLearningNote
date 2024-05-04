@@ -52,3 +52,31 @@ int main() {
 ```
 
 # Class
+
+```c
+#include <iostream>
+
+// Define a simple class named Person.
+class Person {
+    private: // Member variables
+    std::string m_name;
+    int m_age;
+    public: // Constructor
+    Person(std::string name, int age) {
+        m_name = name;
+        m_age = age;
+    }
+    // Member function to display information about the person.
+    void displayInfo() {
+        std::cout << "Name: " << m_name << ", Age: " << m_age << std::endl;
+    }
+};
+
+int main() {
+    // Create an object of class Person.
+    Person person1("Fanfan", 20);
+    // Call the displayInfo() member function.
+    person1.displayInfo();
+    return 0;
+}
+```
