@@ -53,6 +53,16 @@ int main() {
 
 # Class
 
+1. `class Person { ... };`, this declares a class named `Person`. Inside the class definition:
+- `private`: It indicates that the member variables below it are only accessible within the class, `std::string m_name;` and `int m_age;`: These are member variables of the `Person` class. They represent the name and age of the person.
+- `public`: It indicates that the member functions and variables below it are accessible from outside the class.
+- `Person(std::string name, int age) { ... }`: This is the constructor of the `Person` class. It initializes the `m_name` and `m_age` member variables with the values passed as arguments.
+- `void displayInfo() { ... }`: This is a member function of the Person class. It outputs the name and age of the person. In C++, the `void` keyword is used to specify that a function does not return any value.
+- `~Person() { ... }`: This is a destructor for the `Person` class. It is called automatically when an object of the class goes out of scope or is explicitly deleted. In this example, the destructor simply prints a message indicating that it has been called.
+
+
+
+
 ```c
 #include <iostream>
 
@@ -69,6 +79,9 @@ class Person {
     // Member function to display information about the person.
     void displayInfo() {
         std::cout << "Name: " << m_name << ", Age: " << m_age << std::endl;
+    }
+    ~Person() {
+        std::cout << "Destructor called for " << m_name << "." << std::endl;
     }
 };
 
