@@ -22,12 +22,27 @@ For example:
 <h6>Heading 6</h6>
 ```
 
-It will display like this:
+It will be displayed like this:
 
 <div align=center>
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/ce8738e6-2ba6-4e22-a611-8476ec51ac61">
 </div>
 
+### Paragraph Element
+
+The opening tag for the paragraph element is `<p>`, and the closing tag is </p>. This will separate two paragraphs.
+
+For example:
+```
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+```
+
+It will be displayed like this:
+
+<div align=center>
+<img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/2b7d2fd0-5f83-457d-ad87-c65bd9cd2ac7">
+</div>
 
 
 
