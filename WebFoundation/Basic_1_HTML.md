@@ -74,4 +74,23 @@ It will be displayed like this:
 <img width="483" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/d1e4f6f8-7060-40bb-befc-3a63108b6311">
 </div>
 
+## Boilerplate
+
+A Boilerplate is a basic template structure of the HTML file, the basic structure is like this:
+```
+<!DOCTYPE html> <!--This tag tells the brower which version of HTML the file was written in.-->
+<html lang="en"> <!--This is the root of the HTML file, all elements are going to write inside of this tag. lang means language, if you use a website speaker to read the website, they will check the targeted language to read.-->
+  <head> <!--This is the area where important information about the website is placed, the things included in here help the website render in the brower correctly, and will not be displayed to the user.-->
+    <meta charset="UTF-8"> <!--This ensures the characters that you're using on your website gets displayed correctly.-->
+    <title>My Website</title> <!--The title here is the name of the website usually gets displayed up in the tab bar.-->
+  </head>
+
+  <body> <!--Here is where all of the content of the website displayed.-->
+    <h1>This is the body of My Website</h1>
+
+
+  </body>
+</html>
+```
+
 
