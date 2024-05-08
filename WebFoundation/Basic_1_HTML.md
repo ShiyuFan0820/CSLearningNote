@@ -1,8 +1,5 @@
-# Web Foundation
-
-Most modern websites are created using HTML, CSS and Javascript.
-
-## HTML
+# HTML
+Most modern websites are created using HTML, CSS, and Javascript, and HTML is the only one that can display as a web page on its own.
 
 HTML stands for Hypertext Markup Language. It is the standard markup language for creating web pages and web applications. It's like the skeleton of a web page.
 
@@ -10,7 +7,7 @@ Hypertext refers to the pieces of text which can link to other documents in the 
 
 The HTML elements are a combination of an opening tag and a closing tag and content between them.
 
-### Heading Element
+## Heading Element
 
 When writing the heading element, it starts with an opening tag `<h1>` and ends with a closing tag `</h1>`, the text content is between the opening and closing tag. There are 6 hierarchies of headlines in total, the advantage of using this is that it can automatically generate directories. Remember, do not have more than one h1 in the code, and do not skip a level, such as don't go straight from h1 to h3.
 
@@ -30,7 +27,7 @@ It will be displayed like this:
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/ce8738e6-2ba6-4e22-a611-8476ec51ac61">
 </div>
 
-### Paragraph Element
+## Paragraph Element
 
 The opening tag for the paragraph element is `<p>`, and the closing tag is </p>. This will separate two paragraphs.
 
@@ -46,7 +43,7 @@ It will be displayed like this:
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/2b7d2fd0-5f83-457d-ad87-c65bd9cd2ac7">
 </div>
 
-### Void Element
+## Void Element
 
 A void element is an element where you are forbidden from putting any content inside the tag.
 
