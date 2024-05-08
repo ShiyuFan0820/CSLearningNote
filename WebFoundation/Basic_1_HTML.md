@@ -93,4 +93,10 @@ A Boilerplate is a basic template structure of the HTML file, the basic structur
 </html>
 ```
 
+It will be displayed like this:
+
+<div align=center>
+<img width="560" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/fedf3a86-9e72-434e-8ae4-df39731e1ef7">
+</div>
+
 
