@@ -8,6 +8,8 @@ HTML stands for Hypertext Markup Language. It is the standard markup language fo
 
 Hypertext refers to the pieces of text which can link to other documents in the website, these pieces of text are hypertext or hyperlinks. Markup Language means HTML uses tags to mark up or define different parts of a web page. These tags provide instructions to web browsers about how to display the content. The tags of HTML are often written between `<>`.
 
+The HTML elements are a combination of an opening tag and a closing tag and content between them.
+
 ### Heading Element
 
 When writing the heading element, it starts with an opening tag `<h1>` and ends with a closing tag `</h1>`, the text content is between the opening and closing tag. There are 6 hierarchies of headlines in total, the advantage of using this is that it can automatically generate directories. Remember, do not have more than one h1 in the code, and do not skip a level, such as don't go straight from h1 to h3.
@@ -44,9 +46,9 @@ It will be displayed like this:
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/2b7d2fd0-5f83-457d-ad87-c65bd9cd2ac7">
 </div>
 
+### Void Element
 
-
-
+A void element is an element where you are forbidden from putting any content inside the tag.
 
 
 
