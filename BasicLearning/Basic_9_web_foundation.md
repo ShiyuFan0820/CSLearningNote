@@ -50,7 +50,7 @@ It will be displayed like this:
 
 A void element is an element where you are forbidden from putting any content inside the tag.
 
-1. Horizontal Rule Element `<hr />`, use this element between two elements, it will create a line between them.
+1. Horizontal Rule Element `<hr />` (`<hr>` also works), use this element between two elements, it will create a line between them.
 
 For example:
 ```
@@ -65,7 +65,7 @@ It will be displayed like this:
 <img width="300" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/d603c5a1-14a5-4bfd-80ed-340ab45d1d47">
  </div>
 
-2. Break Element `<br />`, use this element in a paragraph will wrap everything after the element.
+2. Break Element `<br />` (`<be>` also works), use this element in a paragraph will wrap everything after the element.
 
 For example:
 ```
