@@ -10,7 +10,7 @@ Hypertext refers to the pieces of text which can link to other documents in the 
 
 ### Heading Element
 
-When writing the heading element, it starts with an opening tag `<h1>` and ends with a closing tag `</h1>`, the text content is between the opening and closing tag. There are 6 hierarchies of headlines in total, the advantage of using this is that it can automatically generate directories. Remember do not have more than one head 1 in the code.
+When writing the heading element, it starts with an opening tag `<h1>` and ends with a closing tag `</h1>`, the text content is between the opening and closing tag. There are 6 hierarchies of headlines in total, the advantage of using this is that it can automatically generate directories. Remember, do not have more than one h1 in the code, and do not skip a level, such as don't go straight from h1 to h3.
 
 For example:
 ```
