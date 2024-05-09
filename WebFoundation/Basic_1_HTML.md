@@ -103,6 +103,38 @@ It will be displayed like this:
 
 **Unordered List**
 
+Unordered lists are the lists that start after a dot.
+
+The structure is:
+```
+<ul>
+    <li>List element 1</li>
+    <li>List element 2</li>
+    <li>List element 3</li>
+</ul>
+```
+
+It will be displayed like this:
+
+<div align=center>
+<img width="200" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/59d9dc65-a254-4445-a238-a46a166dae8d">
+</div>
 
 **Ordered List**
 
+Ordered lists are numbered lists.
+
+The structure is:
+```
+<ol>
+    <li>List element 1</li>
+    <li>List element 2</li>
+    <li>List element 3</li>
+</ol>
+```
+
+It will be displayed like this:
+
+<div align=center>
+<img width="200" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/f3911755-e277-430e-9f2b-041354455f5e">
+</div>
