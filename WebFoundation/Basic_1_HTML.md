@@ -1,5 +1,5 @@
 # HTML
-Most modern websites are created using HTML, CSS, and Javascript, and HTML is the only one that can display as a web page on its own.
+Most modern websites are created using HTML, CSS, and Javascript, and HTML is the only one that can be displayed as a web page on its own.
 
 HTML stands for Hypertext Markup Language. It is the standard markup language for creating web pages and web applications. It's like the skeleton of a web page.
 
