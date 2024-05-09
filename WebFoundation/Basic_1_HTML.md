@@ -136,5 +136,5 @@ The structure is:
 It will be displayed like this:
 
 <div align=center>
-<img width="200" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/f3911755-e277-430e-9f2b-041354455f5e">
+<img width="180" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/f3911755-e277-430e-9f2b-041354455f5e">
 </div>
