@@ -45,7 +45,7 @@ It will be displayed like this:
 
 ## Void Element
 
-A void element is an element where you are forbidden from putting any content inside the tag.
+A void element is an element that doesn't have any content and have no end tag, these elements are self-closing.
 
 1. Horizontal Rule Element `<hr />` (`<hr>` also works), use this element between two elements, it will create a line between them.
 
@@ -153,7 +153,9 @@ It will be displayed like this:
 <img width="200" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/af2c57f0-7ac3-450d-8bf7-61755527c3c7">
 </div>
 
+## Image Element
 
+ 
 
 
 
