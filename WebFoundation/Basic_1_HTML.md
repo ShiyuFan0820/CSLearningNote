@@ -138,3 +138,25 @@ It will be displayed like this:
 <div align=center>
 <img width="180" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/f3911755-e277-430e-9f2b-041354455f5e">
 </div>
+
+## Anchor Element
+
+Anchor element can be used to create hyperlinks, the opening tag is `<a>`, and the closing tag is `</a>`. The link goes into the part just after the `a` of the opening tag, and follows an attribute `href=`, the name of the link can be write between the opening and closing tags.
+
+For example:
+```
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
