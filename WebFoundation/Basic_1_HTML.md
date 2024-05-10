@@ -141,12 +141,17 @@ It will be displayed like this:
 
 ## Anchor Element
 
-Anchor element can be used to create hyperlinks, the opening tag is `<a>`, and the closing tag is `</a>`. The link goes into the part just after the `a` of the opening tag, and follows an attribute `href=`, the name of the link can be write between the opening and closing tags.
+Anchor element can be used to create hyperlinks, the opening tag is `<a>`, and the closing tag is `</a>`. The link goes into the part just after the `a` of the opening tag, and follows an HTML attribute `href=`, the name of the link can be written between the opening and closing tags. If the HTML attribute is not included, the hyperlink won't be activated, it will just look like a text.
 
 For example:
 ```
-
+<a href="https://www.google.cn/">This is a link to Google</a>
 ```
+
+It will be displayed like this:
+<div align=center>
+<img width="200" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/af2c57f0-7ac3-450d-8bf7-61755527c3c7">
+</div>
 
 
 
