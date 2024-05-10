@@ -161,7 +161,7 @@ For example:
 ```
 <img src="https://picsum.photos/200" />
 ```
-This image link can create pictures randomly.
+This image link can create pictures randomly, the `/200` is the size of the image.
 
 
 
