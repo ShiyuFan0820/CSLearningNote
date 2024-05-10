@@ -155,7 +155,13 @@ It will be displayed like this:
 
 ## Image Element
 
- 
+An image element is a self-closing or void element. The structure is `<img />`, and the HTML attribute is `src=`.
+
+For example:
+```
+<img src="https://picsum.photos/200" />
+```
+This image link can create pictures randomly.
 
 
 
