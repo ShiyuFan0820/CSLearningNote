@@ -155,7 +155,7 @@ It will be displayed like this:
 
 ## Image Element
 
-An image element is a self-closing or void element. The structure is `<img />`, and the HTML attribute is `src=`.
+An image element is a self-closing or void element. The structure is `<img />`, and the HTML attribute for the picture is `src=`, the attribute for the text description of the picture is `alt=`, this is used for a website speaker to read the.
 
 For example:
 ```
