@@ -1,6 +1,6 @@
 # Function Overloading
 
-Function overloading is two or more functions have the same name but different parameters.
+Function overloading refers to the ability to define multiple functions with the same name but different numbers of parameters or different types of parameters, this allows user to use the same function name for different implementations based on the type or number of the parameters passed to it.
 
 For example:
 
