@@ -10,7 +10,7 @@ CSS (Cascading Style Sheets), Cascading refers to the way styles are applied to 
 
 There are three different styles of adding CSS, Inline, Internal and External, they are used to define the presentation of HTML elements. Cascading means CSS determine the priority of conflicting styles from these different sources using the cascade, which considers specificity and the other of importance.
 
-1. **Inline**
+**1. Inline**
 ```
 <html style="background: blue">
 </html>
