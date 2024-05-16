@@ -17,9 +17,13 @@ There are three different styles of adding CSS, Inline, Internal and External, t
 ```
 As the name suggests, it goes into the same line as a particular HTML element, as the code shows above, it goes into the opening tag of the HTML. `background: blue` This part is the CSS code, the first part of it is the property that you want to change, here it's the `background`, the second part is the value of that property you want to set it to, here it sets the background to `blue`.
 
-2. External
+Inline elements are really useful for adding CSS style to just a single element or specific sections.
 
-3. Internal
+2. Internal
+
+
+
+3. External
 
 
 
