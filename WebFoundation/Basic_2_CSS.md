@@ -19,11 +19,11 @@ As the name suggests, it goes into the same line as a particular HTML element, a
 
 Inline elements are really useful for adding CSS style to just a single element or specific sections.
 
-2. Internal
+**2. Internal**
 
 
 
-3. External
+**3. External**
 
 
 
