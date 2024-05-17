@@ -32,7 +32,7 @@ Inline elements are really useful for adding CSS style to just a single element 
 </html>
 ```
 
-An internal CSS can go into any element, the html element or the head element, in the example above, it goes into the head element, the structure includes an opening tag` <style>`, a closing tag` </style>` 
+An internal CSS can go into any element, the html element or the head element, in the example above, it goes into the head element. The structure includes an opening tag` <style>`, and a closing tag` </style>`, in between these tags is where we add all of the CSS, 
 
 **3. External**
 
