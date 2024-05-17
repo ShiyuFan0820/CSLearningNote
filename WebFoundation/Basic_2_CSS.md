@@ -22,13 +22,13 @@ Inline elements are really useful for adding CSS style to just a single element 
 **2. Internal**
 ```
 <html>
-    <head>
-        <style>
-            html{
-              background: read;
-            }
-        </style>
-    </head>
+  <head>
+    <style>
+      html{
+        background: read;
+      }
+    </style>
+  </head>
 </html>
 ```
 
@@ -38,6 +38,11 @@ Internal CSS styling is also usually used for applying it only to one HTML docum
 
 **3. External**
 
+<div align=center>
+<img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/2c151cff-256c-48a0-a76b-41c0f76dac98">
+</div>
+
+The biggest difference between the external, internal and inline styles is that external go to a completely separate file, the file ends with `.css`, 
 
 
 
