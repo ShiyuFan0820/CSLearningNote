@@ -11,7 +11,7 @@ CSS (Cascading Style Sheets), Cascading refers to the way styles are applied to 
 There are three different styles of adding CSS, Inline, Internal and External, they are used to define the presentation of HTML elements. Cascading means CSS determine the priority of conflicting styles from these different sources using the cascade, which considers specificity and the other of importance.
 
 **1. Inline**
-```
+```html
 <p style="background: blue;">This is a paragraph with a blue background.</p>
 ```
 As the name suggests, an inline style goes into the same line as a particular HTML element, it's added directly into the opening tag of the HTML element using the `style` attribute.
@@ -21,19 +21,36 @@ As the code shows above, the `style` attribute is used within the `<p>` tag to a
 Inline elements are really useful for adding CSS style to just a single element or specific sections of an HTML document. However, they are not the most efficient way to apply styles if you need to style multiple elements or maintain a consistent design across multiple pages.
 
 **2. Internal**
-```
+```html
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
+    <title>Internal CSS Example</title>
     <style>
-      html{
-        background: red;
-      }
+        /* CSS code goes here */
+        body {
+            background-colour: blue;
+        }
+        h1 {
+            color: navy;
+            margin-left: 20px;
+        }
+        p {
+            font-size: 14px;
+            colour: grey;
+        }
     </style>
-  </head>
+</head>
+<body>
+    <h1>This is a heading</h1>
+    <p>This is a paragraph.</p>
+</body>
 </html>
 ```
 
-An internal CSS can go into any element, the html element or the head element, in the example above, it goes into the head element. The structure includes an opening tag` <style>`, and a closing tag` </style>`, in between these tags is where we add all of the CSS, here we need to add an additional selector before a set of curly braces, here the selector is `html`, and the CSS content goes into these curly braces.
+An internal CSS is used to define styles for a single HTML document. It is placed within the `<head>` section of the HTML file. This method of adding CSS is useful when you want to apply styles to a single web page, rather than multiple pages.
+
+As the example shows above, The `<style>` element contains the CSS code, CSS rules are written inside the `<style>` element, Each rule consists of a selector and a set of curly braces `{}`, The selector (e.g., `body`, `h1`, `p`) targets the HTML elements to be styled, Inside the curly braces, properties and values are defined (e.g., `background-colour: blue;`).
 
 Internal CSS styling is usually used for applying it only to one web page.
 
