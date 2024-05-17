@@ -60,9 +60,9 @@ Internal CSS styling is usually used for applying it only to one web page.
 <img width="500" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/2c151cff-256c-48a0-a76b-41c0f76dac98">
 </div>
 
-The biggest difference between the external, internal and inline styles is that external go to a completely separate file, the file ends with `.css`, in this `.css` file, it also includes a selector, curly braces, the property, and the value. 
+The biggest difference between the external, internal and inline styles is that external goes to a completely separate file, the file ends with `.css`, in this `.css` file, it also includes a selector, curly braces, the property, and the value. 
 
-To use the `.css` file in the HTML file, we would add a link element which is a self-closing tag, and write a `rel` relationship which refers to what is the role of this thing that it is linking to, and the other one is the `href`, which is the location of the linked file.
+To use the `.css` file in the HTML file, we would add a link element which is a self-closing tag within the `<head>` section of an HTML file, and write a `rel` relationship which refers to what the role of this thing that it is linking to, and the other one is the `href`, which is the location of the linked file.
 
 External CSS is suitable for multi-page HTML websites.
 
