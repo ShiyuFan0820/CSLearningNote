@@ -46,7 +46,7 @@ The biggest difference between the external, internal and inline styles is that 
 
 To use the `.css` file in the HTML file, we would add a link element which is a self-closing tag, and write a `rel` relationship which refers to what is the role of this thing that it is linking to, and the other one is the `href`, which is the location of the linked file.
 
-
+External CSS is suitable for multi-page HTML websites.
 
 
 
