@@ -34,6 +34,8 @@ Inline elements are really useful for adding CSS style to just a single element 
 
 An internal CSS can go into any element, the html element or the head element, in the example above, it goes into the head element. The structure includes an opening tag` <style>`, and a closing tag` </style>`, in between these tags is where we add all of the CSS, here we need to add an additional selector before a set of curly braces, here the selector is `html`, and the CSS content goes into these curly braces.
 
+Internal CSS styling is also usually used for applying it only to one HTML document.
+
 **3. External**
 
 
