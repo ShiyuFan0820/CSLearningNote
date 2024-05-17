@@ -20,8 +20,19 @@ As the name suggests, it goes into the same line as a particular HTML element, a
 Inline elements are really useful for adding CSS style to just a single element or specific sections.
 
 **2. Internal**
+```
+<html>
+    <head>
+        <style>
+            html{
+              background: read;
+            }
+        </style>
+    </head>
+</html>
+```
 
-
+An internal CSS can go into any element, the html element or the head element, in the example above, it goes into the head element, the structure includes an opening tag` <style>`, a closing tag` </style>` 
 
 **3. External**
 
