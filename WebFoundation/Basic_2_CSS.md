@@ -12,12 +12,13 @@ There are three different styles of adding CSS, Inline, Internal and External, t
 
 **1. Inline**
 ```
-<html style="background: blue">
-</html>
+<p style="background: blue;">This is a paragraph with a blue background.</p>
 ```
-As the name suggests, it goes into the same line as a particular HTML element, as the code shows above, it goes into the opening tag of the HTML. `background: blue` This part is the CSS code, the first part of it is the property that you want to change, here it's the `background`, the second part is the value of that property you want to set it to, here it sets the background to `blue`.
+As the name suggests, an inline style goes into the same line as a particular HTML element, it's added directly into the opening tag of the HTML element using the `style` attribute.
 
-Inline elements are really useful for adding CSS style to just a single element or specific sections.
+As the code shows above, the `style` attribute is used within the `<p>` tag to apply CSS styles directly to this paragraph. `background: blue;` is the CSS code, `background` is the property that you want to change, `blue` is the value you what to set the property to.
+
+Inline elements are really useful for adding CSS style to just a single element or specific sections of an HTML document. However, they are not the most efficient way to apply styles if you need to style multiple elements or maintain a consistent design across multiple pages.
 
 **2. Internal**
 ```
