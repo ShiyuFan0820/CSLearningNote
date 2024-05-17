@@ -25,7 +25,7 @@ Inline elements are really useful for adding CSS style to just a single element 
   <head>
     <style>
       html{
-        background: read;
+        background: red;
       }
     </style>
   </head>
