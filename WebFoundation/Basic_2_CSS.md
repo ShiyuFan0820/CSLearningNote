@@ -66,7 +66,7 @@ To use the `.css` file in the HTML file, we would add a link element which is a 
 
 External CSS is suitable for multi-page HTML websites.
 
-
+## Selector
 
 
 
