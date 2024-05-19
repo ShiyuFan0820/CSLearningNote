@@ -25,7 +25,7 @@ int main() {
     std::cin>>age; // Read the input into the age variable
     
     // Display the information back to the user
-    std::cout<<"Hello, "<<name<<"! Your are "<<age<<"years old!"<<std::endl;
+    std::cout<<"Hello, "<<name<<"! Your are "<<age<<" years old!"<<std::endl;
     return 0;
 }
 ```
