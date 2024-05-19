@@ -12,7 +12,22 @@ In C++, user input can be taken by using the `cin`, short for `character input`,
 
 This is a simple example of asking the user's name and age.
 ```c
+#include <iostream>
 
+int main() {
+    std:: string name; // Variable to store the user's name
+    int age; // Variable to store the user's age
+    
+    std::cout<<"What's your name: "; // Prompt the user for their name
+    std::cin>>name; // Read the input into the name variable
+    
+    std::cout<<"What's your age: "; //Prompt the user for their age
+    std::cin>>age; // Read the input into the age variable
+    
+    // Display the information back to the user
+    std::cout<<"Hello, "<<name<<"! Your are "<<age<<"years old!"<<std::endl;
+    return 0;
+}
 ```
 
 
