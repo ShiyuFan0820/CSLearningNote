@@ -5,7 +5,7 @@ Function overloading refers to the ability to define multiple functions with the
 For example:
 
 Function `add` in here is an overlodaing function.
-```c
+```c++
 #include<iostream>
 
 int add(int a, int b){
@@ -39,7 +39,7 @@ int main()
 ```
 
 The output is:
-```c
+```c++
 Call add 1: Function add 1 is called, the result is 3
 Call add 2: Function add 2 is called, the result is 4
 Call add 3: Function add 3 is called, the result is 3.6
