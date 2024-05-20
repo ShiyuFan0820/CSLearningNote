@@ -6,7 +6,7 @@
 4. `<<` operator is the insertion operator, and it's used to insert data into the `std::cout` object, in this case, `Hello Fanfan` is being inserted. `<< std::endl` is used to insert a newline like `\n`, it moves the cursor to the next line after printing `Hello Fanfan!`.
 5. In C++, the "main" function must return an integer value indicating the exit status of the program. Typically, returning 0 indicates successful program execution, while returning a non-zero value indicates an error.
 
-```c
+```c++
 #include <iostream>
 
 int main() { 
@@ -17,7 +17,7 @@ int main() {
 
 # If 
 
-```c
+```c++
 #include <iostream>
 
 int main() {
@@ -31,8 +31,6 @@ int main() {
 }
 ```
 
-
-
 # For
 
 In C++, the for loop syntax is a bit different from that in Python.
@@ -40,7 +38,7 @@ In C++, the for loop syntax is a bit different from that in Python.
 2. `i < 5`, this is the condition that the loop checks before each iteration, if it's true, the loop continues, if it's false, the loop terminates.
 3. `i++`, this is the update expression that increments `i` by `1` after each iteration.
 
-```c
+```c++
 #include <iostream>
 
 int main() {
@@ -60,10 +58,7 @@ int main() {
 - `void displayInfo() { ... }`: This is a member function of the Person class. It outputs the name and age of the person. In C++, the `void` keyword is used to specify that a function does not return any value.
 - `~Person() { ... }`: This is a destructor for the `Person` class. It is called automatically when an object of the class goes out of scope or is explicitly deleted. In this example, the destructor simply prints a message indicating that it has been called.
 
-
-
-
-```c
+```c++
 #include <iostream>
 
 // Define a simple class named Person.
