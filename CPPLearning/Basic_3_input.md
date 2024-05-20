@@ -11,7 +11,7 @@ In C++, user input can be taken by using the `cin`, short for `character input`,
 **Example**
 
 This is a simple example of asking the user's name and age.
-```c
+```c++
 #include <iostream>
 
 int main() {
