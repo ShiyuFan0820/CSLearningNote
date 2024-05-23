@@ -137,5 +137,14 @@ p[draggable="true"] {
 }
 ```
 
+**Universal Selector**
+
+Universal selector means it selects all, it applies the style to everything in the HTML file:
+
+```
+* {
+  color: red
+}
+```
 
 
