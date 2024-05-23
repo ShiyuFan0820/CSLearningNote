@@ -68,6 +68,74 @@ External CSS is suitable for multi-page HTML websites.
 
 ## Selector
 
+**Element Selector**
+
+In the previous example of how to use CSS, we wrote examples like this:
+```html
+h1 {
+  color: navy;
+  margin-left: 20px;
+}
+p {
+  font-size: 14px;
+  colour: grey;
+}
+```
+Here, `h1` and `p` are CSS selectors, and the rules in their curly braces are applied to the particular HTML tags. This style of selector is the simplest CSS selector, it's called element selector.
+
+**Class Selector**
+
+A class is something that can be added as an attribute to any HTML element, for example:
+```html
+<h2 class="red-text">Red text</h2>
+```
+
+The structure of a class selector is like this:
+```html
+.red-text {
+  color: red
+}
+```
+There is a `.` at the beginning and then after that, a dot immediately with no spaces is the name of the class, the other part is the same as the element selector. This will change the element that has the `red-text` turns the text colour red.
+
+Using class selectors can change the styles of different tags which have the same class attribute.
+
+**Id Selector**
+
+Id also can be added as an attribute to an HTML element, for example:
+```html
+<h2 id="main">Red text</h2>
+```
+
+The structure is like this:
+```html
+#main {
+  color: red
+}
+```
+
+The difference between the class selector and the id selector is that a class selector can be applied to many elements, while an id element can only be applied to one element in a single HTML file, for example, there should be only one id has the name of `main` in the HTML file above.
+
+**Attribute Selector**
+
+Some HTML elements may have multiple attributes, and we can select element which has particular attributes or particular attribute values by using an attribute selector, for example:
+```html
+<p draggable="true">Drag me</p>
+<p draggable="false">Don't drag me</p>
+```
+```html
+p[draggable]{
+  color: red
+}
+```
+The first part is the HTML element that you want to select, and then use a set of square brackets and inside includes the attribute that you want to select. Here the attribute selector means it selects all paragraph elements with the attribute `draggable` and applies the CSS style to them.
+
+If you want to select attributes with particular values, you can write the CSS code like this:
+```html
+p[draggable="true"] {
+  color: red
+}
+```
 
 
 
