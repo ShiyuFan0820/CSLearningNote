@@ -147,6 +147,3 @@ Universal selector means it selects all, it applies the style to everything in t
 }
 ```
 
-## Colour Properties
-
-
