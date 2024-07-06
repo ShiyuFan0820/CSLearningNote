@@ -5,3 +5,5 @@ Some websites can be accessed with their API. However, some websites don't have 
 ## Module BeautifulSoup
 
 Beautiful Soup is a Python library for pulling data out of HTML and XML files.
+
+To use BeautifulSoup, we should install package `bs4` first, and import `BeautifulSoup`.
