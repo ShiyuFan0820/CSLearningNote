@@ -13,3 +13,5 @@ To create a BeautifulSoup object (often referred to as making the "Soup"), two m
 Once we have a BeautifulSoup object, we can use its methods and attributes to navigate and manipulate the document's elements.
 
 BeautifulSoup simplifies the process of scraping and parsing web data, making it easier to extract specific information from HTML and XML documents using Python.
+
+
