@@ -15,3 +15,4 @@ Once we have a BeautifulSoup object, we can use its methods and attributes to na
 BeautifulSoup simplifies the process of scraping and parsing web data, making it easier to extract specific information from HTML and XML documents using Python.
 
 
+
