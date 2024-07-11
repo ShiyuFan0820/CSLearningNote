@@ -27,7 +27,40 @@
 <img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/76f749ce-de1e-494a-9b75-4a1ffd28bd35">
 </div>
 
+4. The code is:
+```
+from bs4 import BeautifulSoup
+import requests
 
+response = requests.get("https://news.ycombinator.com/news")
+
+# Get the HTML of the website.
+yc_web_page = response.text
+
+soup = BeautifulSoup(yc_web_page, "html.parser")
+
+article_texts = []
+article_links = []
+article_points = []
+
+# Extract the links and names.
+articles = soup.find_all(name="span", class_="titleline")
+for article in articles:
+    link = article.find('a')
+    if link:
+        text = link.text
+        article_texts.append(text)
+        href = link.get('href')
+        article_links.append(href)
+
+# Extract the points.
+score_texts = soup.find_all(name="span", class_="score")
+article_upvotes = [int(score.getText().split()[0]) for score in score_texts]
+largest_number = max(article_upvotes)
+largest_index = article_upvotes.index(largest_number)
+print(f"The largest points is {largest_number}, the article is {article_texts[largest_index]}, the link is {article_links[largest_index]}.")
+
+```
 
 
 
