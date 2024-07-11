@@ -28,7 +28,7 @@
 </div>
 
 4. The code is:
-```
+```py
 from bs4 import BeautifulSoup
 import requests
 
@@ -62,6 +62,10 @@ print(f"The largest points is {largest_number}, the article is {article_texts[la
 
 ```
 
+5. Run the code, the output is:
+```py
+The largest points is 665, the article is 'Multi-agent chatbot murder mystery', the link is https://ai-murder-mystery.onrender.com/.
+```
 
 
 
