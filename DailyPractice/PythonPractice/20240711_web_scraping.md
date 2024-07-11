@@ -1,4 +1,4 @@
-# Scraping a Live Website
+ # Scraping a Live Website
 
 1. Given website [Hacker News](https://news.ycombinator.com/news).
 2. Using BeautifulSoup to scrap the latest article with the most points, print the total points, article name, and link.
@@ -15,10 +15,16 @@
 <img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/0757ec5f-d233-4c08-8597-998bde23a506">
 </div>
 
-2. It's found that all the article names and links are written in an anchor tag under a `<span>` element.
+2. It's found that all the article names and links are written in an anchor tag under a `<span>` element with the class name `titleline`.
 
 <div align=center>
 <img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/df02ea4b-0ca3-479c-81bf-b620b82d412f">
+</div>
+
+3. All points are also written in a `<span> element with the class name `score`.
+
+<div align=center>
+<img width="650" alt="image" src="https://github.com/ShiyuFan0820/CSLearningNote/assets/149340606/76f749ce-de1e-494a-9b75-4a1ffd28bd35">
 </div>
 
 
