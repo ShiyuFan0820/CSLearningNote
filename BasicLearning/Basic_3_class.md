@@ -62,4 +62,4 @@ I'm xixi, I come from China, my telephone number is 123789, Hope you guys have a
 
 ## Object-Oriented Programming
 
-Python is an "object-oriented" programming language, this means that almost all the code is implemented using classed, programmers use classed to keep related things together. By using class in python, we can organise and structure data in a single unit, reduce duplication.
+Python is an "object-oriented" programming language, this means that almost all the code is implemented using classed, programmers use classes to keep related things together. By using class in python, we can organise and structure data in a single unit, reduce duplication.
